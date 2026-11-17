@@ -1,0 +1,4 @@
+id,usuario_id,libro,importe,fecha
+1,10,PLN aplicado,12.50,2026-11-01
+2,10,Bases de datos,7.50,2026-11-02
+3,20,Redes neuronales,,2026-11-02

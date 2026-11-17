@@ -1,0 +1,32 @@
+{
+  "biblioteca": {
+    "nombre": "Aurora",
+    "politica": {
+      "duracion_dias": 7,
+      "renovaciones": 1
+    }
+  },
+  "prestamos": [
+    {
+      "id": 1,
+      "usuario_id": 10,
+      "libro": "PLN aplicado",
+      "importe": "12.50",
+      "fecha": "2026-11-01"
+    },
+    {
+      "id": 2,
+      "usuario_id": 10,
+      "libro": "Bases de datos",
+      "importe": "7.50",
+      "fecha": "2026-11-02"
+    },
+    {
+      "id": 3,
+      "usuario_id": 20,
+      "libro": "Redes neuronales",
+      "importe": null,
+      "fecha": "2026-11-02"
+    }
+  ]
+}

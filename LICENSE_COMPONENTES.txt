@@ -1,0 +1,1 @@
+El código conserva sus atribuciones de origen. Open WebUI mantiene su autoría, identidad y licencia: https://raw.githubusercontent.com/open-webui/open-webui/v0.12.5/LICENSE. MySQL, PostgreSQL, pgvector, Ollama y los modelos conservan sus propias licencias. Los documentos de Aurora son ficticios. No se copió código de RAGParity.
