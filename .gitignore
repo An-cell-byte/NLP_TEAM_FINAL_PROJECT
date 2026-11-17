@@ -1,16 +1,20 @@
+# Variables de entorno (cualquier .env, .env.*, *.env en cualquier carpeta)
 .env
+.env.*
+*.env
+# ...excepto las plantillas de ejemplo, que sí deben versionarse
+!.env.example
+!.env.*.example
+!*.env.example
+
+# Entornos virtuales
 .venv/
-__pycache__/
-*.pyc
-respaldos/
-
-.env.sources
-
-.env.mysql
-
-.runtime/
-
-.env.webui
 .venv_webui/
 
-.env.postgresql_setup.json
+# Python
+__pycache__/
+*.pyc
+
+# Otros
+respaldos/
+.runtime/
