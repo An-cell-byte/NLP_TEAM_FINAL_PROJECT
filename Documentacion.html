@@ -1,0 +1,1653 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guías de Qwerty</title>
+<style>
+  body { max-width: 72ch; margin: 2rem auto; padding: 0 1.25rem;
+         font: 1rem/1.6 system-ui, sans-serif; color: #172033; }
+  a { color: #075b9b; }
+  pre, table { overflow-x: auto; }
+  pre { padding: 1rem; background: #f0f4f8; }
+  table { display: block; border-collapse: collapse; }
+  th, td { padding: .45rem .6rem; border: 1px solid #cbd5e1; text-align: left; }
+  section { padding-top: 1.5rem; margin-top: 2rem; border-top: 1px solid #cbd5e1; }
+</style>
+<main>
+<h1 id="indice">Guías de Qwerty</h1>
+<p>Elige la guía que quieres consultar.</p>
+<nav aria-label="Guías"><ul><li><a href="#guia-readme">Qwerty</a></li><li><a href="#guia-readme-windows">Qwerty en Windows</a></li><li><a href="#guia-readme-construccion">Cómo construimos Qwerty</a></li><li><a href="#guia-preguntas-frecuentes">Preguntas frecuentes de Qwerty</a></li><li><a href="#guia-docs-arquitectura">Arquitectura local</a></li><li><a href="#guia-docs-bases-de-datos">Conexiones de MySQL y fuentes de lectura</a></li><li><a href="#guia-docs-construccion">Construcción de Qwerty</a></li><li><a href="#guia-docs-errores">Diagnóstico</a></li><li><a href="#guia-docs-identidad">Identidad</a></li><li><a href="#guia-docs-instalacion">Instalación local</a></li><li><a href="#guia-docs-mapa-rubrica">Evidencias de evaluación</a></li><li><a href="#guia-docs-puente">Conexión de la interfaz con la API</a></li><li><a href="#guia-docs-ragparity">Auditoría independiente</a></li><li><a href="#guia-docs-respaldo">Respaldo y recuperación</a></li><li><a href="#guia-docs-uso">Consultar documentos</a></li><li><a href="#guia-docs-windows">Ejecutar Qwerty en Windows</a></li></ul></nav><section id="guia-readme"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-readme-qwerty">Qwerty</h1>
+<p>Demo local para consultar archivos y hacer preguntas sobre los préstamos ficticios de la biblioteca Aurora. Open WebUI gestiona el acceso y las conversaciones. FastAPI recupera la evidencia y consulta MySQL.</p>
+<ul>
+<li><a href="#guia-docs-instalacion">Primera instalación en macOS</a></li>
+<li><a href="#guia-readme-windows">Instalar y levantar el demo en Windows</a></li>
+<li><a href="#guia-readme-consultar-postgresql-desde-pgadmin-en-macos">Consultar PostgreSQL desde pgAdmin en macOS</a></li>
+<li><a href="#guia-readme-construccion">Cómo construimos el demo, paso a paso y con código</a></li>
+<li><a href="#guia-preguntas-frecuentes">Preguntas frecuentes sobre archivos, MySQL y acceso para el grupo</a></li>
+</ul>
+<p>También puedes abrir <a href="#indice">Documentacion.html</a> en tu navegador. Está en esta carpeta y sus enlaces funcionan al moverla o copiarla a Windows.</p>
+<h2 id="guia-readme-uso-diario-en-macos">Uso diario en macOS</h2>
+<p>Si acabas de extraer el ZIP, completa primero la instalación de tu sistema. Cada instalación tiene sus propias cuentas y configuración.</p>
+<ol>
+<li>
+<p>Abre MAMP y pulsa <strong>Start</strong>.</p>
+</li>
+<li>
+<p>Desde Terminal, en la carpeta del demo, ejecuta:</p>
+<pre><code class="language-sh">./iniciar_demo.sh
+</code></pre>
+</li>
+<li>
+<p>Abre la dirección que imprime el comando, inicia sesión y selecciona <strong>Qwerty</strong>. Si acabas de crear la primera cuenta, registra el conector como indica la guía de instalación.</p>
+</li>
+</ol>
+<h2 id="guia-readme-preguntas-para-probar-el-demo">Preguntas para probar el demo</h2>
+<p>Escribe estas preguntas directamente en un chat con <strong>Qwerty</strong>. Los resultados de MySQL corresponden a los datos ficticios de Aurora incluidos en el demo.</p>
+<table>
+<thead>
+<tr>
+<th>Pregunta sobre MySQL</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Cuántos préstamos hay en MySQL?</td>
+<td>Hay 3 préstamos.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene Ana?</td>
+<td>Ana tiene 2 préstamos.</td>
+</tr>
+<tr>
+<td>¿Y Luis?</td>
+<td>Si la haces después de la pregunta sobre Ana, Luis tiene 1 préstamo.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene cada usuario?</td>
+<td>Ana tiene 2 y Luis tiene 1.</td>
+</tr>
+<tr>
+<td>Muestra los préstamos de Ana</td>
+<td>Aparecen <em>PLN aplicado</em> y <em>Bases de datos</em>.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos?</td>
+<td>El total es 20.00.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe promedio de los préstamos?</td>
+<td>El promedio es 10.00 y se calcula con los 2 importes disponibles.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe máximo de los préstamos?</td>
+<td>El máximo es 12.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe mínimo de los préstamos?</td>
+<td>El mínimo es 7.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos con importe mayor que 10 en MySQL?</td>
+<td>El total de los préstamos que cumplen la condición es 12.50.</td>
+</tr>
+<tr>
+<td>¿Qué columnas tiene la vista de préstamos en MySQL?</td>
+<td>La vista <code>prestamos_detalle</code> incluye ID, ID de usuario, nombre, libro, importe y fecha.</td>
+</tr>
+</tbody>
+</table>
+<p>Para probar los archivos, adjunta el indicado desde <code>datos/</code> y envía <code>/cargar</code>. Cuando el chat confirme la carga, escribe la pregunta y abre la referencia para revisar de dónde sale la respuesta.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo de ejemplo</th>
+<th>Qué escribir en el chat</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>politicas.txt</code> o <code>politicas.pdf</code></td>
+<td>¿Cuánto dura el préstamo?</td>
+<td>El préstamo dura siete días naturales.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuántos préstamos se permiten por persona?</td>
+<td>La política permite hasta tres libros por persona.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuándo se permite la renovación?</td>
+<td>Se permite una vez si no existe otra reserva.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuál es el horario de la biblioteca?</td>
+<td>Abre de lunes a viernes de 8 a 20 y el sábado de 9 a 13. El domingo permanece cerrada.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuándo abre los sábados?</td>
+<td>Abre de 9 a 13 horas.</td>
+</tr>
+<tr>
+<td><code>multas.txt</code></td>
+<td>¿Cuál es la multa por retraso?</td>
+<td>Cinco créditos ficticios por libro y día.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Por cuántas horas se reservan las salas de estudio?</td>
+<td>Se reservan por dos horas.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Cuándo se cancela la reserva de sala?</td>
+<td>Después de quince minutos de retraso.</td>
+</tr>
+<tr>
+<td><code>prestamos.csv</code>, <code>biblioteca.xlsx</code> o <code>biblioteca.json</code></td>
+<td>PLN aplicado</td>
+<td>El chat localiza el título en el archivo. Prueba cada formato por separado para revisar su referencia.</td>
+</tr>
+<tr>
+<td>Cualquiera de estos ejemplos</td>
+<td>¿Cuál es el clima en Marte?</td>
+<td>El asistente indica que no encontró esa información.</td>
+</tr>
+</tbody>
+</table>
+<p>Al repetir una pregunta de MySQL, la frase puede variar. El resultado se calcula con los datos disponibles en ese momento. <a href="#guia-readme-construccion-cómo-damos-formato-a-las-respuestas">Cómo damos formato a las respuestas</a></p>
+<p>Para sumar, promediar o contar filas de un archivo CSV, Excel o JSON, consulta <a href="#guia-docs-uso-cálculos-que-podemos-comprobar">los ejemplos de <code>/calcular</code></a>.</p>
+<p>FastAPI usa <strong>qwen3:1.7b</strong> por dentro cuando necesita interpretar una pregunta o redactar con evidencia.</p>
+<h2 id="guia-readme-estado-y-cierre">Estado y cierre</h2>
+<p>macOS mantiene los procesos del demo en marcha mediante <code>launchd</code>. Puedes cerrar Terminal y ChatGPT. Después de reiniciar el Mac o cerrar tu sesión de macOS, abre MAMP y vuelve a iniciar el demo. <a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html">Servicios de usuario en macOS</a></p>
+<pre><code class="language-sh">./estado_demo.sh
+./detener_demo.sh
+</code></pre>
+<p>El primer comando muestra el estado de los procesos del demo y de MAMP. El segundo cierra los procesos propios de Qwerty. MAMP y cualquier instancia de Ollama que hayas iniciado aparte se controlan desde sus aplicaciones.</p>
+<h2 id="guia-readme-ollama-local">Ollama local</h2>
+<p>FastAPI toma la dirección y el modelo de <code>OLLAMA_URL</code> y <code>GENERATION_MODEL</code> en <code>.env</code>. El lanzador reutiliza Ollama si ya responde en el puerto configurado. En el chat selecciona <strong>Qwerty</strong>. <a href="#guia-docs-puente-conectar-ollama-local">Configuración y prueba de Ollama</a></p>
+<h2 id="guia-readme-mover-la-carpeta">Mover la carpeta</h2>
+<ol>
+<li>Apaga el demo con <code>./detener_demo.sh</code>.</li>
+<li>Mueve la carpeta completa. Incluye los archivos <code>.env*</code> y las carpetas ocultas <code>.runtime</code>, <code>.venv</code> y <code>.venv_webui</code>.</li>
+<li>En la carpeta nueva ejecuta <code>./iniciar_demo.sh</code>. El lanzador prepara los servicios para esa ubicación y recupera las rutas de los adjuntos locales.</li>
+</ol>
+<p>Estos pasos sirven para moverlo en el mismo Mac. En otro equipo prepara Python, PostgreSQL y MAMP según la guía de instalación.</p>
+<h2 id="guia-readme-servicios-y-archivos">Servicios y archivos</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Puerto de ejemplo</th>
+<th>Configuración o datos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open WebUI</td>
+<td>3187</td>
+<td><code>.env.webui</code> y <code>.runtime/webui</code></td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>18129</td>
+<td><code>.env</code>, <code>.env.mysql</code> y <code>.env.sources</code></td>
+</tr>
+<tr>
+<td>PostgreSQL 16</td>
+<td>55442</td>
+<td><code>.env.webui</code> y <code>.runtime/postgresql</code></td>
+</tr>
+<tr>
+<td>Ollama</td>
+<td>11434</td>
+<td><code>OLLAMA_URL</code> y <code>GENERATION_MODEL</code> en <code>.env</code></td>
+</tr>
+<tr>
+<td>MySQL 8 de MAMP</td>
+<td>8889</td>
+<td>Bases de ejemplo <code>demo_documental</code> y <code>demo_documental_aurora</code></td>
+</tr>
+</tbody>
+</table>
+<p>Los modelos de búsqueda se descargan a <code>.runtime/huggingface</code> en macOS al procesar el primer archivo. Las bases de MySQL permanecen en MAMP y se consultan con las cuentas limitadas de <code>.env.mysql</code> y <code>.env.sources</code>.</p>
+<p>Si recibiste el ZIP, abre <a href="./EJERCICIOS.md">los ejercicios</a> para ubicar el punto de partida y el trabajo de E1 y E2. Comparte únicamente el ZIP limpio. Cada instalación guarda su configuración y su historial por separado.</p>
+<h2 id="guia-readme-consultar-postgresql-desde-pgadmin-en-macos">Consultar PostgreSQL desde pgAdmin en macOS</h2>
+<ol>
+<li>
+<p>Abre MAMP y pulsa <strong>Start</strong>. Desde la carpeta de Qwerty, ejecuta <code>./iniciar_demo.sh</code> para que arranque también PostgreSQL.</p>
+</li>
+<li>
+<p>Abre pgAdmin. Si ya tienes la conexión <strong>Qwerty local</strong>, ábrela y pasa al paso 4. Si es la primera vez, haz clic derecho en <strong>Servers</strong>, elige <strong>Register / Server</strong> y escribe <strong>Qwerty local</strong> en <strong>General / Name</strong>. El nombre solo identifica la conexión en pgAdmin.</p>
+</li>
+<li>
+<p>En <strong>Connection</strong>, usa los valores del archivo privado <code>.env.webui</code>, que se genera en la misma carpeta que este README. Ábrelo en tu editor para encontrar la línea <code>WEBUI_PG_PASSWORD</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Campo en pgAdmin</th>
+<th>Variable en <code>.env.webui</code></th>
+<th>Valor de ejemplo en macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host name/address</td>
+<td><code>WEBUI_PG_HOST</code></td>
+<td><code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>WEBUI_PG_PORT</code></td>
+<td><code>55442</code></td>
+</tr>
+<tr>
+<td>Maintenance database</td>
+<td><code>WEBUI_PG_DATABASE</code></td>
+<td><code>demo_webui</code></td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>WEBUI_PG_USER</code></td>
+<td><code>demo_webui</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>WEBUI_PG_PASSWORD</code></td>
+<td>La contraseña de tu instalación</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Si acabas de registrar la conexión, pulsa <strong>Save</strong>. Abre <strong>Qwerty local / Databases / demo_webui / Schemas / public / Tables</strong>. Si ya tenías el árbol abierto, haz clic derecho en <strong>Tables</strong> y selecciona <strong>Refresh</strong>. Busca <code>chat</code>, <code>user</code>, <code>file</code>, <code>model</code> y <code>function</code>.</p>
+</li>
+</ol>
+<p>Si tienes varias instancias registradas, verifica el puerto. Las entradas «PostgreSQL 15» y «PostgreSQL 16» pueden apuntar a otros servicios locales. Puedes usar <strong>Properties / Connection</strong> para comprobar a cuál apunta cada registro. En <strong>Query Tool</strong>, abierto desde <code>demo_webui</code>, confirma la base, el usuario y el puerto.</p>
+<pre><code class="language-sql">SELECT current_database(), current_user, inet_server_port();
+</code></pre>
+<p>Los archivos de la instancia que inicia Qwerty en macOS están en <code>.runtime/postgresql</code>. La contraseña <code>WEBUI_PG_PASSWORD</code> corresponde al usuario de PostgreSQL. Para entrar al chat usa las credenciales de tu cuenta de Open WebUI. El ZIP incluye la plantilla <code>.env.webui.example</code> y cada instalación genera su propio <code>.env.webui</code>. <a href="#guia-readme-windows-consultar-postgresql-desde-pgadmin-en-windows">Conexión desde Windows</a>.</p>
+<h2 id="guia-readme-qué-guarda-cada-base">Qué guarda cada base</h2>
+<table>
+<thead>
+<tr>
+<th>Motor y base</th>
+<th>Qué guarda Qwerty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PostgreSQL, <code>demo_webui</code></td>
+<td>Open WebUI guarda cuentas, permisos, conversaciones, configuración y registros de los archivos adjuntos. Las tablas <code>model</code> y <code>function</code> guardan el modelo visible y el conector. Los archivos originales se almacenan en <code>.runtime/webui/uploads</code> con la configuración predeterminada.</td>
+</tr>
+<tr>
+<td>MySQL, <code>demo_documental</code></td>
+<td>FastAPI guarda documentos procesados, fragmentos, vectores para la búsqueda, versiones y datos de las consultas y respuestas de la API.</td>
+</tr>
+<tr>
+<td>MySQL, <code>demo_documental_aurora</code></td>
+<td>Contiene los usuarios y préstamos ficticios. La vista <code>prestamos_detalle</code> reúne esos datos para responder preguntas como «¿Cuántos préstamos tiene Ana?».</td>
+</tr>
+</tbody>
+</table>
+<p>Usa pgAdmin para PostgreSQL. Para abrir las bases MySQL en macOS, usa phpMyAdmin de MAMP o un cliente MySQL. El puerto configurado está en <code>.env.mysql</code> y suele ser <code>8889</code> en MAMP.</p>
+<h3 id="guia-readme-prueba-rápida-con-sql-en-macos">Prueba rápida con SQL en macOS</h3>
+<p>Abre un chat normal con Qwerty. Adjunta <code>datos/politicas.txt</code>, envía <code>/cargar</code> y copia el <code>id</code> del documento que devuelve el chat. Pregunta <strong>¿Cuánto dura el préstamo?</strong> y cambia el título de la conversación a <strong>Prueba SQL Qwerty</strong>. En pgAdmin abre <strong>Query Tool</strong> desde <code>demo_webui</code>. Esta consulta muestra el identificador del chat y cuándo se actualizó.</p>
+<pre><code class="language-sql">SELECT id, title, to_timestamp(updated_at) AS ultima_actividad
+FROM public.chat
+WHERE title = 'Prueba SQL Qwerty'
+ORDER BY updated_at DESC;
+</code></pre>
+<p>En phpMyAdmin, abre la pestaña <strong>SQL</strong> de <code>demo_documental</code> y sustituye <code>ID_DEL_DOCUMENTO</code> por el <code>id</code> que copiaste al cargar el archivo.</p>
+<pre><code class="language-sql">SELECT id, name, status, version
+FROM documents
+WHERE id = 'ID_DEL_DOCUMENTO' AND deleted = 0;
+</code></pre>
+<p>En la <a href="#guia-readme-construccion-12-sigue-una-conversación-con-sql">prueba completa con SQL</a> puedes ver cómo se leen los mensajes en PostgreSQL y cómo se comprueban el texto procesado, los fragmentos y la respuesta con su fuente en MySQL.</p>
+<p>Para comprobar qué ocurre después de <code>/sustituir ID</code> o <code>/eliminar ID</code>, vuelve a la pestaña <strong>SQL</strong> de <code>demo_documental</code> en phpMyAdmin y ejecuta esta consulta con el mismo identificador.</p>
+<pre><code class="language-sql">SELECT id, version AS ultima_version, deleted AS eliminado,
+       CASE WHEN deleted = 0 AND status = 'disponible'
+            THEN version END AS version_vigente
+FROM documents
+WHERE id = 'ID_DEL_DOCUMENTO';
+</code></pre>
+<p>La sustitución conserva el identificador e incrementa <code>version_vigente</code>. Al eliminar el archivo, <code>eliminado</code> pasa a <code>1</code> y <code>version_vigente</code> queda en <code>NULL</code>. <a href="#guia-readme-construccion-sustituir-o-eliminar-un-archivo-en-mysql">Prueba de versiones y fragmentos</a>.</p>
+<h3 id="guia-readme-borrar-un-archivo-y-sus-citas-en-macos">Borrar un archivo y sus citas en macOS</h3>
+<p>Busca el ID con <code>/documentos</code> y escribe <code>/purgar ID</code>. Qwerty muestra qué se va a borrar y devuelve un comando de confirmación. Si lo confirmas, elimina los adjuntos registrados de ese documento y sus respuestas con citas en MySQL. El texto guardado en conversaciones anteriores se gestiona desde Open WebUI. <a href="#guia-readme-construccion-borrar-un-archivo-y-sus-citas-del-demo">Confirmación, comprobación SQL y procedimiento para archivos anteriores</a>.</p>
+<h2 id="guia-readme-guías">Guías</h2>
+<ul>
+<li><a href="#guia-docs-instalacion">Instalación y actualización de dependencias</a></li>
+<li><a href="#guia-docs-uso">Uso con documentos y MySQL</a></li>
+<li><a href="#guia-docs-arquitectura">Arquitectura y puertos</a></li>
+<li><a href="#guia-docs-puente">Conexión de Open WebUI con FastAPI</a></li>
+<li><a href="#guia-docs-errores">Diagnóstico de fallos</a></li>
+<li><a href="#guia-docs-respaldo">Respaldo y recuperación</a></li>
+</ul>
+</section>
+<section id="guia-readme-windows"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-readme-windows-qwerty-en-windows">Qwerty en Windows</h1>
+<p>Sigue esta guía para instalar el demo en Windows y arrancarlo desde PowerShell. En una instalación ya preparada, inicia MySQL y PostgreSQL y ejecuta <code>.\iniciar_demo.cmd</code> desde la carpeta del demo.</p>
+<p>Puedes abrir <a href="#indice">Documentacion.html</a> en tu navegador para consultar todas las guías de la carpeta.</p>
+<p>Para agregar archivos, consultar otras tablas o dar acceso a más personas, revisa las <a href="#guia-preguntas-frecuentes">preguntas frecuentes</a>.</p>
+<p>Si el demo ya funciona, puedes ir directamente a <a href="#guia-readme-windows-consultar-postgresql-desde-pgadmin-en-windows">la conexión de pgAdmin</a>.</p>
+<h2 id="guia-readme-windows-1-instala-las-herramientas">1. Instala las herramientas</h2>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Para qué la usamos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python 3.11 para Windows x64</td>
+<td>Ejecuta FastAPI y Open WebUI en entornos separados. <a href="https://docs.python.org/3.11/using/windows.html">Instalar Python</a></td>
+</tr>
+<tr>
+<td>MySQL 8.x</td>
+<td>Guarda los documentos y contiene la base de ejemplo de Aurora. Instala MySQL 8.4 con su configurador o usa un servidor 8.x que ya tengas. <a href="https://dev.mysql.com/doc/refman/8.4/en/windows-installation.html">Instalar MySQL</a></td>
+</tr>
+<tr>
+<td>PostgreSQL 16 o 17 con pgAdmin</td>
+<td>Guarda las cuentas y las conversaciones. Selecciona el servidor y pgAdmin en el instalador. <a href="https://www.postgresql.org/download/windows/">Instalar PostgreSQL</a></td>
+</tr>
+<tr>
+<td>Ollama</td>
+<td>Ejecuta el modelo local <code>qwen3:1.7b</code>. <a href="https://docs.ollama.com/windows">Instalar Ollama</a></td>
+</tr>
+</tbody>
+</table>
+<p>Configura MySQL y PostgreSQL como servicios de Windows. Guarda el puerto y la contraseña administrativa de cada uno. En los ejemplos usamos <code>3306</code> para MySQL y <code>5432</code> para PostgreSQL.</p>
+<p>MAMP para Windows incluye MySQL 5.7.24. Para el demo usa MySQL 8 independiente. Si otro servidor ya usa <code>3306</code>, elige un puerto libre como <code>3307</code> al configurar el servidor nuevo. <a href="https://www.mamp.info/en/release-notes/windows/">Versiones de MAMP para Windows</a></p>
+<h2 id="guia-readme-windows-2-prepara-una-copia-limpia">2. Prepara una copia limpia</h2>
+<p>Usa una copia que contenga <code>app.py</code>, <code>iniciar_demo.cmd</code>, <code>datos/</code> y los archivos de requisitos. Si vienes del Mac, copia el código, los datos de ejemplo y las plantillas <code>.env.example</code>, <code>.env.mysql.example</code> y <code>.env.webui.example</code>. Prepara entornos y credenciales nuevos en Windows. Las carpetas <code>.venv</code>, <code>.venv_webui</code> y <code>.runtime</code> del Mac pertenecen a esa instalación.</p>
+<p>Abre PowerShell en la carpeta del demo. Todos los comandos de esta guía parten de ahí.</p>
+<pre><code class="language-powershell">py -3.11 --version
+py -3.11 -m venv .venv
+&amp; .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+&amp; .\.venv\Scripts\python.exe -m pip check
+
+py -3.11 -m venv .venv_webui
+&amp; .\.venv_webui\Scripts\python.exe -m pip install -r requirements-webui.txt
+&amp; .\.venv_webui\Scripts\python.exe -m pip check
+</code></pre>
+<p>El primer entorno es para la API. El segundo es para Open WebUI y usa <code>requirements-webui.lock.txt</code> para fijar sus dependencias. Llamamos a cada Python por su ruta relativa para usar el entorno correcto.</p>
+<h2 id="guia-readme-windows-3-prepara-mysql">3. Prepara MySQL</h2>
+<p>En <strong>Servicios</strong> de Windows comprueba que MySQL 8 esté en ejecución. El configurador pedirá la cuenta que puede crear las bases del demo.</p>
+<pre><code class="language-powershell">&amp; .\.venv\Scripts\python.exe configurar.py
+&amp; .\.venv\Scripts\python.exe configurar_mysql.py
+&amp; .\.venv\Scripts\python.exe verificar_mysql.py
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Dato que pide el programa</th>
+<th>Qué escribir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td><code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td>Puerto</td>
+<td>El de tu MySQL 8. Escribe <code>3306</code> si usas el puerto habitual. La sugerencia <code>8889</code> corresponde al Mac.</td>
+</tr>
+<tr>
+<td>Administrador y contraseña</td>
+<td>La cuenta que configuraste para MySQL, normalmente <code>root</code>, y su contraseña.</td>
+</tr>
+<tr>
+<td>Base nueva y usuario nuevo</td>
+<td><code>demo_documental</code> si ambos nombres están libres. Para otra instalación usa nombres nuevos que empiecen por <code>demo_</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>El programa crea una base para la API y otra para Aurora. Con el nombre sugerido quedan <code>demo_documental</code> y <code>demo_documental_aurora</code>. También crea una cuenta de escritura para la API y una cuenta que solo puede leer la vista ficticia. La última comprobación debe mostrar MySQL conectado y <strong>tres filas</strong> en la vista de Aurora.</p>
+<h2 id="guia-readme-windows-4-prepara-postgresql-desde-pgadmin">4. Prepara PostgreSQL desde pgAdmin</h2>
+<ol>
+<li>Abre pgAdmin. En <strong>Servers</strong>, abre <strong>Register</strong> y elige <strong>Server</strong>. Escribe un nombre como <strong>PostgreSQL local</strong> y conecta con <code>127.0.0.1</code>, el puerto del servidor, el usuario <code>postgres</code> y la contraseña elegida en el instalador.</li>
+<li>En <strong>Login/Group Roles</strong>, abre <strong>Create</strong> y elige <strong>Login/Group Role</strong>. Crea <code>demo_webui</code>, ponle una contraseña en <strong>Definition</strong> y habilita <strong>Can login</strong> en <strong>Privileges</strong>. Déjalo como usuario normal.</li>
+<li>En <strong>Databases</strong>, abre <strong>Create</strong> y elige <strong>Database</strong>. Crea <code>demo_webui</code> y selecciona <code>demo_webui</code> como propietario. Si el nombre ya existe, elige uno nuevo para esta instalación.</li>
+<li>Guarda la conexión del demo desde PowerShell.</li>
+</ol>
+<pre><code class="language-powershell">&amp; .\.venv\Scripts\python.exe configurar_webui_windows.py
+</code></pre>
+<p>Ingresa el host, el puerto, la base y la cuenta que acabas de crear. Usa la contraseña de <code>demo_webui</code>. El programa comprueba la conexión y genera <code>.env.webui</code> con <code>MANAGE_LOCAL_POSTGRES=false</code>, porque Windows administra PostgreSQL como servicio.</p>
+<h2 id="guia-readme-windows-5-conecta-ollama-local">5. Conecta Ollama local</h2>
+<p>Abre Ollama desde Inicio y ejecuta lo siguiente en PowerShell.</p>
+<pre><code class="language-powershell">ollama pull qwen3:1.7b
+ollama list
+(Invoke-RestMethod &quot;http://127.0.0.1:11434/api/tags&quot;).models.name
+</code></pre>
+<p>La lista debe incluir <code>qwen3:1.7b</code>. Si PowerShell todavía no encuentra <code>ollama</code>, abre una ventana nueva. La primera descarga necesita conexión a Internet. La búsqueda en documentos también descarga un modelo de representaciones la primera vez que lo necesita.</p>
+<p>Revisa estos valores en el archivo <code>.env</code> de la carpeta del demo. Si tu Ollama usa otro puerto, escribe ese puerto en <code>OLLAMA_URL</code> y úsalo también al probar <code>/api/tags</code>.</p>
+<pre><code class="language-dotenv">OLLAMA_URL=http://127.0.0.1:11434
+GENERATION_MODEL=qwen3:1.7b
+</code></pre>
+<p>FastAPI se conecta a Ollama por esa dirección. En Open WebUI usa <strong>Qwerty</strong> para que el conector pueda consultar MySQL y los documentos. <a href="#guia-docs-puente-conectar-ollama-local">Cómo se conectan los servicios</a></p>
+<h2 id="guia-readme-windows-6-arranca-el-demo-y-conecta-el-chat">6. Arranca el demo y conecta el chat</h2>
+<p>Con MySQL y PostgreSQL en marcha, ejecuta:</p>
+<pre><code class="language-powershell">.\iniciar_demo.cmd
+</code></pre>
+<p>El lanzador comprueba las bases y Ollama. Después inicia FastAPI y Open WebUI en segundo plano. Abre la dirección que imprime. Con la configuración de ejemplo es <a href="http://127.0.0.1:3187">Open WebUI en 3187</a>.</p>
+<p>La primera cuenta que crees en Open WebUI administra el chat. Usa el correo y la contraseña de esa cuenta para registrar el conector.</p>
+<pre><code class="language-powershell">&amp; .\.venv\Scripts\python.exe conectar_openwebui.py
+</code></pre>
+<p>Acepta la dirección de Open WebUI que propone el programa. Para la API usa <code>http://127.0.0.1:18129</code> si conservaste el puerto de ejemplo. En una instalación de una sola persona puedes dejar vacía la lista de usuarios autorizados. Después recarga la página, abre un chat nuevo y selecciona <strong>Qwerty</strong>.</p>
+<h2 id="guia-readme-windows-7-comprueba-que-responde">7. Comprueba que responde</h2>
+<p>Escribe estas preguntas directamente en un chat con <strong>Qwerty</strong>. Los resultados de MySQL corresponden a los datos ficticios de Aurora incluidos en el demo.</p>
+<table>
+<thead>
+<tr>
+<th>Pregunta sobre MySQL</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Cuántos préstamos hay en MySQL?</td>
+<td>Hay 3 préstamos.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene Ana?</td>
+<td>Ana tiene 2 préstamos.</td>
+</tr>
+<tr>
+<td>¿Y Luis?</td>
+<td>Si la haces después de la pregunta sobre Ana, Luis tiene 1 préstamo.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene cada usuario?</td>
+<td>Ana tiene 2 y Luis tiene 1.</td>
+</tr>
+<tr>
+<td>Muestra los préstamos de Ana</td>
+<td>Aparecen <em>PLN aplicado</em> y <em>Bases de datos</em>.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos?</td>
+<td>El total es 20.00.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe promedio de los préstamos?</td>
+<td>El promedio es 10.00 y se calcula con los 2 importes disponibles.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe máximo de los préstamos?</td>
+<td>El máximo es 12.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe mínimo de los préstamos?</td>
+<td>El mínimo es 7.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos con importe mayor que 10 en MySQL?</td>
+<td>El total de los préstamos que cumplen la condición es 12.50.</td>
+</tr>
+<tr>
+<td>¿Qué columnas tiene la vista de préstamos en MySQL?</td>
+<td>La vista <code>prestamos_detalle</code> incluye ID, ID de usuario, nombre, libro, importe y fecha.</td>
+</tr>
+</tbody>
+</table>
+<p>Para probar los archivos, adjunta el indicado desde <code>datos/</code> y envía <code>/cargar</code>. Cuando el chat confirme la carga, escribe la pregunta y abre la referencia para revisar de dónde sale la respuesta.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo de ejemplo</th>
+<th>Qué escribir en el chat</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>politicas.txt</code> o <code>politicas.pdf</code></td>
+<td>¿Cuánto dura el préstamo?</td>
+<td>El préstamo dura siete días naturales.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuántos préstamos se permiten por persona?</td>
+<td>La política permite hasta tres libros por persona.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuándo se permite la renovación?</td>
+<td>Se permite una vez si no existe otra reserva.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuál es el horario de la biblioteca?</td>
+<td>Abre de lunes a viernes de 8 a 20 y el sábado de 9 a 13. El domingo permanece cerrada.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuándo abre los sábados?</td>
+<td>Abre de 9 a 13 horas.</td>
+</tr>
+<tr>
+<td><code>multas.txt</code></td>
+<td>¿Cuál es la multa por retraso?</td>
+<td>Cinco créditos ficticios por libro y día.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Por cuántas horas se reservan las salas de estudio?</td>
+<td>Se reservan por dos horas.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Cuándo se cancela la reserva de sala?</td>
+<td>Después de quince minutos de retraso.</td>
+</tr>
+<tr>
+<td><code>prestamos.csv</code>, <code>biblioteca.xlsx</code> o <code>biblioteca.json</code></td>
+<td>PLN aplicado</td>
+<td>El chat localiza el título en el archivo. Prueba cada formato por separado para revisar su referencia.</td>
+</tr>
+<tr>
+<td>Cualquiera de estos ejemplos</td>
+<td>¿Cuál es el clima en Marte?</td>
+<td>El asistente indica que no encontró esa información.</td>
+</tr>
+</tbody>
+</table>
+<p>Al repetir una pregunta de MySQL, la frase puede variar. El resultado se calcula con los datos disponibles en ese momento. <a href="#guia-readme-construccion-cómo-damos-formato-a-las-respuestas">Cómo damos formato a las respuestas</a></p>
+<p>Para sumar, promediar o contar filas de un archivo CSV, Excel o JSON, consulta <a href="#guia-docs-uso-cálculos-que-podemos-comprobar">los ejemplos de <code>/calcular</code></a>.</p>
+<h3 id="guia-readme-windows-estado-de-los-servicios">Estado de los servicios</h3>
+<pre><code class="language-powershell">Invoke-RestMethod &quot;http://127.0.0.1:18129/health&quot;
+Invoke-RestMethod &quot;http://127.0.0.1:3187/health&quot;
+</code></pre>
+<p>FastAPI debe mostrar <code>status = ok</code> y <code>storage = mysql</code>.</p>
+<h2 id="guia-readme-windows-consultar-postgresql-desde-pgadmin-en-windows">Consultar PostgreSQL desde pgAdmin en Windows</h2>
+<ol>
+<li>
+<p>Abre <strong>Servicios</strong> de Windows y comprueba que el servicio de PostgreSQL esté en ejecución. Si es una instalación nueva, completa el paso 4 y arranca Qwerty una vez con <code>.\iniciar_demo.cmd</code> para que Open WebUI cree sus tablas.</p>
+</li>
+<li>
+<p>En pgAdmin, haz clic derecho en <strong>Servers</strong> y elige <strong>Register / Server</strong>. En <strong>General / Name</strong> escribe <strong>Qwerty local</strong>. Puedes conservar la conexión administrativa del paso 4 y usar esta entrada para consultar la base con el usuario del demo.</p>
+</li>
+<li>
+<p>En <strong>Connection</strong>, copia los valores de <code>.env.webui</code>. Ese archivo se genera al ejecutar <code>configurar_webui_windows.py</code> y queda en la misma carpeta que este README.</p>
+<table>
+<thead>
+<tr>
+<th>Campo en pgAdmin</th>
+<th>Variable en <code>.env.webui</code></th>
+<th>Valor de ejemplo en Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host name/address</td>
+<td><code>WEBUI_PG_HOST</code></td>
+<td><code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>WEBUI_PG_PORT</code></td>
+<td><code>5432</code></td>
+</tr>
+<tr>
+<td>Maintenance database</td>
+<td><code>WEBUI_PG_DATABASE</code></td>
+<td><code>demo_webui</code></td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>WEBUI_PG_USER</code></td>
+<td><code>demo_webui</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>WEBUI_PG_PASSWORD</code></td>
+<td>La contraseña que elegiste para ese usuario en el paso 4</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pulsa <strong>Save</strong> y abre <strong>Qwerty local / Databases / demo_webui / Schemas / public / Tables</strong>. Si elegiste otro nombre para la base, busca el que indica <code>WEBUI_PG_DATABASE</code>. Si el árbol ya estaba abierto, usa <strong>Refresh</strong> en <strong>Tables</strong>. Deben aparecer tablas como <code>chat</code>, <code>user</code>, <code>file</code>, <code>model</code> y <code>function</code>.</p>
+</li>
+</ol>
+<p>Si tienes varias instalaciones de PostgreSQL, usa el puerto exacto de <code>WEBUI_PG_PORT</code>. En <strong>Query Tool</strong>, abierto desde la base de Qwerty, verifica la conexión.</p>
+<pre><code class="language-sql">SELECT current_database(), current_user, inet_server_port();
+</code></pre>
+<p>El archivo <code>.env.webui</code> es privado. El ZIP trae la plantilla <code>.env.webui.example</code>. Usa <code>WEBUI_PG_PASSWORD</code> para la conexión de PostgreSQL y tu cuenta de Open WebUI para entrar al chat. En Windows, el servicio de PostgreSQL administra su propio directorio de datos.</p>
+<h3 id="guia-readme-windows-qué-guarda-cada-base-en-windows">Qué guarda cada base en Windows</h3>
+<ul>
+<li><strong>PostgreSQL, <code>demo_webui</code>.</strong> Guarda las cuentas, los permisos, las conversaciones, los modelos y la configuración de Open WebUI. También guarda los registros de los adjuntos. Los archivos originales quedan en <code>.runtime/webui/uploads</code> con la configuración predeterminada.</li>
+<li><strong>MySQL, <code>demo_documental</code>.</strong> Guarda documentos procesados, fragmentos, vectores, versiones y datos de las consultas y respuestas de FastAPI.</li>
+<li><strong>MySQL, <code>demo_documental_aurora</code>.</strong> Guarda los usuarios y préstamos ficticios que consulta la vista <code>prestamos_detalle</code>.</li>
+</ul>
+<p>Usa pgAdmin para PostgreSQL. Para revisar las dos bases de MySQL en Windows, puedes usar MySQL Workbench con el puerto indicado en <code>.env.mysql</code>. <a href="#guia-readme-consultar-postgresql-desde-pgadmin-en-macos">Conexión desde macOS</a>.</p>
+<h3 id="guia-readme-windows-prueba-rápida-con-sql-en-windows">Prueba rápida con SQL en Windows</h3>
+<p>Abre un chat normal con Qwerty. Adjunta <code>datos/politicas.txt</code>, envía <code>/cargar</code> y copia el <code>id</code> del documento que devuelve el chat. Pregunta <strong>¿Cuánto dura el préstamo?</strong> y cambia el título de la conversación a <strong>Prueba SQL Qwerty</strong>. En pgAdmin abre <strong>Query Tool</strong> desde <code>demo_webui</code> y busca ese chat por su título.</p>
+<pre><code class="language-sql">SELECT id, title, to_timestamp(updated_at) AS ultima_actividad
+FROM public.chat
+WHERE title = 'Prueba SQL Qwerty'
+ORDER BY updated_at DESC;
+</code></pre>
+<p>En MySQL Workbench, selecciona <code>demo_documental</code> como esquema y reemplaza <code>ID_DEL_DOCUMENTO</code> por el <code>id</code> que copiaste al cargar el archivo.</p>
+<pre><code class="language-sql">SELECT id, name, status, version
+FROM documents
+WHERE id = 'ID_DEL_DOCUMENTO' AND deleted = 0;
+</code></pre>
+<p>Sigue la <a href="#guia-readme-construccion-12-sigue-una-conversación-con-sql">prueba completa con SQL</a> para ver los mensajes del chat, los fragmentos indexados y el registro de la pregunta y la respuesta.</p>
+<p>Después de <code>/sustituir ID</code> o <code>/eliminar ID</code>, usa el mismo identificador en una pestaña SQL de MySQL Workbench con <code>demo_documental</code> seleccionado.</p>
+<pre><code class="language-sql">SELECT id, version AS ultima_version, deleted AS eliminado,
+       CASE WHEN deleted = 0 AND status = 'disponible'
+            THEN version END AS version_vigente
+FROM documents
+WHERE id = 'ID_DEL_DOCUMENTO';
+</code></pre>
+<p>La sustitución conserva el identificador e incrementa <code>version_vigente</code>. Al eliminar el archivo, <code>eliminado</code> pasa a <code>1</code> y <code>version_vigente</code> queda en <code>NULL</code>. <a href="#guia-readme-construccion-sustituir-o-eliminar-un-archivo-en-mysql">Prueba de versiones y fragmentos</a>.</p>
+<h3 id="guia-readme-windows-borrar-un-archivo-y-sus-citas-en-windows">Borrar un archivo y sus citas en Windows</h3>
+<p>Busca el ID con <code>/documentos</code> y escribe <code>/purgar ID</code>. Qwerty muestra qué se va a borrar y devuelve un comando de confirmación. Si lo confirmas, elimina los adjuntos registrados de ese documento y sus respuestas con citas en MySQL. El texto guardado en conversaciones anteriores se gestiona desde Open WebUI. <a href="#guia-readme-construccion-borrar-un-archivo-y-sus-citas-del-demo">Confirmación, comprobación SQL y procedimiento para archivos anteriores</a>.</p>
+<h2 id="guia-readme-windows-uso-diario">Uso diario</h2>
+<p>Inicia MySQL y PostgreSQL desde <strong>Servicios</strong> si están apagados. Después puedes arrancar o detener el demo desde su carpeta.</p>
+<pre><code class="language-powershell">.\iniciar_demo.cmd
+</code></pre>
+<pre><code class="language-powershell">.\detener_demo.cmd
+</code></pre>
+<p>Al detener el demo, Windows conserva los servicios de las bases. Ollama se cierra si lo inició el lanzador. Para la siguiente sesión usa tu misma cuenta y los archivos que ya configuraste.</p>
+<p>Para actualizar dependencias, detén el demo y respalda tus datos. Vuelve a ejecutar los comandos <code>pip install</code> y <code>pip check</code> del paso 2 en sus respectivos entornos. Después inicia el demo y repite las comprobaciones del paso 7.</p>
+<h2 id="guia-readme-windows-dónde-revisar-la-configuración">Dónde revisar la configuración</h2>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Qué guarda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.env</code></td>
+<td>Puertos <code>API_PORT</code> y <code>UI_PORT</code>, dirección <code>OLLAMA_URL</code>, modelo y claves internas.</td>
+</tr>
+<tr>
+<td><code>.env.mysql</code></td>
+<td>Host, puerto y cuenta de la API en MySQL.</td>
+</tr>
+<tr>
+<td><code>.env.sources</code></td>
+<td>Acceso de lectura y vista autorizada de Aurora.</td>
+</tr>
+<tr>
+<td><code>.env.webui</code></td>
+<td>Conexión de PostgreSQL y ruta de los adjuntos.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Si ocurre esto</th>
+<th>Revisa esto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python no se encuentra</td>
+<td>Confirma que <code>py -3.11 --version</code> responde en una ventana nueva.</td>
+</tr>
+<tr>
+<td>MySQL muestra versión 5.7</td>
+<td>Revisa el puerto del servicio MySQL 8 en <code>.env.mysql</code> y <code>.env.sources</code>.</td>
+</tr>
+<tr>
+<td>PostgreSQL rechaza la conexión</td>
+<td>Prueba en pgAdmin con la cuenta propietaria de la base del demo.</td>
+</tr>
+<tr>
+<td>Open WebUI no abre</td>
+<td>Revisa <code>.runtime/windows/webui.log</code> y el puerto impreso por el lanzador.</td>
+</tr>
+<tr>
+<td>La interfaz abre pero la consulta falla</td>
+<td>Revisa <code>.runtime/windows/api.log</code> y la dirección de la API que usa el conector.</td>
+</tr>
+<tr>
+<td>Ollama no responde</td>
+<td>Abre Ollama y revisa el puerto <code>11434</code>. Si lo inició el demo, consulta <code>.runtime/windows/modelo.log</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Si necesitas ver los mensajes en pantalla, ejecuta <code>.\detener_demo.cmd</code>. Desde la carpeta del demo abre dos ventanas de PowerShell y ejecuta un comando en cada una. Usa Ctrl+C en esas ventanas para cerrar el inicio manual.</p>
+<pre><code class="language-powershell">&amp; .\.venv\Scripts\python.exe iniciar_api.py
+</code></pre>
+<pre><code class="language-powershell">&amp; .\.venv_webui\Scripts\python.exe iniciar_webui.py
+</code></pre>
+<p>Los pasos de esta guía se contrastaron con los scripts y la documentación oficial. La ejecución completa del demo en Windows queda por validar en ese sistema.</p>
+<p><a href="#guia-readme-construccion">Construcción paso a paso</a> | <a href="#guia-docs-respaldo">Respaldo de datos</a> | <a href="#guia-docs-uso">Guía de uso</a></p>
+</section>
+<section id="guia-readme-construccion"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-readme-construccion-cómo-construimos-qwerty">Cómo construimos Qwerty</h1>
+<p>La idea fue usar una sola conversación para consultar archivos y datos de una biblioteca ficticia. Tomemos dos preguntas como punto de partida. <strong>¿Cuánto dura el préstamo?</strong> se responde con la política de préstamos. <strong>¿Cuántos préstamos tiene Ana?</strong> se responde contando registros de MySQL.</p>
+<p>La guía sigue el orden de construcción. Cada etapa señala los archivos del proyecto y explica cómo comprobarla. Si quieres levantar el demo en tu equipo, empieza por la guía de instalación de tu sistema. <a href="#guia-docs-instalacion">macOS</a> | <a href="#guia-readme-windows">Windows</a></p>
+<p>Si quieres ampliar el demo después de instalarlo, consulta las <a href="#guia-preguntas-frecuentes">preguntas frecuentes</a>.</p>
+<h2 id="guia-readme-construccion-1-reparte-el-trabajo-entre-los-componentes">1. Reparte el trabajo entre los componentes</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Responsabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open WebUI</td>
+<td>Presenta el chat, inicia sesión y administra las conversaciones.</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>Guarda las cuentas, las conversaciones y la configuración de Open WebUI.</td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>Recibe archivos y preguntas. Decide qué fuente consultar y prepara la respuesta.</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>Guarda documentos procesados, fragmentos y respuestas de la API. También aloja una base separada con los datos ficticios de Aurora.</td>
+</tr>
+<tr>
+<td>Sentence Transformers</td>
+<td>Convierte fragmentos y preguntas en vectores para comparar su contenido.</td>
+</tr>
+<tr>
+<td>Ollama</td>
+<td>Interpreta preguntas que no cubren las reglas y puede redactar respuestas con evidencia.</td>
+</tr>
+</tbody>
+</table>
+<p>En la carpeta, <code>datos/</code> reúne los ejemplos. <code>readers.py</code> los lee, <code>tabular.py</code> hace cálculos y <code>db_sources.py</code> abre las fuentes autorizadas. <code>natural_mysql.py</code> interpreta preguntas de Aurora. <code>app.py</code> reúne esas piezas y <code>openwebui_pipe.py</code> conecta el chat con la API.</p>
+<h2 id="guia-readme-construccion-2-prepara-los-entornos-y-la-configuración">2. Prepara los entornos y la configuración</h2>
+<p>Trabaja desde una copia limpia del código. El proyecto usa Python 3.11 y dos entornos para instalar las versiones de cada componente por separado.</p>
+<p>En macOS ejecuta:</p>
+<pre><code class="language-sh">python3.11 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+
+python3.11 -m venv .venv_webui
+.venv_webui/bin/python -m pip install -r requirements-webui.txt
+.venv_webui/bin/python -m pip check
+
+.venv/bin/python configurar.py
+</code></pre>
+<p>En Windows usa <code>py -3.11</code> y los ejecutables de <code>Scripts</code> en lugar de <code>bin</code>. La guía de Windows tiene los comandos completos. <a href="#guia-readme-windows">Instalación en Windows</a></p>
+<p><code>configurar.py</code> toma <code>.env.example</code> como plantilla. Genera <code>BRIDGE_SECRET</code> para firmar las peticiones de la API y <code>WEBUI_SECRET_KEY</code> para las sesiones del chat. Puedes ejecutar el configurador otra vez para comprobar que conserva la configuración existente.</p>
+<p>Estos son los valores de ejemplo que puedes revisar en <code>.env</code>. Mantén las claves que generó el programa.</p>
+<pre><code class="language-dotenv">STORAGE_BACKEND=mysql
+API_PORT=18129
+UI_PORT=3187
+OLLAMA_URL=http://127.0.0.1:11434
+GENERATION_MODEL=qwen3:1.7b
+</code></pre>
+<p>La copia preparada en el Mac usa <code>18131</code>, <code>3188</code> y <code>11435</code> para la API, la interfaz y Ollama. Usa los valores de tu instalación en las pruebas.</p>
+<p>Para ejecutar los ejemplos Python de esta guía, puedes copiar cada bloque en un archivo temporal llamado <code>comprobar.py</code> junto a <code>app.py</code>. Ejecútalo con <code>.venv/bin/python comprobar.py</code> en macOS o con <code>.\.venv\Scripts\python.exe comprobar.py</code> en Windows.</p>
+<h2 id="guia-readme-construccion-3-crea-las-bases-de-mysql-y-verifica-el-caso-de-aurora">3. Crea las bases de MySQL y verifica el caso de Aurora</h2>
+<p>En macOS inicia MAMP con MySQL 8. En Windows inicia tu servicio MySQL 8. Ejecuta los dos programas con el Python del entorno de la API. En macOS se ejecutan así.</p>
+<pre><code class="language-sh">.venv/bin/python configurar_mysql.py
+.venv/bin/python verificar_mysql.py
+</code></pre>
+<p>Con los nombres de ejemplo, el configurador crea estas dos bases.</p>
+<ul>
+<li><code>demo_documental</code> recibe los datos de la aplicación. Su cuenta puede crear las tablas que necesita FastAPI.</li>
+<li><code>demo_documental_aurora</code> contiene los usuarios y préstamos ficticios. Su cuenta lectora solo tiene acceso a <code>prestamos_detalle</code>.</li>
+</ul>
+<p>El configurador guarda las cuentas limitadas en <code>.env.mysql</code> y <code>.env.sources</code>. La contraseña administrativa se usa durante la preparación de las bases.</p>
+<p>Revisa <code>datos/aurora_mysql.sql</code>. La vista junta el nombre del usuario con sus préstamos. Este es el fragmento que la crea dentro de la base de ejemplo.</p>
+<pre><code class="language-sql">CREATE VIEW prestamos_detalle AS
+SELECT p.id, p.usuario_id, u.nombre, p.libro, p.importe, p.fecha
+FROM prestamos AS p
+JOIN usuarios AS u ON u.id = p.usuario_id;
+</code></pre>
+<p>Después de configurar, ejecuta esta consulta en la base de Aurora desde tu cliente MySQL.</p>
+<pre><code class="language-sql">SELECT COUNT(*) AS prestamos,
+       COUNT(importe) AS importes_presentes,
+       SUM(importe) AS importe_total
+FROM prestamos_detalle;
+</code></pre>
+<p>Esperamos tres préstamos y dos importes presentes. El total es 20.00. El préstamo de Luis tiene importe ausente, de modo que el promedio se calcula con 12.50 y 7.50. El resultado es 10.00.</p>
+<h2 id="guia-readme-construccion-4-lee-archivos-y-conserva-la-ubicación-de-los-datos">4. Lee archivos y conserva la ubicación de los datos</h2>
+<p><code>readers.load()</code> recibe un nombre, el contenido en bytes y, si hace falta, opciones de lectura. Devuelve fragmentos para buscar y tablas para calcular. Cada fragmento conserva la página, línea, fila, hoja o campo de donde salió.</p>
+<p>El siguiente ejemplo lee el CSV de préstamos y usa <code>tabular.calculate()</code>. El cálculo usa decimales y descarta el importe ausente.</p>
+<pre><code class="language-python">from decimal import Decimal
+from pathlib import Path
+
+from readers import load
+from tabular import calculate
+
+archivo = Path(&quot;datos/prestamos.csv&quot;)
+contenido = load(archivo.name, archivo.read_bytes())
+tabla = contenido[&quot;tables&quot;][&quot;datos&quot;]
+
+promedio = calculate(tabla, operation=&quot;mean&quot;, column=&quot;importe&quot;)
+assert Decimal(promedio[&quot;result&quot;]) == Decimal(&quot;10.00&quot;)
+assert promedio[&quot;missing_values_excluded&quot;] == 1
+
+print(&quot;Promedio&quot;, promedio[&quot;result&quot;])
+print(&quot;Valores ausentes&quot;, promedio[&quot;missing_values_excluded&quot;])
+</code></pre>
+<p>Usamos el mismo esquema de tablas para CSV, Excel, JSON y las vistas de MySQL. Así podemos aplicar las mismas operaciones sobre fuentes distintas y mostrar de qué filas salió el resultado.</p>
+<h2 id="guia-readme-construccion-5-busca-fragmentos-antes-de-responder">5. Busca fragmentos antes de responder</h2>
+<p>Al cargar un archivo, <code>app.py</code> guarda cada fragmento junto con un vector de Sentence Transformers. Un vector es una lista de números que permite comparar el contenido de un fragmento con una pregunta.</p>
+<p>La búsqueda léxica usa coincidencias de palabras con TF-IDF. La semántica compara vectores. La híbrida toma en cuenta ambos tipos de búsqueda. En el ZIP, <code>exercises.py</code> incluye una demostración léxica y deja las comparaciones para E1. La API verifica la evidencia antes de responder.</p>
+<p>Puedes probar primero la búsqueda por palabras con un fragmento del ejemplo. Aquí usamos el modo extractivo, que responde con el texto de la fuente.</p>
+<pre><code class="language-python">from pathlib import Path
+
+from exercises import produce_answer, rank_candidates
+from readers import load
+
+archivo = Path(&quot;datos/politicas.txt&quot;)
+partes = load(archivo.name, archivo.read_bytes())[&quot;parts&quot;]
+fragmentos = [
+    {
+        &quot;id&quot;: f&quot;politica-{numero}&quot;,
+        &quot;document&quot;: archivo.name,
+        &quot;version&quot;: 1,
+        **parte,
+    }
+    for numero, parte in enumerate(partes, start=1)
+]
+
+pregunta = &quot;¿Cuánto dura el préstamo?&quot;
+ordenados = rank_candidates(pregunta, fragmentos, &quot;lexica&quot;, embed=None)
+respuesta = produce_answer(pregunta, ordenados[:1], &quot;extractivo&quot;)
+
+assert &quot;siete días&quot; in respuesta[&quot;answer&quot;]
+assert respuesta[&quot;references&quot;][0][&quot;document&quot;] == archivo.name
+print(respuesta[&quot;answer&quot;])
+</code></pre>
+<p>En E2 se desarrolla la síntesis con citas. Parte de los fragmentos seleccionados y comprueba con tus propios casos qué afirmaciones quedan respaldadas y cuándo conviene mostrar el texto original.</p>
+<h2 id="guia-readme-construccion-6-convierte-preguntas-de-mysql-en-operaciones">6. Convierte preguntas de MySQL en operaciones</h2>
+<p><code>db_sources.py</code> busca la conexión y las columnas en la política de <code>.env.sources</code>. Lee la vista con la cuenta de Aurora y devuelve filas con tipos y ubicación.</p>
+<p><code>natural_mysql.py</code> intenta interpretar las preguntas comunes con reglas. Para <strong>¿Cuántos préstamos tiene Ana?</strong> prepara un plan con la operación <code>count</code> y un filtro por nombre. Para otras formulaciones, Ollama propone un plan con la misma estructura. Python lo valida y realiza el cálculo con las filas autorizadas.</p>
+<p>Este ejemplo muestra el plan y su resultado. Ejecuta primero la configuración de MySQL.</p>
+<pre><code class="language-python">from dotenv import load_dotenv
+
+from db_sources import read
+from natural_mysql import simple_plan, validate
+from tabular import calculate
+
+load_dotenv(&quot;.env.sources&quot;, override=True)
+tabla, momento, motor = read(&quot;aurora_mamp&quot;, &quot;prestamos_detalle&quot;)
+pregunta = &quot;¿Cuántos préstamos tiene Ana?&quot;
+
+plan = simple_plan(pregunta, tabla)
+assert plan is not None
+plan = validate(plan, tabla, pregunta, [])
+
+resultado = calculate(
+    tabla,
+    operation=plan.operation,
+    column=plan.column,
+    filters=[filtro.model_dump() for filtro in plan.filters],
+)
+
+assert resultado[&quot;result&quot;] == 2
+print(plan.model_dump())
+print(&quot;Préstamos de Ana&quot;, resultado[&quot;result&quot;])
+</code></pre>
+<p>La validación revisa que existan las columnas y que el plan conserve el nombre y los valores pedidos. Ollama entrega datos estructurados. El código controla la consulta y los permisos de lectura.</p>
+<h2 id="guia-readme-construccion-7-conecta-la-lógica-con-fastapi">7. Conecta la lógica con FastAPI</h2>
+<p><code>storage.py</code> prepara la conexión con MySQL. <code>app.py</code> crea las tablas de la aplicación al iniciar y reúne la carga, la búsqueda y los cálculos.</p>
+<table>
+<thead>
+<tr>
+<th>Ruta</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /health</code></td>
+<td>Comprueba la conexión de la API con su base.</td>
+</tr>
+<tr>
+<td><code>POST /documents</code></td>
+<td>Procesa un archivo y guarda los fragmentos y sus vectores.</td>
+</tr>
+<tr>
+<td><code>POST /query</code></td>
+<td>Elige la consulta de Aurora o la búsqueda en documentos. Guarda la respuesta por propietario e identificador de solicitud.</td>
+</tr>
+<tr>
+<td><code>POST /calculate</code></td>
+<td>Calcula sobre una tabla de archivo o una vista autorizada.</td>
+</tr>
+<tr>
+<td><code>GET /sources/{identifier}</code></td>
+<td>Permite revisar el fragmento que respaldó una respuesta.</td>
+</tr>
+</tbody>
+</table>
+<p>El conector envía la identidad del usuario, la hora y una firma HMAC. La firma se calcula con la clave del puente y los bytes exactos de la petición. La API la verifica antes de abrir los datos del propietario.</p>
+<p>Con FastAPI en marcha, puedes comprobar una petición de lectura firmada. El ejemplo obtiene la clave del archivo local sin imprimirla.</p>
+<pre><code class="language-python">import hashlib
+import hmac
+import time
+
+import httpx
+from dotenv import dotenv_values
+
+config = dotenv_values(&quot;.env&quot;)
+api = &quot;http://127.0.0.1:&quot; + config.get(&quot;API_PORT&quot;, &quot;18129&quot;)
+propietario = &quot;comprobacion_construccion&quot;
+marca = str(int(time.time()))
+mensaje = f&quot;{propietario}\n{marca}\n&quot;.encode()
+firma = hmac.new(config[&quot;BRIDGE_SECRET&quot;].encode(), mensaje, hashlib.sha256)
+
+with httpx.Client(timeout=10) as cliente:
+    salud = cliente.get(api + &quot;/health&quot;)
+    salud.raise_for_status()
+    assert salud.json()[&quot;storage&quot;] == &quot;mysql&quot;
+
+    assert cliente.get(api + &quot;/documents&quot;).status_code == 401
+    documentos = cliente.get(
+        api + &quot;/documents&quot;,
+        headers={
+            &quot;X-Owner&quot;: propietario,
+            &quot;X-Time&quot;: marca,
+            &quot;X-Signature&quot;: firma.hexdigest(),
+        },
+    )
+    documentos.raise_for_status()
+    assert isinstance(documentos.json(), list)
+    print(&quot;La API acepta la petición firmada.&quot;)
+</code></pre>
+<p>La lista puede estar vacía porque el perfil de comprobación todavía no tiene documentos. En una petición con cuerpo, la firma incluye también esos bytes.</p>
+<h3 id="guia-readme-construccion-cómo-damos-formato-a-las-respuestas">Cómo damos formato a las respuestas</h3>
+<p>El cálculo devuelve el resultado y sus datos de revisión. <code>natural_mysql.py</code> conserva los filtros y la fuente en <code>database_result</code>. <code>app.py</code> guarda el identificador de consulta con la respuesta. Quitamos <strong>Filtros</strong>, <strong>Fuente</strong> y <strong>Consulta</strong> del texto del chat al separar esos campos del mensaje que se muestra.</p>
+<p><code>tabular.render_answer()</code> redacta con los valores ya calculados. Usa el nombre y el número para el conteo, identifica la operación en los importes y arma una tabla en los listados. <code>/calcular</code> usa el mismo formato. <code>openwebui_pipe.py</code> muestra <code>answer</code> y envía las citas de los documentos por separado.</p>
+<p>Este ejemplo usa un resultado reducido para mostrar las dos frases posibles.</p>
+<pre><code class="language-python">from tabular import render_answer
+
+resultado = {
+    &quot;operation&quot;: &quot;count&quot;,
+    &quot;result&quot;: 2,
+    &quot;filters&quot;: [{&quot;column&quot;: &quot;nombre&quot;, &quot;op&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;Ana&quot;}],
+    &quot;source&quot;: {&quot;dataset&quot;: &quot;prestamos_detalle&quot;},
+}
+
+print(render_answer(resultado, variant=0))
+print(render_answer(resultado, variant=1))
+</code></pre>
+<p>Las frases son <strong>Ana tiene 2 préstamos</strong> y <strong>Encontré 2 préstamos de Ana</strong>. FastAPI alterna entre las dos formas según las veces que esa cuenta haya enviado la misma pregunta. Guarda el texto elegido, así un reintento con el mismo identificador devuelve la misma frase. La variación se hace en Python y no requiere otra llamada a Ollama.</p>
+<p>En una respuesta extractiva, la variante puede añadir una frase breve antes del fragmento. El texto del documento y sus citas se conservan tal como se recuperaron.</p>
+<h2 id="guia-readme-construccion-8-prepara-ollama-y-postgresql">8. Prepara Ollama y PostgreSQL</h2>
+<p>Instala Ollama, abre su aplicación y descarga el modelo.</p>
+<pre><code class="language-sh">ollama pull qwen3:1.7b
+ollama list
+</code></pre>
+<p>Confirma que la lista incluya <code>qwen3:1.7b</code>. FastAPI lee <code>OLLAMA_URL</code> y <code>GENERATION_MODEL</code> de <code>.env</code>. La plantilla usa el puerto <code>11434</code>. Si lo cambiaste, usa el puerto de tu instalación. <a href="#guia-docs-puente-conectar-ollama-local">Configuración por sistema</a></p>
+<p>Con Ollama en marcha, este ejemplo usa los mismos valores del demo y pide una respuesta breve. Sirve para comprobar el motor por separado antes de probar el chat con datos.</p>
+<pre><code class="language-python">import httpx
+from dotenv import dotenv_values
+
+config = dotenv_values(&quot;.env&quot;)
+url = config[&quot;OLLAMA_URL&quot;].rstrip(&quot;/&quot;)
+respuesta = httpx.post(
+    url + &quot;/api/chat&quot;,
+    json={
+        &quot;model&quot;: config[&quot;GENERATION_MODEL&quot;],
+        &quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;¿Cuánto es dos más dos?&quot;}],
+        &quot;think&quot;: False,
+        &quot;stream&quot;: False,
+    },
+    timeout=60,
+)
+respuesta.raise_for_status()
+print(respuesta.json()[&quot;message&quot;][&quot;content&quot;])
+</code></pre>
+<p><code>natural_mysql.py</code> usa esa conexión cuando necesita interpretar una pregunta. El mismo servicio local permite experimentar con la redacción generativa en E2. <a href="https://docs.ollama.com/api/chat">API de chat de Ollama</a></p>
+<p>Para las conversaciones, elige el procedimiento de tu sistema. En macOS, desde una instalación limpia, prepara una instancia local.</p>
+<pre><code class="language-sh">.venv/bin/python configurar_postgresql.py --port 55442
+.venv/bin/python gestionar_demo.py detener
+</code></pre>
+<p>El primer comando crea la base y verifica la cuenta. El segundo cierra esa instancia de preparación. El lanzador de macOS la vuelve a iniciar cuando abras el demo.</p>
+<p>En Windows crea el usuario y la base desde pgAdmin. Usa <code>configurar_webui_windows.py</code> para guardar y comprobar la conexión a ese servicio. <a href="#guia-readme-windows">Paso 4 de la guía de Windows</a></p>
+<p>En ambos sistemas, <code>iniciar_webui.py</code> lee <code>WEBUI_DATABASE_URL</code> y usa <code>WEBUI_DATA_DIR</code> para los adjuntos. En una instalación nueva, la ruta de datos es relativa al proyecto.</p>
+<pre><code class="language-dotenv">WEBUI_DATA_DIR=.runtime/webui
+</code></pre>
+<p>Para inspeccionar la base, registra una conexión en pgAdmin con el host, puerto, base y usuario que aparecen en <code>.env.webui</code>. La contraseña está en <code>WEBUI_PG_PASSWORD</code>. Abre <strong>Databases / demo_webui / Schemas / public / Tables</strong> después del primer arranque de Open WebUI. Ahí puedes ver las cuentas, las conversaciones y la configuración. En MySQL, FastAPI guarda sus documentos procesados y consultas en <code>demo_documental</code>, y la biblioteca ficticia queda en <code>demo_documental_aurora</code>. <a href="#guia-readme-consultar-postgresql-desde-pgadmin-en-macos">Pasos en macOS</a> y <a href="#guia-readme-windows-consultar-postgresql-desde-pgadmin-en-windows">pasos en Windows</a>.</p>
+<h2 id="guia-readme-construccion-9-registra-el-conector-en-open-webui">9. Registra el conector en Open WebUI</h2>
+<p>Abre el demo con <code>./iniciar_demo.sh</code> en macOS o <code>.\iniciar_demo.cmd</code> en PowerShell. Abre la dirección que imprime el lanzador y crea la primera cuenta.</p>
+<p><code>conectar_openwebui.py</code> registra la función de <code>openwebui_pipe.py</code> con el nombre <strong>Qwerty</strong>. En macOS ejecútalo así.</p>
+<pre><code class="language-sh">.venv/bin/python conectar_openwebui.py
+</code></pre>
+<p>En Windows usa <code>.\.venv\Scripts\python.exe conectar_openwebui.py</code>. Introduce la cuenta administradora del chat y confirma los puertos de la interfaz y de la API. La conexión se hace desde Open WebUI con la clave de <code>.env</code>.</p>
+<p>El conector toma el último mensaje y la identidad de Open WebUI. Si escribes <code>/cargar</code>, lee el adjunto de tu cuenta y lo envía a <code>POST /documents</code>. Si haces una pregunta, llama a <code>POST /query</code>. Con <code>file_context=false</code>, el conector controla qué archivos se envían y qué fuentes se muestran.</p>
+<p>Si ya tenías Qwerty instalado, reinicia el demo y vuelve a ejecutar <code>conectar_openwebui.py</code> con tu cuenta administradora para registrar el conector actualizado. Revisa la actualización cuando el programa pida confirmarla. Desde esa actualización, las cargas y sustituciones guardan el ID del adjunto para que <code>/purgar</code> pueda identificarlo.</p>
+<h3 id="guia-readme-construccion-preguntas-para-probar-el-demo">Preguntas para probar el demo</h3>
+<p>Escribe estas preguntas directamente en un chat con <strong>Qwerty</strong>. Los resultados de MySQL corresponden a los datos ficticios de Aurora incluidos en el demo.</p>
+<table>
+<thead>
+<tr>
+<th>Pregunta sobre MySQL</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Cuántos préstamos hay en MySQL?</td>
+<td>Hay 3 préstamos.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene Ana?</td>
+<td>Ana tiene 2 préstamos.</td>
+</tr>
+<tr>
+<td>¿Y Luis?</td>
+<td>Si la haces después de la pregunta sobre Ana, Luis tiene 1 préstamo.</td>
+</tr>
+<tr>
+<td>¿Cuántos préstamos tiene cada usuario?</td>
+<td>Ana tiene 2 y Luis tiene 1.</td>
+</tr>
+<tr>
+<td>Muestra los préstamos de Ana</td>
+<td>Aparecen <em>PLN aplicado</em> y <em>Bases de datos</em>.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos?</td>
+<td>El total es 20.00.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe promedio de los préstamos?</td>
+<td>El promedio es 10.00 y se calcula con los 2 importes disponibles.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe máximo de los préstamos?</td>
+<td>El máximo es 12.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe mínimo de los préstamos?</td>
+<td>El mínimo es 7.50.</td>
+</tr>
+<tr>
+<td>¿Cuál es el importe total de los préstamos con importe mayor que 10 en MySQL?</td>
+<td>El total de los préstamos que cumplen la condición es 12.50.</td>
+</tr>
+<tr>
+<td>¿Qué columnas tiene la vista de préstamos en MySQL?</td>
+<td>La vista <code>prestamos_detalle</code> incluye ID, ID de usuario, nombre, libro, importe y fecha.</td>
+</tr>
+</tbody>
+</table>
+<p>Para probar los archivos, adjunta el indicado desde <code>datos/</code> y envía <code>/cargar</code>. Cuando el chat confirme la carga, escribe la pregunta y abre la referencia para revisar de dónde sale la respuesta.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo de ejemplo</th>
+<th>Qué escribir en el chat</th>
+<th>Qué puedes comprobar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>politicas.txt</code> o <code>politicas.pdf</code></td>
+<td>¿Cuánto dura el préstamo?</td>
+<td>El préstamo dura siete días naturales.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuántos préstamos se permiten por persona?</td>
+<td>La política permite hasta tres libros por persona.</td>
+</tr>
+<tr>
+<td><code>politicas.txt</code></td>
+<td>¿Cuándo se permite la renovación?</td>
+<td>Se permite una vez si no existe otra reserva.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuál es el horario de la biblioteca?</td>
+<td>Abre de lunes a viernes de 8 a 20 y el sábado de 9 a 13. El domingo permanece cerrada.</td>
+</tr>
+<tr>
+<td><code>horarios.txt</code></td>
+<td>¿Cuándo abre los sábados?</td>
+<td>Abre de 9 a 13 horas.</td>
+</tr>
+<tr>
+<td><code>multas.txt</code></td>
+<td>¿Cuál es la multa por retraso?</td>
+<td>Cinco créditos ficticios por libro y día.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Por cuántas horas se reservan las salas de estudio?</td>
+<td>Se reservan por dos horas.</td>
+</tr>
+<tr>
+<td><code>salas.txt</code></td>
+<td>¿Cuándo se cancela la reserva de sala?</td>
+<td>Después de quince minutos de retraso.</td>
+</tr>
+<tr>
+<td><code>prestamos.csv</code>, <code>biblioteca.xlsx</code> o <code>biblioteca.json</code></td>
+<td>PLN aplicado</td>
+<td>El chat localiza el título en el archivo. Prueba cada formato por separado para revisar su referencia.</td>
+</tr>
+<tr>
+<td>Cualquiera de estos ejemplos</td>
+<td>¿Cuál es el clima en Marte?</td>
+<td>El asistente indica que no encontró esa información.</td>
+</tr>
+</tbody>
+</table>
+<p>Al repetir una pregunta de MySQL, la frase puede variar. El resultado se calcula con los datos disponibles en ese momento. Para sumar, promediar o contar filas de un archivo CSV, Excel o JSON, consulta <a href="#guia-docs-uso-cálculos-que-podemos-comprobar">los ejemplos de <code>/calcular</code></a>.</p>
+<h2 id="guia-readme-construccion-10-reúne-el-arranque-y-prueba-el-cierre">10. Reúne el arranque y prueba el cierre</h2>
+<p>En macOS, <code>gestionar_demo_mac.py</code> registra los servicios en <code>launchd</code>. Calcula sus rutas a partir de la ubicación actual de la carpeta. En Windows, <code>gestionar_demo_windows.py</code> comprueba MySQL y PostgreSQL y administra los procesos de FastAPI y Open WebUI. Los comandos de cada sistema llaman al lanzador correspondiente.</p>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>macOS</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iniciar</td>
+<td><code>./iniciar_demo.sh</code></td>
+<td><code>.\iniciar_demo.cmd</code></td>
+</tr>
+<tr>
+<td>Detener</td>
+<td><code>./detener_demo.sh</code></td>
+<td><code>.\detener_demo.cmd</code></td>
+</tr>
+</tbody>
+</table>
+<p>Haz una pregunta, detén el demo y vuelve a iniciarlo. Entra con la misma cuenta y abre la conversación anterior. La prueba comprueba tanto el cierre de los procesos como la persistencia de los datos.</p>
+<h2 id="guia-readme-construccion-11-comprueba-los-resultados-y-prepara-un-respaldo">11. Comprueba los resultados y prepara un respaldo</h2>
+<p>Ejecuta la suite con <code>.venv/bin/python -m pytest -q</code> en macOS o <code>.\.venv\Scripts\python.exe -m pytest -q</code> en Windows. Las pruebas cubren lectores, cálculos, filtros y control de procesos. Aparte, prueba con el chat y tus servicios locales.</p>
+<table>
+<thead>
+<tr>
+<th>Qué comprobar</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consulta de Ana</td>
+<td>Ana tiene 2 préstamos.</td>
+</tr>
+<tr>
+<td>Cálculo de importes</td>
+<td>Total 20.00 y promedio 10.00.</td>
+</tr>
+<tr>
+<td>Política de préstamos</td>
+<td>Siete días naturales, con referencia al archivo.</td>
+</tr>
+<tr>
+<td>Pregunta ajena a las fuentes</td>
+<td>El asistente indica que no tiene evidencia suficiente.</td>
+</tr>
+<tr>
+<td>Dos cuentas</td>
+<td>Cada una consulta sus propios archivos y conversaciones.</td>
+</tr>
+<tr>
+<td>Reinicio</td>
+<td>La cuenta y la conversación siguen disponibles.</td>
+</tr>
+</tbody>
+</table>
+<p>Para actualizar dependencias, detén el demo y respalda las bases, los adjuntos y la configuración privada. Después usa los requisitos fijados de cada entorno y repite las pruebas.</p>
+<p>Si editas las guías, vuelve a generar <code>Documentacion.html</code> con <code>.venv_webui/bin/python generar_documentacion.py</code> en macOS o con <code>.\.venv_webui\Scripts\python.exe generar_documentacion.py</code> en Windows. Puedes mover o copiar la documentación sin regenerarla.</p>
+<h2 id="guia-readme-construccion-12-sigue-una-conversación-con-sql">12. Sigue una conversación con SQL</h2>
+<p>Abre un chat normal con <strong>Qwerty</strong>. Adjunta <code>datos/politicas.txt</code>, envía <code>/cargar</code> y copia el <code>id</code> del documento que devuelve el chat. Después pregunta <strong>¿Cuánto dura el préstamo?</strong>. La respuesta debe mencionar siete días naturales y citar <code>politicas.txt</code>. Cambia el título de esa conversación a <strong>Prueba SQL Qwerty</strong> y úsala para las consultas siguientes.</p>
+<h3 id="guia-readme-construccion-historial-del-chat-en-postgresql">Historial del chat en PostgreSQL</h3>
+<p>En pgAdmin abre <strong>Query Tool</strong> desde <code>demo_webui</code>. Busca el chat por su título y copia su <code>id</code>. La fecha de la última actividad se obtiene a partir de la marca de tiempo que guarda Open WebUI.</p>
+<pre><code class="language-sql">SELECT id, title, to_timestamp(updated_at) AS ultima_actividad
+FROM public.chat
+WHERE title = 'Prueba SQL Qwerty'
+ORDER BY updated_at DESC;
+</code></pre>
+<p>En la siguiente consulta, reemplaza <code>ID_DEL_CHAT</code> por ese valor. <code>role</code> indica quién escribió cada mensaje. <code>content</code> está guardado como JSON y <code>#&gt;&gt; '{}'</code> extrae su valor como texto. Verás el comando de carga, la pregunta y las respuestas en el orden en que se guardaron.</p>
+<pre><code class="language-sql">SELECT to_timestamp(created_at) AS fecha,
+       role AS quien_escribio,
+       content #&gt;&gt; '{}' AS mensaje
+FROM public.chat_message
+WHERE chat_id = 'ID_DEL_CHAT'
+ORDER BY created_at, id;
+</code></pre>
+<h3 id="guia-readme-construccion-documento-fragmentos-y-respuesta-en-mysql">Documento, fragmentos y respuesta en MySQL</h3>
+<p>En macOS, abre phpMyAdmin de MAMP. En Windows, usa MySQL Workbench o el cliente MySQL que ya tengas. Selecciona <code>demo_documental</code> o el esquema indicado en <code>MYSQL_DATABASE</code> dentro de <code>.env.mysql</code>. En el primer renglón reemplaza <code>ID_DEL_DOCUMENTO</code> por el valor que devolvió <code>/cargar</code>. Ejecuta el bloque en la misma pestaña. <code>@documento_id</code> conserva ese valor solo en la sesión SQL.</p>
+<pre><code class="language-sql">SET @documento_id = 'ID_DEL_DOCUMENTO';
+
+SELECT id, name, version, status, LEFT(body, 180) AS texto_procesado
+FROM documents
+WHERE id = @documento_id AND deleted = 0;
+
+SELECT id, version, page,
+       LEFT(body, 180) AS fragmento,
+       JSON_LENGTH(embedding) AS dimensiones_del_vector
+FROM chunks
+WHERE document_id = @documento_id
+ORDER BY page, id;
+
+SELECT t.request_id, t.query AS pregunta,
+       JSON_UNQUOTE(JSON_EXTRACT(t.response, '$.answer')) AS respuesta,
+       JSON_EXTRACT(t.response, '$.references[*].document') AS archivos_citados
+FROM turns AS t
+JOIN documents AS d ON d.owner = t.owner
+WHERE d.id = @documento_id AND d.deleted = 0
+  AND t.query = '¿Cuánto dura el préstamo?'
+  AND JSON_SEARCH(t.response, 'one', CONCAT(d.id, ':v%:part%'),
+                  NULL, '$.references[*].id') IS NOT NULL;
+</code></pre>
+<p><code>documents</code> muestra el estado y la versión del archivo procesado. <code>chunks</code> muestra las partes del texto y el tamaño de su representación numérica. <code>turns</code> guarda la pregunta y el resultado de FastAPI. La última consulta busca la pregunta en la misma cuenta y exige una cita a ese documento. Si no devuelve filas, verifica que la respuesta en el chat haya citado el archivo que acabas de cargar.</p>
+<h3 id="guia-readme-construccion-sustituir-o-eliminar-un-archivo-en-mysql">Sustituir o eliminar un archivo en MySQL</h3>
+<p>Continúa con el documento ficticio de la prueba anterior. En phpMyAdmin o MySQL Workbench, selecciona <code>demo_documental</code> o el esquema indicado en <code>.env.mysql</code>. Reemplaza <code>ID_DEL_DOCUMENTO</code> por el <code>id</code> que devolvió <code>/cargar</code>. Ejecuta el bloque completo en cada etapa para comparar los resultados.</p>
+<pre><code class="language-sql">SET @documento_id = 'ID_DEL_DOCUMENTO';
+
+SELECT id, name, status,
+       version AS ultima_version, deleted AS eliminado,
+       CASE WHEN deleted = 0 AND status = 'disponible'
+            THEN version END AS version_vigente
+FROM documents
+WHERE id = @documento_id;
+
+SELECT version, COUNT(*) AS fragmentos
+FROM chunks
+WHERE document_id = @documento_id
+GROUP BY version
+ORDER BY version;
+</code></pre>
+<ol>
+<li><strong>Antes de sustituir.</strong> Si acabas de cargar <code>politicas.txt</code>, <code>version_vigente</code> debe mostrar <code>1</code>. Anota cuántos fragmentos aparecen para esa versión.</li>
+<li><strong>Después de sustituir.</strong> Crea una copia de prueba con el texto «El préstamo dura nueve días naturales». Adjunta esa copia en el chat y envía <code>/sustituir ID</code> con el identificador original. Al confirmar la carga, repite el bloque. El identificador es el mismo, <code>version_vigente</code> ahora muestra <code>2</code> y en <code>chunks</code> aparecen solo los fragmentos de la versión 2. Pregunta de nuevo <strong>¿Cuánto dura el préstamo?</strong> y comprueba que el chat cite la versión nueva. Si falla la sustitución, la versión anterior sigue disponible.</li>
+<li><strong>Después de eliminar.</strong> Envía <code>/eliminar ID</code> en el chat con el mismo identificador. Al repetir el bloque, la fila de <code>documents</code> conserva <code>ultima_version = 2</code>, <code>eliminado</code> vale <code>1</code> y <code>version_vigente</code> es <code>NULL</code>. La consulta de fragmentos devuelve cero filas. Para saber si puedes consultar el documento, revisa <code>version_vigente</code>. El campo <code>status</code> por sí solo puede seguir mostrando <code>disponible</code>.</li>
+</ol>
+<p>La eliminación marca el documento como retirado y quita sus fragmentos del índice. MySQL conserva la fila del documento y las respuestas guardadas en <code>turns</code>. Puedes comprobar qué versiones se citaron antes de eliminar el archivo. Ejecuta esta consulta en la sesión donde definiste <code>@documento_id</code>.</p>
+<pre><code class="language-sql">SELECT t.request_id, t.query AS pregunta,
+       JSON_EXTRACT(t.response, '$.references[*].version') AS versiones_citadas
+FROM turns AS t
+JOIN documents AS d ON d.owner = t.owner
+WHERE d.id = @documento_id
+  AND JSON_SEARCH(t.response, 'one', CONCAT(d.id, ':v%:part%'),
+                  NULL, '$.references[*].id') IS NOT NULL;
+</code></pre>
+<p>Las versiones de esta última consulta corresponden a citas guardadas en respuestas previas. Para revisar qué versión puede recuperar Qwerty ahora, usa el primer bloque.</p>
+<h3 id="guia-readme-construccion-borrar-un-archivo-y-sus-citas-del-demo">Borrar un archivo y sus citas del demo</h3>
+<p>Para los archivos cargados con el conector actualizado, escribe <code>/purgar ID</code> con el identificador que devolvió <code>/cargar</code>. Qwerty muestra el nombre del documento y devuelve un comando como <code>/purgar ID confirmar CODIGO</code>. Copia el comando exacto dentro de los 10 minutos siguientes. El primer mensaje solo muestra la operación. Si cambias de opinión, basta con dejar vencer el código.</p>
+<p>La confirmación retira los adjuntos registrados de todas las versiones y elimina el documento, sus fragmentos, sus metadatos y las respuestas de FastAPI que lo citaban. Si una respuesta cita varios archivos, se elimina ese registro completo de MySQL. Qwerty cancela la purga si detecta que un adjunto se usa en otro documento de Qwerty o en una base de conocimiento de Open WebUI. Si la operación queda pendiente por un fallo, vuelve a escribir <code>/purgar ID</code> y usa una confirmación nueva.</p>
+<p>Los fragmentos purgados dejan de estar disponibles en <code>/fuente ID_FRAGMENTO</code>. Las conversaciones ya guardadas pueden conservar el texto y las citas que mostraron. Para retirar esas copias, usa el menú de cada conversación en Open WebUI. La comprobación SQL al final de esta sección también sirve para verificar <code>/purgar</code>.</p>
+<h4 id="guia-readme-construccion-procedimiento-manual-para-archivos-anteriores">Procedimiento manual para archivos anteriores</h4>
+<p>Los documentos cargados antes de esta actualización pueden carecer del ID de uno o más adjuntos. En ese caso Qwerty indica que debes seguir el procedimiento manual. Identifica cada adjunto por su cuenta, conversación y versión antes de borrarlo. Si pertenece a otro documento o base de conocimiento, conserva ese adjunto. Haz la prueba con un documento ficticio en un chat dedicado, porque borrar una conversación elimina todos sus mensajes.</p>
+<ol>
+<li>Copia el <code>id</code> que devolvió <code>/cargar</code> o usa <code>/documentos</code> para localizarlo. En el chat, envía <code>/eliminar ID</code> con ese valor. A partir de ahí, una cita antigua puede seguir mostrando el texto guardado en la conversación. Si pides el fragmento con <code>/fuente ID_FRAGMENTO</code>, Qwerty ya no puede recuperarlo.</li>
+<li>En tu perfil de Open WebUI abre <strong>Settings / Data Controls / Manage Files / Manage</strong>. Busca y elimina el adjunto exacto. Si sustituiste el archivo, revisa también los adjuntos de las versiones anteriores. Borra las conversaciones que incluyan esas citas o reproduzcan el contenido. Si hay enlaces compartidos o exportaciones, revisa también esas copias. <a href="https://docs.openwebui.com/features/chat-conversations/data-controls/files/">Gestión de archivos en Open WebUI</a>.</li>
+<li>Detén Qwerty con <code>./detener_demo.sh</code> en macOS o <code>.\detener_demo.cmd</code> en Windows. Deja MySQL en marcha. Abre una sesión en MySQL Workbench o en el cliente de terminal y selecciona el esquema indicado en <code>MYSQL_DATABASE</code> dentro de <code>.env.mysql</code>. Usa una cuenta autorizada para borrar registros de ese esquema. Conserva la misma sesión hasta confirmar o revertir la transacción.</li>
+</ol>
+<p>Comprueba primero el nombre, el propietario y el estado del documento. Sustituye <code>ID_DEL_DOCUMENTO</code> por el valor que copiaste. El resultado esperado es una fila del archivo que elegiste con <code>deleted = 1</code>.</p>
+<pre><code class="language-sql">SET @documento_id = 'ID_DEL_DOCUMENTO';
+
+SELECT id, owner, name, version, deleted
+FROM documents
+WHERE id = @documento_id;
+</code></pre>
+<p>Copia el valor de <code>owner</code> en <code>ID_DEL_PROPIETARIO</code>. El bloque siguiente solo actúa cuando el ID y el propietario corresponden a un documento ya retirado. La purga borra de FastAPI cada respuesta que cita ese documento. Si una respuesta cita varios archivos, se borra ese registro completo de <code>turns</code> y los demás documentos permanecen disponibles.</p>
+<pre><code class="language-sql">SET @propietario = 'ID_DEL_PROPIETARIO';
+SET @objetivo = NULL;
+
+START TRANSACTION;
+
+SELECT id INTO @objetivo
+FROM documents
+WHERE id = @documento_id AND owner = @propietario AND deleted = 1
+FOR UPDATE;
+
+DELETE FROM turns
+WHERE owner = @propietario
+  AND JSON_SEARCH(response, 'one', CONCAT(@objetivo, ':v%:part%'),
+                  NULL, '$.references[*].id') IS NOT NULL;
+
+DELETE FROM chunks WHERE document_id = @objetivo;
+DELETE FROM document_locations WHERE document_id = @objetivo;
+DELETE FROM document_structures WHERE document_id = @objetivo;
+DELETE FROM source_manifest WHERE document_id = @objetivo;
+DELETE FROM document_attachments WHERE document_id = @objetivo;
+
+DELETE FROM documents
+WHERE id = @objetivo AND owner = @propietario AND deleted = 1;
+SELECT ROW_COUNT() AS documentos_borrados;
+</code></pre>
+<p>Si los comandos terminan correctamente y <code>documentos_borrados</code> vale <code>1</code>, ejecuta <code>COMMIT;</code> en la misma sesión. Si aparece un error o el resultado es distinto, ejecuta <code>ROLLBACK;</code> y revisa el identificador y el esquema antes de reintentar. Tras confirmar, el borrado es irreversible en esa base activa.</p>
+<p>Verifica que todos los conteos sean <code>0</code>. Si abriste otra sesión, define de nuevo <code>@documento_id</code> y <code>@propietario</code> antes de ejecutar la consulta.</p>
+<pre><code class="language-sql">SELECT
+  (SELECT COUNT(*) FROM documents WHERE id = @documento_id) AS documentos,
+  (SELECT COUNT(*) FROM chunks WHERE document_id = @documento_id) AS fragmentos,
+  (SELECT COUNT(*) FROM document_locations WHERE document_id = @documento_id) AS ubicaciones,
+  (SELECT COUNT(*) FROM document_structures WHERE document_id = @documento_id) AS estructuras,
+  (SELECT COUNT(*) FROM source_manifest WHERE document_id = @documento_id) AS manifiestos,
+  (SELECT COUNT(*) FROM document_attachments WHERE document_id = @documento_id) AS adjuntos_registrados,
+  (SELECT COUNT(*) FROM turns
+   WHERE owner = @propietario
+     AND JSON_SEARCH(response, 'one', CONCAT(@documento_id, ':v%:part%'),
+                     NULL, '$.references[*].id') IS NOT NULL) AS respuestas_con_citas;
+</code></pre>
+<p>Esta verificación cubre el ID en la base activa. Cada carga duplicada tiene su propio ID. Si necesitas retirar todas las copias, revisa por separado los respaldos, los registros de recuperación de la base y cualquier mensaje o exportación que contenga texto copiado sin una cita registrada.</p>
+<p><a href="#guia-docs-respaldo">Respaldo y recuperación</a> | <a href="#guia-docs-errores">Diagnóstico</a> | <a href="#guia-readme-windows">Instalación en Windows</a></p>
+</section>
+<section id="guia-preguntas-frecuentes"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-preguntas-frecuentes-preguntas-frecuentes-de-qwerty">Preguntas frecuentes de Qwerty</h1>
+<p>Esta guía explica cómo incorporar fuentes, dar acceso a más personas y personalizar el demo. Para instalarlo y hacer las primeras pruebas, abre el <a href="#guia-readme">README de macOS</a> o el <a href="#guia-readme-windows">README de Windows</a>.</p>
+<h2 id="guia-preguntas-frecuentes-dónde-pongo-los-archivos-que-quiero-consultar">¿Dónde pongo los archivos que quiero consultar?</h2>
+<p>Guárdalos donde te resulte práctico. La carpeta <code>datos/</code> contiene los ejemplos del demo. Para que el asistente lea un archivo, adjúntalo en un chat con <strong>Qwerty</strong> y envía <code>/cargar</code>. El servicio procesa el contenido y lo deja disponible para tu cuenta. Puedes preguntar en cuanto termine la carga, sin reiniciar.</p>
+<p>Puedes cargar TXT, PDF con texto seleccionable, Excel en formato XLSX, CSV y JSON. Prueba con <code>datos/politicas.txt</code> y pregunta <strong>¿Cuánto dura el préstamo?</strong>. Abre la referencia que acompaña la respuesta para comprobar los siete días naturales.</p>
+<h2 id="guia-preguntas-frecuentes-cómo-actualizo-un-archivo-ya-cargado">¿Cómo actualizo un archivo ya cargado?</h2>
+<p>Escribe <code>/documentos</code> para localizar su identificador. Adjunta la versión nueva y envía <code>/sustituir ID</code>, cambiando <code>ID</code> por el que te mostró el chat. Espera la confirmación y repite la pregunta. El asistente consulta la versión nueva sin reiniciar. Si el archivo nuevo falla, puedes seguir consultando la versión anterior y volver a intentar el reemplazo con un archivo válido.</p>
+<h2 id="guia-preguntas-frecuentes-puedo-agregar-tablas-de-mysql">¿Puedo agregar tablas de MySQL?</h2>
+<p>Sí. El chatbot consulta únicamente las tablas y vistas que el administrador autoriza. Una vista permite exponer un conjunto concreto de filas y columnas. Por ejemplo, <code>prestamos_detalle</code> reúne los préstamos y los nombres de los usuarios de Aurora.</p>
+<ol>
+<li>Prepara una tabla o vista con los campos que quieres consultar y concede permiso <code>SELECT</code> a una cuenta lectora.</li>
+<li>Agrega la tabla o vista y las columnas permitidas a <code>SOURCE_CONNECTIONS</code> en <code>.env.sources</code>. Si es otra base, configura también el alias, su conexión privada y las cuentas autorizadas.</li>
+<li>Reinicia el demo para que FastAPI lea la configuración. Prueba con una cuenta autorizada y verifica el resultado en MySQL.</li>
+</ol>
+<p>Para las preguntas en lenguaje natural, menciona MySQL y el nombre de la vista cuando haya varias. El intérprete de <code>natural_mysql.py</code> está preparado para el vocabulario de Aurora. Si incorporas otro tema, puedes adaptar sus reglas y probar las nuevas preguntas. El comando <code>/calcular</code> permite indicar de forma explícita la fuente, la operación y las columnas. <a href="#guia-docs-bases-de-datos">Configuración de fuentes de lectura</a> y <a href="#guia-docs-uso">ejemplos de uso</a>.</p>
+<h2 id="guia-preguntas-frecuentes-tengo-que-reiniciar-si-agrego-filas-a-las-tablas-actuales">¿Tengo que reiniciar si agrego filas a las tablas actuales?</h2>
+<p>Guarda los cambios en MySQL y envía una pregunta nueva. El chatbot vuelve a consultar <code>prestamos_detalle</code>, así que las filas que aparezcan en esa vista se reflejan sin reiniciar. Por ejemplo, si Ana tiene dos préstamos y agregas un tercero vinculado a su usuario, el siguiente conteo dará tres. Si agregas columnas o cambias qué fuente se puede consultar, revisa la configuración de acceso y reinicia después de editarla.</p>
+<h2 id="guia-preguntas-frecuentes-puedo-cambiar-el-nombre-o-el-logo">¿Puedo cambiar el nombre o el logo?</h2>
+<p>En el <strong>Panel de administración</strong>, abre <strong>Ajustes / Modelos</strong> y edita <strong>Qwerty</strong>. Ahí puedes cambiar el nombre y el ícono que aparecen en el selector del chat. Conserva el identificador interno <code>pln_documental</code> para que el conector siga asociado al modelo. <a href="https://docs.openwebui.com/features/workspace/models/">Editor de modelos</a>.</p>
+<p>El título y el logo de la interfaz pertenecen a Open WebUI. El ajuste <code>WEBUI_NAME</code> se aplica al iniciar y añade «(Open WebUI)» al nombre configurado. Antes de personalizar el título general o sustituir el logo oficial, revisa las condiciones de marca. Para un grupo de clase puedes usar un ícono propio en el asistente y conservar la identidad de la interfaz. <a href="https://docs.openwebui.com/reference/env-configuration/#webui_name">Ajuste del título</a> y <a href="https://docs.openwebui.com/license/">política de marca</a>.</p>
+<h2 id="guia-preguntas-frecuentes-puedo-tener-más-de-50-usuarios-cuándo-tiene-un-costo">¿Puedo tener más de 50 usuarios? ¿Cuándo tiene un costo?</h2>
+<p>Sí. Puedes dar acceso a más de 50 personas en una instalación interna de Open WebUI sin pagar una licencia por usuario si conservas el nombre y el logo oficiales. La excepción de 50 se refiere a modificar la marca. Cuenta personas con acceso directo en cualquier periodo móvil de 30 días. Si superas ese número y quieres sustituir la marca, necesitas permiso previo por escrito de Open WebUI o una licencia empresarial que autorice el cambio. La licencia empresarial se cotiza con el proveedor. <a href="https://github.com/open-webui/open-webui/blob/v0.12.5/LICENSE">Licencia de la versión 0.12.5</a> y <a href="https://docs.openwebui.com/enterprise/">opciones empresariales</a>.</p>
+<p>En este demo, Ollama ejecuta el modelo de forma local. Si alojas el demo para todo el grupo, considera los recursos del equipo o el costo de hospedar los servicios. La cantidad de cuentas y la cantidad de consultas simultáneas se comprueban por separado.</p>
+<h2 id="guia-preguntas-frecuentes-cómo-doy-acceso-a-todo-el-grupo">¿Cómo doy acceso a todo el grupo?</h2>
+<ol>
+<li>Desde el panel de administración de Open WebUI, crea o aprueba las cuentas con el rol de usuario. En <strong>Ajustes / Modelos</strong>, edita <strong>Qwerty</strong> y concede acceso a los usuarios o al grupo correspondiente. Prueba con una cuenta de alumno que pueda seleccionar el asistente, cargar un archivo y consultar los datos ficticios de Aurora. <a href="https://docs.openwebui.com/getting-started/sharing/">Guía para compartir Open WebUI</a>.</li>
+<li>Si cada alumno ejecuta su copia, usa la guía de instalación de su sistema. Si todos van a usar una sola instancia, la dirección <code>127.0.0.1</code> de este demo solo funciona en el equipo que lo ejecuta. Para compartirla, instala el demo en un equipo accesible por una red institucional o VPN. Expón la interfaz mediante HTTPS y mantén FastAPI, Ollama y las bases de datos detrás de la interfaz.</li>
+<li>Antes de abrir el acceso al grupo completo, prueba varias consultas simultáneas con datos ficticios. Mide el tiempo de respuesta y revisa memoria y CPU. Usa dos cuentas para comprobar que cada persona ve sus propios documentos. En macOS el lanzador usa Ollama en <code>127.0.0.1</code>. Para atender a más personas puedes instalar el demo completo en un equipo institucional con más recursos y repetir las pruebas. <a href="#guia-docs-puente-conectar-ollama-local">Conexión con Ollama</a>.</li>
+</ol>
+</section>
+<section id="guia-docs-arquitectura"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-arquitectura-arquitectura-local">Arquitectura local</h1>
+<p>Open WebUI guarda las cuentas, los permisos y las conversaciones en PostgreSQL. Los adjuntos quedan en <code>.runtime/webui/uploads</code>. La interfaz usa su propio entorno de Python.</p>
+<p>openwebui_pipe.py firma la identidad y llama a FastAPI. app.py verifica esa firma y decide si la pregunta corresponde a documentos o a una fuente MySQL. La API utiliza MySQL de MAMP para su evidencia y sus respuestas. La cuenta lectora de Aurora consulta únicamente prestamos_detalle.</p>
+<p><code>natural_mysql.py</code> interpreta las preguntas habituales con reglas. Para otras formulaciones, Ollama propone un plan. La API lo valida y <code>tabular.py</code> calcula el resultado sobre las filas autorizadas. Las preguntas sobre el límite de préstamos por persona se buscan en los documentos.</p>
+<p><code>readers.py</code> extrae documentos conservando su ubicación. Sentence Transformers produce las representaciones numéricas que se guardan en MySQL. En el ZIP, <code>exercises.py</code> muestra búsqueda por palabras y respuestas extractivas. La ampliación corresponde a E1 y E2.</p>
+<p>Las guías indican puertos de ejemplo. Consulta <code>.env</code>, <code>.env.mysql</code> y <code>.env.webui</code> para ver los de tu instalación. <code>gestionar_demo_mac.py</code> registra los procesos propios en <code>launchd</code>. Las definiciones quedan en <code>.runtime/launchd</code> y los registros en <code>.runtime</code>.</p>
+<p>Las rutas de <code>.env.webui</code> parten de la carpeta del demo. <code>launchd</code> necesita la ubicación completa de cada servicio. El lanzador la calcula al iniciar y regenera las definiciones si la carpeta se movió.</p>
+</section>
+<section id="guia-docs-bases-de-datos"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-bases-de-datos-conexiones-de-mysql-y-fuentes-de-lectura">Conexiones de MySQL y fuentes de lectura</h1>
+<p>La ruta MAMP se prepara con configurar_mysql.py y se comprueba con verificar_mysql.py. La conexión principal de la aplicación está en .env.mysql. El alias aurora_mamp está en .env.sources y utiliza una cuenta distinta, de solo lectura. /conectar aurora_mamp devuelve un ID privado para utilizar /calcular. El README contiene todos los pasos y ejemplos.</p>
+<p>No utilices la cuenta principal de la aplicación para consultar datos externos. La base demo_documental guarda la infraestructura; demo_documental_aurora contiene exclusivamente los datos ficticios proporcionados. Para otras fuentes se aplica la política de esta guía.</p>
+<h1 id="guia-docs-bases-de-datos-bases-de-datos-de-lectura">Bases de datos de lectura</h1>
+<p>PostgreSQL y MySQL se consultan con SQLAlchemy; psycopg y PyMySQL son sus controladores. Un controlador permite que Python se comunique con el motor. El código no usa las credenciales administrativas de la aplicación para leer fuentes externas.</p>
+<h2 id="guia-docs-bases-de-datos-preparar-una-fuente">Preparar una fuente</h2>
+<p>Pide al administrador una cuenta con SELECT únicamente sobre las vistas o tablas necesarias. En PostgreSQL concede CONNECT a la base, USAGE al esquema y SELECT a la vista; configura default_transaction_read_only=on. En MySQL concede SELECT sobre la vista concreta. No se necesita SHOW VIEW: las columnas se definen en la política. Revoca privilegios heredados y comprueba las restricciones con esa cuenta. No utilices cuentas personales o administrativas para el chat.</p>
+<p>Para practicar, crea una base vacía y exclusiva de demostración en cada motor. Ejecuta el esquema datos/aurora_postgresql.sql o datos/aurora_mysql.sql con una cuenta administradora únicamente en esa base nueva. Esos archivos preparan dos tablas relacionadas y una vista. No crean ni cambian usuarios. No los ejecutes sobre una base existente con datos reales.</p>
+<p>Crea después un usuario lector y concede SELECT a prestamos_detalle. En MySQL, limita además el host autorizado del usuario a la red del backend. Las pruebas de esta revisión usaron bases nuevas con usuarios lectores separados. Las credenciales generadas quedaron fuera de la distribución.</p>
+<h2 id="guia-docs-bases-de-datos-configurar-el-servidor">Configurar el servidor</h2>
+<p><code>configurar.py</code> prepara <code>.env.sources</code> vacío si no existe. Conserva este archivo privado. La API lo carga mediante <code>iniciar_api.py</code>. Este ejemplo usa valores de muestra que debes sustituir por los de tu base y tu cuenta de Open WebUI.</p>
+<pre><code class="language-dotenv">SOURCE_PG_READ_URL=postgresql+psycopg://LECTOR:CLAVE_ESCAPADA@HOST:5432/BASE_DEMO
+SOURCE_MYSQL_READ_URL=mysql+pymysql://LECTOR:CLAVE_ESCAPADA@HOST:3306/BASE_DEMO
+SOURCE_CONNECTIONS='{&quot;aurora_pg&quot;:{&quot;url_env&quot;:&quot;SOURCE_PG_READ_URL&quot;,&quot;allowed_owners&quot;:[&quot;ID_USUARIO&quot;],&quot;tables&quot;:{&quot;prestamos_detalle&quot;:[&quot;id&quot;,&quot;usuario_id&quot;,&quot;nombre&quot;,&quot;libro&quot;,&quot;importe&quot;,&quot;fecha&quot;]}},&quot;aurora_mysql&quot;:{&quot;url_env&quot;:&quot;SOURCE_MYSQL_READ_URL&quot;,&quot;allowed_owners&quot;:[&quot;ID_USUARIO&quot;],&quot;tables&quot;:{&quot;prestamos_detalle&quot;:[&quot;id&quot;,&quot;usuario_id&quot;,&quot;nombre&quot;,&quot;libro&quot;,&quot;importe&quot;,&quot;fecha&quot;]}}}'
+</code></pre>
+<p>Una contraseña con caracteres reservados debe codificarse para una URL. No pegues una cadena real en el chat ni en capturas. La API se ejecuta en tu Mac; 127.0.0.1 identifica el mismo equipo donde está MAMP. Los ejemplos no habilitan conexiones por sí solos.</p>
+<p>allowed_owners contiene IDs de cuentas, no correos. Cada alias se limita a una base por su URL y a las tablas, esquemas y columnas de tables. Para otro esquema PostgreSQL usa &quot;esquema.vista&quot;. No se admite que el usuario envíe una URL o SQL. public_demo=true habilita explícitamente un alias para todas las cuentas del servidor: úsalo solo con datos ficticios destinados a todos.</p>
+<p>Reinicia la API después de cambiar la política. Dentro del chat, /conectar ALIAS verifica tu autorización y genera un registro privado. Conservar ese ID no permite compartir acceso: se valida el propietario en cada cálculo y se revalida la política. /revocar ID cancela ese registro. Para retirar acceso general elimina el alias, retira allowed_owners o revoca los permisos de la base; reinicia la API. Cambiar la URL o la vista actualiza la fuente sin migrar conversaciones.</p>
+<h2 id="guia-docs-bases-de-datos-qué-ocurre-durante-una-consulta">Qué ocurre durante una consulta</h2>
+<p>/calcular valida la fuente, tabla, columnas, filtros y operación. Abre una transacción de lectura y obtiene como máximo 5001 filas: si hay más de 5000, rechaza el resultado completo en vez de presentar un total parcial. Las operaciones se ejecutan sobre esas filas autorizadas con decimales exactos. Hay límites de conexión y de ejecución SQL de cinco segundos. No es un motor analítico para millones de registros; prepara una vista acotada si hace falta.</p>
+<p>El resultado conserva alias, tabla, columnas, identificadores pertinentes y hora UTC. Los números de fila de la base son posiciones del resultado, no una identidad estable: utiliza identifiers.id para localizar el registro. No hay SQL generado por un modelo, credenciales en respuestas ni copia automática al índice vectorial. Un resultado puede cambiar entre consultas; exportar una instantánea y cargarla como archivo es una decisión explícita.</p>
+<p>Ante error de credenciales, permisos, servicio o columna, se muestra un mensaje sin la cadena de conexión. El diagnóstico detallado corresponde al administrador local. Los permisos de solo lectura deben existir en la base además del control de la aplicación.</p>
+<h2 id="guia-docs-bases-de-datos-permisos-mínimos-de-ejemplo">Permisos mínimos de ejemplo</h2>
+<p>Estos comandos los ejecuta el administrador dentro de la base nueva. LECTOR representa una cuenta previamente creada con una contraseña privada. No se incluyen contraseñas en el ejemplo.</p>
+<p>PostgreSQL:</p>
+<pre><code class="language-sql">GRANT CONNECT ON DATABASE BASE_DEMO TO LECTOR;
+GRANT USAGE ON SCHEMA public TO LECTOR;
+GRANT SELECT ON public.prestamos_detalle TO LECTOR;
+ALTER ROLE LECTOR SET default_transaction_read_only=on;
+</code></pre>
+<p>MySQL, sustituyendo HOST_BACKEND por el host autorizado al crear la cuenta:</p>
+<pre><code class="language-sql">GRANT SELECT ON BASE_DEMO.prestamos_detalle TO 'LECTOR'@'HOST_BACKEND';
+</code></pre>
+<p>Estos GRANT agregan permisos; no eliminan privilegios que una cuenta ya tuviera. Utiliza una cuenta nueva y comprueba que INSERT y la lectura de tablas no autorizadas fallen. El script de datos no administra usuarios ni amplía permisos automáticamente.</p>
+</section>
+<section id="guia-docs-construccion"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-construccion-construcción-de-qwerty">Construcción de Qwerty</h1>
+<p>El recorrido completo, con código y comprobaciones por etapa, está en el <a href="#guia-readme-construccion">README de construcción</a>.</p>
+</section>
+<section id="guia-docs-errores"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-errores-diagnóstico">Diagnóstico</h1>
+<p>Ejecuta <code>./estado_demo.sh</code> desde la carpeta del demo. Muestra qué servicios están registrados en macOS y si MySQL responde.</p>
+<table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Qué revisar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open WebUI no abre</td>
+<td>Abre MAMP, pulsa <strong>Start</strong> y ejecuta <code>./iniciar_demo.sh</code>. Comprueba la dirección que imprime.</td>
+</tr>
+<tr>
+<td>MySQL no responde en 8889</td>
+<td>Comprueba que MAMP use MySQL 8. Revisa el puerto en MAMP y en <code>.env.mysql</code>.</td>
+</tr>
+<tr>
+<td>Un puerto está ocupado</td>
+<td>Comprueba qué instalación está activa. Detén esa copia con su propio comando de cierre o elige otro puerto para la instalación nueva.</td>
+</tr>
+<tr>
+<td>PostgreSQL no inicia</td>
+<td>Consulta <code>.runtime/postgresql.log</code>. El lanzador busca la versión de PostgreSQL que corresponde a los datos. Si lo instalaste en otra ubicación, indica su carpeta <code>bin</code> en <code>PG_BIN</code>.</td>
+</tr>
+<tr>
+<td>Moviste la carpeta</td>
+<td>Apaga el demo antes de moverlo. Incluye <code>.runtime</code> y los archivos ocultos de configuración al trasladarlo.</td>
+</tr>
+<tr>
+<td>Ollama no responde</td>
+<td>Comprueba <code>OLLAMA_URL</code> en <code>.env</code> y abre <code>/api/tags</code> en esa dirección. La lista debe incluir <code>qwen3:1.7b</code>. Si Qwerty inició el proceso, revisa <code>.runtime/modelo.log</code>.</td>
+</tr>
+<tr>
+<td>El chat falla al consultar</td>
+<td>Consulta <code>.runtime/webui.log</code> y <code>.runtime/api.log</code>. El conector debe apuntar al <code>API_PORT</code> de <code>.env</code> en <code>127.0.0.1</code> y utilizar la clave del puente de esa instalación.</td>
+</tr>
+<tr>
+<td>Un chat anterior respondía con qwen3</td>
+<td>Recarga Open WebUI y abre un chat nuevo con <strong>Qwerty</strong>. La interfaz ofrece el conector y FastAPI usa Ollama por dentro.</td>
+</tr>
+<tr>
+<td>La lista de modelos está vacía</td>
+<td>En una copia nueva, registra el conector con <code>conectar_openwebui.py</code>. Consulta la guía de instalación de tu sistema.</td>
+</tr>
+<tr>
+<td>Un reemplazo falla</td>
+<td>Puedes seguir consultando la versión que ya estaba disponible. Adjunta un archivo válido y vuelve a enviar <code>/sustituir ID</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Para reiniciar los servicios de esta carpeta, ejecuta <code>./detener_demo.sh</code> y después <code>./iniciar_demo.sh</code>. Los registros quedan en <code>.runtime/</code>. Comparte únicamente el mensaje de error pertinente y omite valores de los archivos <code>.env</code>.</p>
+</section>
+<section id="guia-docs-identidad"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-identidad-identidad">Identidad</h1>
+<p>El demo se llama Qwerty. La interfaz conserva el nombre, el logo y los avisos oficiales de Open WebUI.</p>
+<p>El identificador interno pln_documental se conserva para mantener los permisos y las conversaciones existentes.</p>
+</section>
+<section id="guia-docs-instalacion"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-instalacion-instalación-local">Instalación local</h1>
+<p>Haz estos pasos una vez en una copia recién extraída. Necesitas Python 3.11, PostgreSQL 16 o 17, MAMP con MySQL 8 y Ollama. Abre Terminal en la carpeta que contiene <code>README.md</code>. Reserva varios GB para los entornos y los modelos, y usa una conexión a Internet para la primera instalación.</p>
+<p>Usa un Mac con Apple Silicon y Python ARM64. <code>python3.11 -c 'import platform; print(platform.machine())'</code> debe mostrar <code>arm64</code>. En un Mac Intel puedes usar una instalación compartida del curso o un equipo compatible. La versión de PyTorch fijada por el demo ofrece la distribución de macOS para ARM64. <a href="https://pypi.org/project/torch/2.6.0/#files">Archivos de PyTorch 2.6.0</a>.</p>
+<ol>
+<li>Abre MAMP y pulsa <strong>Start</strong>. Desde la copia limpia crea el entorno de la API y la configuración.</li>
+</ol>
+<pre><code class="language-sh">python3.11 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python configurar.py
+.venv/bin/python configurar_mysql.py
+.venv/bin/python verificar_mysql.py
+</code></pre>
+<p>En MAMP confirma la versión y el puerto de MySQL, que suele ser <code>8889</code>. Usa las credenciales administrativas de tu instalación para crear las bases. Para la cuenta nueva de Qwerty acepta <code>demo_documental</code> o elige un nombre que empiece con <code>demo_</code>. Al terminar, <code>verificar_mysql.py</code> debe encontrar tres préstamos ficticios.</p>
+<p>Si ya existen las bases de MAMP y quieres reutilizarlas, restaura los archivos privados <code>.env.mysql</code> y <code>.env.sources</code> de la instalación de origen. Para una instalación independiente elige bases y usuarios nuevos en el asistente. El instalador conserva las bases existentes.</p>
+<ol start="2">
+<li>Prepara PostgreSQL y el entorno de Open WebUI.</li>
+</ol>
+<pre><code class="language-sh">.venv/bin/python configurar_postgresql.py --port 55442
+.venv/bin/python gestionar_demo.py detener
+python3.11 -m venv .venv_webui
+.venv_webui/bin/python -m pip install -r requirements-webui.txt
+</code></pre>
+<p>El configurador inicia PostgreSQL para crear la cuenta y verificar el acceso. El segundo comando cierra esa instancia inicial para que el lanzador de uso diario pueda registrarla en macOS. Si <code>55442</code> está ocupado, elige otro puerto libre durante la configuración. Conserva las claves pendientes en <code>.env.postgresql_setup.json</code> si la preparación se interrumpe.</p>
+<ol start="3">
+<li>
+<p>Abre Ollama y ejecuta <code>ollama pull qwen3:1.7b</code>. Puedes dejarlo abierto. Qwerty reutiliza la instancia que responda en <code>OLLAMA_URL</code>, normalmente <code>http://127.0.0.1:11434</code>. Si el puerto lo ocupa otro programa, elige un puerto local libre y configura Ollama y Qwerty con ese mismo puerto. El modelo de búsqueda se descarga al procesar el primer documento. <a href="https://docs.ollama.com/macos">Instalación de Ollama en macOS</a></p>
+</li>
+<li>
+<p>Ejecuta <code>./iniciar_demo.sh</code>, abre la URL que imprime y crea tu cuenta administradora. Registra el conector una vez con el acceso de esa cuenta.</p>
+</li>
+</ol>
+<pre><code class="language-sh">.venv/bin/python conectar_openwebui.py
+</code></pre>
+<p>Confirma las direcciones que propone el script. La plantilla usa <code>3187</code> para el chat y <code>18129</code> para la API. Si necesitas otros puertos, define <code>UI_PORT</code> y <code>API_PORT</code> en <code>.env</code> y verifica los valores antes de registrar el conector. Abre un chat nuevo y selecciona <strong>Qwerty</strong>. Pregunta <strong>¿Cuántos préstamos tiene Ana?</strong>. Después adjunta <code>datos/politicas.txt</code>, envía <code>/cargar</code> y pregunta <strong>¿Cuántos préstamos se permiten por persona?</strong>.</p>
+<p>Si macOS indica que el script no tiene permiso de ejecución después de extraer el ZIP, ejecuta <code>chmod +x iniciar_demo.sh detener_demo.sh estado_demo.sh</code> desde esta carpeta.</p>
+<h2 id="guia-docs-instalacion-actualizar-dependencias">Actualizar dependencias</h2>
+<pre><code class="language-sh">./detener_demo.sh
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+.venv/bin/python -m pytest -q
+.venv_webui/bin/python -m pip install -r requirements-webui.txt
+.venv_webui/bin/python -m pip check
+./iniciar_demo.sh
+</code></pre>
+<p>Conserva los dos entornos separados. Respalda el historial y la configuración antes de actualizar Open WebUI o PostgreSQL. Las versiones requeridas están en los archivos <code>requirements</code>.</p>
+<p>Para construir el proyecto desde el código sigue <a href="#guia-readme-construccion">README_CONSTRUCCION.md</a>. Para preparar una copia limpia en Windows sigue <a href="#guia-readme-windows">README_WINDOWS.md</a>.</p>
+</section>
+<section id="guia-docs-mapa-rubrica"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-mapa-rubrica-evidencias-de-evaluación">Evidencias de evaluación</h1>
+<p>Consulta el enunciado y la rúbrica vigentes publicados en el curso. Sus requisitos y puntajes se conservan.</p>
+<p>Relaciona cada requisito con una ejecución, su resultado y una explicación. Los lectores y servicios proporcionados son infraestructura; las comparaciones y conclusiones requieren evidencia propia.</p>
+</section>
+<section id="guia-docs-puente"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-puente-conexión-de-la-interfaz-con-la-api">Conexión de la interfaz con la API</h1>
+<p>Open WebUI y FastAPI se ejecutan en el mismo equipo. <code>conectar_openwebui.py</code> registra el conector <strong>Qwerty</strong> y guarda la dirección de FastAPI. La plantilla usa <code>http://127.0.0.1:18129</code>. Si cambiaste el puerto, confirma el valor de <code>API_PORT</code> en <code>.env</code>.</p>
+<p>El puente recibe la identidad de la cuenta, firma la solicitud con BRIDGE_SECRET y llama a la API. La API verifica la firma y el propietario antes de consultar documentos o fuentes. El navegador no recibe las contraseñas de MySQL.</p>
+<p>El chat muestra el resultado. FastAPI guarda la vista, los filtros y el identificador de la consulta para poder revisarlos después.</p>
+<h2 id="guia-docs-puente-conectar-ollama-local">Conectar Ollama local</h2>
+<p>Open WebUI envía la pregunta a FastAPI por el conector <strong>Qwerty</strong>. FastAPI llama a Ollama cuando necesita interpretar la pregunta o redactar con evidencia. Mantén desactivada la conexión directa de Ollama en Open WebUI. Así el chat pasa por las fuentes del demo.</p>
+<h3 id="guia-docs-puente-en-macos">En macOS</h3>
+<p>Descarga <code>qwen3:1.7b</code> desde Ollama en la primera instalación. Desde la carpeta del demo, revisa estos valores de ejemplo en <code>.env</code>.</p>
+<pre><code class="language-dotenv">OLLAMA_URL=http://127.0.0.1:11434
+GENERATION_MODEL=qwen3:1.7b
+</code></pre>
+<p>Abre MAMP y pulsa <strong>Start</strong>. Después inicia el demo y consulta la lista de modelos.</p>
+<pre><code class="language-sh">./iniciar_demo.sh
+curl -fsS http://127.0.0.1:11434/api/tags
+</code></pre>
+<h3 id="guia-docs-puente-en-windows">En Windows</h3>
+<p>Abre Ollama desde Inicio y descarga el modelo una vez.</p>
+<pre><code class="language-powershell">ollama pull qwen3:1.7b
+(Invoke-RestMethod &quot;http://127.0.0.1:11434/api/tags&quot;).models.name
+</code></pre>
+<p>Configura <code>.env</code> con la dirección de esa instancia.</p>
+<pre><code class="language-dotenv">OLLAMA_URL=http://127.0.0.1:11434
+GENERATION_MODEL=qwen3:1.7b
+</code></pre>
+<p>Cuando las bases estén en marcha, inicia el demo con <code>.\iniciar_demo.cmd</code> desde PowerShell. El lanzador puede usar Ollama si ya está abierto. <a href="#guia-readme-windows">Instalación en Windows</a></p>
+<h3 id="guia-docs-puente-comprueba-la-conexión">Comprueba la conexión</h3>
+<p>En ambos sistemas, <code>/api/tags</code> debe incluir <code>qwen3:1.7b</code>. Si el puerto es distinto, usa el valor de <code>OLLAMA_URL</code> al hacer la prueba. Después de editar <code>.env</code>, detén y vuelve a iniciar el demo para que FastAPI cargue los cambios. <a href="https://docs.ollama.com/api/tags">Lista de modelos de Ollama</a></p>
+<p>Para comprobar el recorrido completo, abre un chat nuevo con <strong>Qwerty</strong> y pregunta <strong>¿Cuántos préstamos tiene Ana?</strong>. FastAPI consulta MySQL y devuelve <strong>2 préstamos</strong>. La frase puede variar al repetir la pregunta. La prueba de <code>/api/tags</code> comprueba Ollama por separado.</p>
+</section>
+<section id="guia-docs-ragparity"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-ragparity-auditoría-independiente">Auditoría independiente</h1>
+<p>El endpoint privado GET /audit/export devuelve el manifiesto esperado y el inventario actual para el usuario autenticado. Conserva ese JSON localmente y no lo envíes a otros usuarios.</p>
+<p>Con Python 3.12 o posterior, instala RAGParity desde una distribución verificada o su repositorio oficial. No lo añadas a ciegas al entorno Python 3.11 del chatbot. Ejecuta:</p>
+<pre><code class="language-sh">python audit_ragparity.py audit_export.json
+</code></pre>
+<p>Se comprobó la biblioteca real con revisión 838ab2845c8c5209427922867e32d581cb070db1. El inventario válido dio PASS y una copia con desfase deliberado dio FAIL. Los hashes se calculan desde las fuentes antes de la ingestión y se recalculan al exportar los fragmentos almacenados. Esa comparación no certifica la verdad ni la relevancia de una respuesta.</p>
+</section>
+<section id="guia-docs-respaldo"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-respaldo-respaldo-y-recuperación">Respaldo y recuperación</h1>
+<p>Conserva .env, .env.mysql, .env.sources y .env.webui en una ubicación privada. No los incluyas en paquetes públicos.</p>
+<p>Exporta las bases del demo MySQL desde phpMyAdmin con una cuenta autorizada. En pgAdmin usa Backup sobre demo_webui con formato Custom. También puedes ejecutar pg_dump con los datos de .env.webui. Conserva una copia de WEBUI_DATA_DIR, que contiene los adjuntos. WEBUI_SECRET_KEY debe mantenerse para conservar la configuración de sesión.</p>
+<p>Recupera primero en bases nuevas. Comprueba acceso, número de conversaciones, un mensaje anterior, un adjunto y una pregunta MySQL antes de utilizar el destino recuperado. No sobrescribas la única copia de tus datos.</p>
+<h2 id="guia-docs-respaldo-trasladar-un-historial-anterior">Trasladar un historial anterior</h2>
+<p>Usa la misma versión de Open WebUI en ambos sitios. Inicia la interfaz una vez para crear el esquema de PostgreSQL. Detén la interfaz y deja PostgreSQL en marcha durante la importación. Conserva la base de destino vacía.</p>
+<p>Crea una instantánea consistente de la base SQLite anterior y conserva una copia de sus adjuntos fuera de la distribución. Copia los adjuntos al directorio uploads de WEBUI_DATA_DIR respetando sus nombres. Después ejecuta desde la carpeta del proyecto:</p>
+<pre><code class="language-sh">.venv/bin/python migrar_historial_webui.py respaldos/webui.db
+</code></pre>
+<p>El programa exige tablas destino vacías, copia los campos y compara las filas antes de confirmar. Conserva cuentas, hashes de acceso, mensajes y permisos; adapta únicamente las rutas locales de los adjuntos. No modifica la instantánea ni la base de origen. Si el destino tiene datos, se detiene para que elijas una base nueva.</p>
+<p>Inicia el destino, prueba ambas cuentas y una referencia anterior. Actualiza la dirección de la API con <code>conectar_openwebui.py</code> y confirma el <code>API_PORT</code> de la instalación nueva. Conserva el origen y el respaldo hasta comprobar el nuevo entorno.</p>
+</section>
+<section id="guia-docs-uso"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-uso-consultar-documentos">Consultar documentos</h1>
+<p>Abre un chat con <strong>Qwerty</strong>. Adjunta un archivo con <strong>Upload Files</strong> y escribe <code>/cargar</code>. Cuando quede disponible, puedes preguntar por su contenido. Usa <code>/documentos</code> para ver tus archivos y sus identificadores.</p>
+<p>Si falta <strong>Qwerty</strong>, registra el conector como indica la guía de <a href="#guia-docs-instalacion">macOS</a> o <a href="#guia-readme-windows">Windows</a>. En una instalación compartida, pide al administrador acceso al modelo. Después recarga la página y abre un chat nuevo.</p>
+<p>Usa <code>/purgar ID</code> para solicitar el borrado de un documento, sus adjuntos registrados y las respuestas que lo citan en MySQL. Qwerty te dará un comando de confirmación. Para un documento cargado con un conector anterior, consulta el <a href="#guia-readme-construccion-borrar-un-archivo-y-sus-citas-del-demo">procedimiento manual y la verificación en MySQL</a>.</p>
+<h2 id="guia-docs-uso-formatos-y-ubicación-de-la-evidencia">Formatos y ubicación de la evidencia</h2>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Qué conservamos</th>
+<th>Cómo verificarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TXT Unicode UTF-8</td>
+<td>Texto y líneas, con posición de palabras</td>
+<td>Abre la referencia y consulta location.line_start y line_end</td>
+</tr>
+<tr>
+<td>PDF con texto</td>
+<td>Página real y posición de palabras</td>
+<td>Contrasta el fragmento con esa página del archivo</td>
+</tr>
+<tr>
+<td>XLSX</td>
+<td>Hojas, encabezados, filas, tipos y celdas de origen</td>
+<td>Revisa sheet, row y range</td>
+</tr>
+<tr>
+<td>CSV UTF-8</td>
+<td>Encabezados, filas, columnas y tipos</td>
+<td>Revisa row y columns; el encabezado es la fila 1</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>Campos anidados y listas sin repetir cada rama completa</td>
+<td>Revisa path: $ es la raíz, [0] el primer elemento</td>
+</tr>
+</tbody>
+</table>
+<p>XLS y XLSM no están habilitados. Exporta una copia XLSX sin macros. No ejecutamos macros ni fórmulas. Para una fórmula Excel se utiliza su resultado guardado, si existe; sin ese resultado queda un valor ausente y una advertencia. Un PDF escaneado necesita reconocimiento óptico de caracteres, OCR, antes de cargarlo. No se ha incorporado OCR automático.</p>
+<h2 id="guia-docs-uso-cargar-una-hoja-o-un-csv">Cargar una hoja o un CSV</h2>
+<p>Con biblioteca.xlsx adjunto, escribe /cargar hoja=Prestamos. Para nombres con espacios utiliza /cargar &quot;hoja=Mi hoja&quot;. Sin selección se procesan las hojas dentro de los límites. /estructura ID muestra hojas, conjuntos de datos disponibles, columnas y advertencias. Cada carga tiene su propio ID; reemplaza ID por el valor recibido, sin comillas adicionales.</p>
+<p>El separador CSV se detecta entre coma, punto y coma, tabulador y barra vertical. Para especificar punto y coma y coma decimal: /cargar separador=; decimal=,. Se admite UTF-8 con o sin marca inicial BOM. Los identificadores como 001 se conservan como texto. Las fechas ISO se reconocen; otras fechas quedan como texto para evitar interpretar día y mes de manera incorrecta. No se adivinan separadores de miles.</p>
+<h2 id="guia-docs-uso-preguntas-sobre-el-contenido">Preguntas sobre el contenido</h2>
+<p>Carga datos/politicas.pdf o datos/politicas.txt y pregunta: ¿Cuánto dura el préstamo? Con politicas.txt también puedes consultar: ¿Cuándo se permite la renovación? Abre el botón de la fuente y revisa el fragmento. /fuente ID_FRAGMENTO permite comprobar que la fuente sigue vigente y pertenece a tu cuenta.</p>
+<p>Para buscar contenido de prestamos.csv, prueba PLN aplicado y verifica el registro citado. Para consultar una fila concreta utiliza /calcular con operation=rows y un filtro sobre id. Una pregunta como ¿Qué libro corresponde al identificador 1? puede producir abstención porque el filtro léxico no reconoce todas las paráfrasis. En biblioteca.json revisa las rutas de los campos y utiliza /calcular para listas tabulares. La búsqueda puede devolver varios registros parecidos; verifica los identificadores antes de concluir.</p>
+<p>Para comparar fuentes, carga los documentos y pregunta por la misma condición en ambos. Las referencias permiten contrastar lo que dice cada uno. Si se contradicen, no elijas una versión solo por su puntuación de búsqueda. Comprueba fecha, versión y autoridad del documento. El sistema no certifica automáticamente cuál es verdadero. Una pregunta sin información disponible, por ejemplo ¿Cuál es el clima en Marte?, debe producir una abstención.</p>
+<h2 id="guia-docs-uso-cálculos-que-podemos-comprobar">Cálculos que podemos comprobar</h2>
+<p>Una suma no debe hacerse sobre los pocos fragmentos recuperados para redactar una respuesta. /calcular opera sobre todas las filas autorizadas de la tabla seleccionada. Por eso los cálculos requieren un comando estructurado: no ofrecemos traducción libre de preguntas a SQL.</p>
+<p>Después de cargar prestamos.csv, usa /estructura ID. El conjunto de ese CSV se llama datos. Sustituye ID por su identificador:</p>
+<p>/calcular {&quot;document_id&quot;:&quot;ID&quot;,&quot;dataset&quot;:&quot;datos&quot;,&quot;operation&quot;:&quot;sum&quot;,&quot;column&quot;:&quot;importe&quot;}</p>
+<p>/calcular {&quot;document_id&quot;:&quot;ID&quot;,&quot;dataset&quot;:&quot;datos&quot;,&quot;operation&quot;:&quot;mean&quot;,&quot;column&quot;:&quot;importe&quot;}</p>
+<p>/calcular {&quot;document_id&quot;:&quot;ID&quot;,&quot;dataset&quot;:&quot;datos&quot;,&quot;operation&quot;:&quot;count&quot;}</p>
+<p>/calcular {&quot;document_id&quot;:&quot;ID&quot;,&quot;dataset&quot;:&quot;datos&quot;,&quot;operation&quot;:&quot;rows&quot;,&quot;filters&quot;:[{&quot;column&quot;:&quot;usuario_id&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;value&quot;:10}]}</p>
+<p>En Excel cambia dataset por Prestamos. En el JSON de demostración utiliza &quot;dataset&quot;:&quot;$[&quot;prestamos&quot;]&quot;. También existen min y max. Los filtros admiten eq (igual), ne (distinto), gt (mayor), ge (mayor o igual), lt (menor) y le (menor o igual).</p>
+<p>El chat presenta el resultado en una frase o una tabla. <code>count</code> cuenta filas. <code>mean</code> usa los valores numéricos presentes y deja fuera los que faltan. Si no hay valores disponibles, el chat lo indica. El importe de la demostración está expresado en pesos ficticios. <code>rows</code> muestra hasta 100 registros. La API conserva los filtros y las ubicaciones para revisar el cálculo.</p>
+<h2 id="guia-docs-uso-preguntas-normales-sobre-mysql">Preguntas normales sobre MySQL</h2>
+<p>Pregunta <strong>¿Cuántos préstamos tiene Ana?</strong>. El chat puede decir <strong>Ana tiene 2 préstamos</strong> o <strong>Encontré 2 préstamos de Ana</strong>. Si después preguntas <strong>¿Y Luis?</strong>, el resultado es <strong>1 préstamo</strong>. Pide <strong>Muestra los préstamos de Ana</strong> para ver el detalle en una tabla. FastAPI calcula con las filas autorizadas de Aurora. Cuando las reglas no bastan, Ollama propone una interpretación. Si no se puede validar, el chat pide que aclares la pregunta.</p>
+<p>Los siguientes comandos siguen disponibles para comprobaciones específicas. Las preguntas naturales de esta versión se aplican a MySQL; los cálculos sobre archivos conservan /calcular.</p>
+<h2 id="guia-docs-uso-consultas-a-bases-autorizadas">Consultas a bases autorizadas</h2>
+<p>El administrador debe configurar primero las fuentes siguiendo docs/BASES_DE_DATOS.md. En el chat no se escriben contraseñas ni cadenas de conexión. /conectar aurora_mamp registra un alias autorizado para tu identidad. /conexiones muestra sus IDs y las vistas permitidas.</p>
+<p>/calcular {&quot;connection_id&quot;:&quot;ID_CONEXION&quot;,&quot;dataset&quot;:&quot;prestamos_detalle&quot;,&quot;operation&quot;:&quot;sum&quot;,&quot;column&quot;:&quot;importe&quot;}</p>
+<p>/calcular {&quot;connection_id&quot;:&quot;ID_CONEXION&quot;,&quot;dataset&quot;:&quot;prestamos_detalle&quot;,&quot;operation&quot;:&quot;rows&quot;,&quot;filters&quot;:[{&quot;column&quot;:&quot;usuario_id&quot;,&quot;op&quot;:&quot;eq&quot;,&quot;value&quot;:10}]}</p>
+<p>Estas consultas son en vivo: source.queried_at indica el momento UTC. No se indexa ni se conserva el contenido de la base como documento. En cambio, un archivo cargado es una instantánea con versión; hay que sustituirlo para actualizarlo. Para comparar dos fuentes, ejecuta el mismo cálculo, con los mismos filtros y columnas, en cada una y compara sus resultados y fechas.</p>
+<p>/revocar ID_CONEXION invalida tu registro. El administrador puede retirar un alias o tu autorización en la política del servidor y reiniciar la API. No se permite SQL libre ni escrituras.</p>
+<h2 id="guia-docs-uso-sustituir-eliminar-y-conservar-el-historial">Sustituir, eliminar y conservar el historial</h2>
+<p>Adjunta el archivo nuevo y escribe /sustituir ID, con las opciones de hoja o decimal si hacen falta. Se genera una nueva versión y se retiran los fragmentos anteriores de las búsquedas. /eliminar ID retira el documento. Las citas antiguas que aparecen en conversaciones son evidencia histórica; /fuente comprueba la vigencia actual. /auditar contrasta el inventario de fragmentos con el manifiesto de la carga; no verifica la verdad del contenido.</p>
+<p>Las carpetas internas las crean los servicios. No prepares directorios manualmente para subir archivos.</p>
+<h2 id="guia-docs-uso-límites">Límites</h2>
+<p>Por defecto: 5 MB por archivo, 100 páginas PDF, 20 hojas Excel, 5000 filas totales por archivo, 200 columnas, 1000 fragmentos, profundidad JSON 20, 10000 caracteres por celda y 40 MB de contenido XLSX expandido. Los límites principales se configuran en el servidor; también se comprueban durante el procesamiento. La función de Open WebUI tiene un máximo adicional de 5 MB. Para aumentarlo deben revisarse ambos controles y los recursos disponibles.</p>
+</section>
+<section id="guia-docs-windows"><p><a href="#indice">Volver al índice</a></p><h1 id="guia-docs-windows-ejecutar-qwerty-en-windows">Ejecutar Qwerty en Windows</h1>
+<p>La instalación, el arranque, las pruebas y el cierre están en el <a href="#guia-readme-windows">README de Windows</a>.</p>
+</section></main>
+</html>

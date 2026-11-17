@@ -1,0 +1,9 @@
+ACTIVIDAD FINAL DE PLN. DEMO QWERTY
+
+Descarga el paquete del demo y consulta README.md. Completa la instalación indicada para tu sistema. El conjunto de servicios funciona localmente; no se aloja en Colab.
+
+Abre Open WebUI y selecciona Qwerty. Carga los documentos ficticios y comprueba una pregunta respondible y una pregunta sin evidencia. Identifica el archivo y el fragmento utilizados. Desarrolla las partes pendientes en exercises.py y explica entradas, operaciones, salidas y límites. La base proporcionada utiliza recuperación léxica; las ampliaciones se distinguen de los requisitos oficiales.
+
+Consulta en Canvas el enunciado, la modalidad, los entregables y la rúbrica vigentes. Las demostraciones son material de apoyo. Declara los aportes de cada integrante y la ayuda recibida. Mantén privadas tus contraseñas, tokens, bases personales y archivos .env.
+
+Utiliza el modelo Qwerty. La guía docs/USO.md explica TXT, PDF, XLSX, CSV y JSON y los cálculos sobre tablas. Son ampliaciones de demostración; se conserva la evaluación vigente.

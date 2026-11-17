@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+respaldos/
+
+.env.sources
+
+.env.mysql
+
+.runtime/
+
+.env.webui
+.venv_webui/
+
+.env.postgresql_setup.json

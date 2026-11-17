@@ -1,0 +1,4 @@
+-c requirements-webui.lock.txt
+open-webui==0.12.5
+psycopg[binary,pool]==3.3.4
+python-dotenv==1.2.4
