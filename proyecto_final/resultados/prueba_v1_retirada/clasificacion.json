@@ -1,0 +1,754 @@
+{
+  "rejilla_validacion": [
+    {
+      "modelo": "clasico",
+      "representacion": "palabras_1-2",
+      "C": 0.1,
+      "macro_f1_val": 0.2596491228070176,
+      "log_loss_val": 1.5909733097106726,
+      "segundos_ajuste": 0.016386599998440943
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "palabras_1-2",
+      "C": 1.0,
+      "macro_f1_val": 0.2533333333333333,
+      "log_loss_val": 1.5290768622424211,
+      "segundos_ajuste": 0.021090100000947132
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "palabras_1-2",
+      "C": 10.0,
+      "macro_f1_val": 0.2533333333333333,
+      "log_loss_val": 1.5392316499712233,
+      "segundos_ajuste": 0.02064050000080897
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "palabras_1-2",
+      "C": 100.0,
+      "macro_f1_val": 0.24761904761904763,
+      "log_loss_val": 1.6615520502619054,
+      "segundos_ajuste": 0.018186799999966752
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "caracteres_2-5",
+      "C": 0.1,
+      "macro_f1_val": 0.425934065934066,
+      "log_loss_val": 1.5751222975482664,
+      "segundos_ajuste": 0.036598499998945044
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "caracteres_2-5",
+      "C": 1.0,
+      "macro_f1_val": 0.5723076923076924,
+      "log_loss_val": 1.4244686661483714,
+      "segundos_ajuste": 0.05321900000126334
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "caracteres_2-5",
+      "C": 10.0,
+      "macro_f1_val": 0.5941258741258741,
+      "log_loss_val": 1.270378698275192,
+      "segundos_ajuste": 0.10713049999867508
+    },
+    {
+      "modelo": "clasico",
+      "representacion": "caracteres_2-5",
+      "C": 100.0,
+      "macro_f1_val": 0.5333333333333334,
+      "log_loss_val": 1.2065320627411475,
+      "segundos_ajuste": 0.1570081999998365
+    },
+    {
+      "modelo": "contextual",
+      "representacion": "minilm",
+      "C": 0.1,
+      "macro_f1_val": 0.6612563906681553,
+      "log_loss_val": 1.4164115469780285,
+      "segundos_ajuste": 1.7364068999995652
+    },
+    {
+      "modelo": "contextual",
+      "representacion": "minilm",
+      "C": 1.0,
+      "macro_f1_val": 0.7938461538461539,
+      "log_loss_val": 0.9708633112107619,
+      "segundos_ajuste": 0.014151199999105302
+    },
+    {
+      "modelo": "contextual",
+      "representacion": "minilm",
+      "C": 10.0,
+      "macro_f1_val": 0.78,
+      "log_loss_val": 0.6719255492398536,
+      "segundos_ajuste": 0.020616800000425428
+    },
+    {
+      "modelo": "contextual",
+      "representacion": "minilm",
+      "C": 100.0,
+      "macro_f1_val": 0.78,
+      "log_loss_val": 0.5319322714105522,
+      "segundos_ajuste": 0.019318599999678554
+    }
+  ],
+  "mejor_por_modelo": {
+    "clasico": {
+      "modelo": "clasico",
+      "representacion": "caracteres_2-5",
+      "C": 10.0,
+      "macro_f1_val": 0.5941258741258741,
+      "log_loss_val": 1.270378698275192,
+      "segundos_ajuste": 0.10713049999867508
+    },
+    "contextual": {
+      "modelo": "contextual",
+      "representacion": "minilm",
+      "C": 1.0,
+      "macro_f1_val": 0.7938461538461539,
+      "log_loss_val": 0.9708633112107619,
+      "segundos_ajuste": 0.014151199999105302
+    }
+  },
+  "elegido": "contextual",
+  "resultados": {
+    "clasico": {
+      "config": {
+        "modelo": "clasico",
+        "representacion": "caracteres_2-5",
+        "C": 10.0,
+        "macro_f1_val": 0.5941258741258741,
+        "log_loss_val": 1.270378698275192,
+        "segundos_ajuste": 0.10713049999867508
+      },
+      "descripcion": "TF-IDF (caracteres_2-5) + regresión logística, C=10.0",
+      "segundos_ajuste_final": 0.1162938999987091,
+      "latencia_ms_por_texto": 0.251620000017283,
+      "validation": {
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.5941258741258741,
+        "f1_por_clase": {
+          "acceso": 0.9091,
+          "conectividad": 0.8,
+          "pagos": 0.8,
+          "software": 0.0,
+          "fuera_de_alcance": 0.4615
+        },
+        "confusion": [
+          [
+            5,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            3
+          ]
+        ],
+        "labels": [
+          "acceso",
+          "conectividad",
+          "pagos",
+          "software",
+          "fuera_de_alcance"
+        ],
+        "n": 30
+      },
+      "test": {
+        "accuracy": 0.7,
+        "macro_f1": 0.7035897435897436,
+        "f1_por_clase": {
+          "acceso": 0.9231,
+          "conectividad": 0.4615,
+          "pagos": 1.0,
+          "software": 0.3333,
+          "fuera_de_alcance": 0.8
+        },
+        "confusion": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            4
+          ]
+        ],
+        "labels": [
+          "acceso",
+          "conectividad",
+          "pagos",
+          "software",
+          "fuera_de_alcance"
+        ],
+        "n": 30
+      },
+      "test_ic95_macro_f1": [
+        0.534310101233476,
+        0.8295297619047619
+      ],
+      "test_predicciones": [
+        {
+          "id": "S031",
+          "texto": "Mi contraseña nueva no se acepta.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S032",
+          "texto": "Buen día, mi contraseña nueva no se acepta. ¿Me pueden orientar?",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S033",
+          "texto": "Mi contraseña nueva no se acepta; ya reinicié y sigue igual, urge tantito.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S034",
+          "texto": "El correo de recuperación pertenece a mi cuenta anterior.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S035",
+          "texto": "Buen día, el correo de recuperación pertenece a mi cuenta anterior. ¿Me pueden orientar?",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S036",
+          "texto": "El correo de recuperación pertenece a mi cuenta anterior; ya reinicié y sigue igual, urge tantito.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S067",
+          "texto": "La factura tiene un impuesto incorrecto.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S068",
+          "texto": "Buen día, la factura tiene un impuesto incorrecto. ¿Me pueden orientar?",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S069",
+          "texto": "La factura tiene un impuesto incorrecto; ya reinicié y sigue igual, urge tantito.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S070",
+          "texto": "Quiero saber cuándo regresará el dinero a mi tarjeta.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S071",
+          "texto": "Buen día, quiero saber cuándo regresará el dinero a mi tarjeta. ¿Me pueden orientar?",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S072",
+          "texto": "Quiero saber cuándo regresará el dinero a mi tarjeta; ya reinicié y sigue igual, urge tantito.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S103",
+          "texto": "El router muestra una luz roja y no hay servicio.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S104",
+          "texto": "Buen día, el router muestra una luz roja y no hay servicio. ¿Me pueden orientar?",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S105",
+          "texto": "El router muestra una luz roja y no hay servicio; ya reinicié y sigue igual, urge tantito.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S106",
+          "texto": "La velocidad de descarga cae cuando activo la VPN.",
+          "real": "conectividad",
+          "predicha": "software"
+        },
+        {
+          "id": "S107",
+          "texto": "Buen día, la velocidad de descarga cae cuando activo la VPN. ¿Me pueden orientar?",
+          "real": "conectividad",
+          "predicha": "software"
+        },
+        {
+          "id": "S108",
+          "texto": "La velocidad de descarga cae cuando activo la VPN; ya reinicié y sigue igual, urge tantito.",
+          "real": "conectividad",
+          "predicha": "software"
+        },
+        {
+          "id": "S139",
+          "texto": "La instalación dice que falta espacio en disco.",
+          "real": "software",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S140",
+          "texto": "Buen día, la instalación dice que falta espacio en disco. ¿Me pueden orientar?",
+          "real": "software",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S141",
+          "texto": "La instalación dice que falta espacio en disco; ya reinicié y sigue igual, urge tantito.",
+          "real": "software",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S142",
+          "texto": "El complemento desapareció del menú después de actualizar.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S143",
+          "texto": "Buen día, el complemento desapareció del menú después de actualizar. ¿Me pueden orientar?",
+          "real": "software",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S144",
+          "texto": "El complemento desapareció del menú después de actualizar; ya reinicié y sigue igual, urge tantito.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "F031",
+          "texto": "¿Cuándo se paga el aguinaldo este año?",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F032",
+          "texto": "Buen día, ¿cuándo se paga el aguinaldo este año? ¿Me pueden orientar?",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F033",
+          "texto": "¿Cuándo se paga el aguinaldo este año? Ya reinicié y sigue igual, urge tantito.",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F034",
+          "texto": "La silla de mi escritorio está rota.",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F035",
+          "texto": "Buen día, la silla de mi escritorio está rota. ¿Me pueden orientar?",
+          "real": "fuera_de_alcance",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "F036",
+          "texto": "La silla de mi escritorio está rota; ya reinicié y sigue igual, urge tantito.",
+          "real": "fuera_de_alcance",
+          "predicha": "software"
+        }
+      ]
+    },
+    "contextual": {
+      "config": {
+        "modelo": "contextual",
+        "representacion": "minilm",
+        "C": 1.0,
+        "macro_f1_val": 0.7938461538461539,
+        "log_loss_val": 0.9708633112107619,
+        "segundos_ajuste": 0.014151199999105302
+      },
+      "descripcion": "MiniLM multilingüe congelado + regresión logística, C=1.0",
+      "segundos_ajuste_final": 0.012393999999403604,
+      "latencia_ms_por_texto": 14.99923666669929,
+      "validation": {
+        "accuracy": 0.8,
+        "macro_f1": 0.7938461538461539,
+        "f1_por_clase": {
+          "acceso": 0.8,
+          "conectividad": 0.8,
+          "pagos": 0.7692,
+          "software": 1.0,
+          "fuera_de_alcance": 0.6
+        },
+        "confusion": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            0,
+            3
+          ]
+        ],
+        "labels": [
+          "acceso",
+          "conectividad",
+          "pagos",
+          "software",
+          "fuera_de_alcance"
+        ],
+        "n": 30
+      },
+      "test": {
+        "accuracy": 0.8666666666666667,
+        "macro_f1": 0.8406593406593407,
+        "f1_por_clase": {
+          "acceso": 0.9231,
+          "conectividad": 1.0,
+          "pagos": 0.8571,
+          "software": 0.9231,
+          "fuera_de_alcance": 0.5
+        },
+        "confusion": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            1,
+            2
+          ]
+        ],
+        "labels": [
+          "acceso",
+          "conectividad",
+          "pagos",
+          "software",
+          "fuera_de_alcance"
+        ],
+        "n": 30
+      },
+      "test_ic95_macro_f1": [
+        0.6933333333333335,
+        0.9609022556390977
+      ],
+      "test_predicciones": [
+        {
+          "id": "S031",
+          "texto": "Mi contraseña nueva no se acepta.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S032",
+          "texto": "Buen día, mi contraseña nueva no se acepta. ¿Me pueden orientar?",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S033",
+          "texto": "Mi contraseña nueva no se acepta; ya reinicié y sigue igual, urge tantito.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S034",
+          "texto": "El correo de recuperación pertenece a mi cuenta anterior.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S035",
+          "texto": "Buen día, el correo de recuperación pertenece a mi cuenta anterior. ¿Me pueden orientar?",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S036",
+          "texto": "El correo de recuperación pertenece a mi cuenta anterior; ya reinicié y sigue igual, urge tantito.",
+          "real": "acceso",
+          "predicha": "acceso"
+        },
+        {
+          "id": "S067",
+          "texto": "La factura tiene un impuesto incorrecto.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S068",
+          "texto": "Buen día, la factura tiene un impuesto incorrecto. ¿Me pueden orientar?",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S069",
+          "texto": "La factura tiene un impuesto incorrecto; ya reinicié y sigue igual, urge tantito.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S070",
+          "texto": "Quiero saber cuándo regresará el dinero a mi tarjeta.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S071",
+          "texto": "Buen día, quiero saber cuándo regresará el dinero a mi tarjeta. ¿Me pueden orientar?",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S072",
+          "texto": "Quiero saber cuándo regresará el dinero a mi tarjeta; ya reinicié y sigue igual, urge tantito.",
+          "real": "pagos",
+          "predicha": "pagos"
+        },
+        {
+          "id": "S103",
+          "texto": "El router muestra una luz roja y no hay servicio.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S104",
+          "texto": "Buen día, el router muestra una luz roja y no hay servicio. ¿Me pueden orientar?",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S105",
+          "texto": "El router muestra una luz roja y no hay servicio; ya reinicié y sigue igual, urge tantito.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S106",
+          "texto": "La velocidad de descarga cae cuando activo la VPN.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S107",
+          "texto": "Buen día, la velocidad de descarga cae cuando activo la VPN. ¿Me pueden orientar?",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S108",
+          "texto": "La velocidad de descarga cae cuando activo la VPN; ya reinicié y sigue igual, urge tantito.",
+          "real": "conectividad",
+          "predicha": "conectividad"
+        },
+        {
+          "id": "S139",
+          "texto": "La instalación dice que falta espacio en disco.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S140",
+          "texto": "Buen día, la instalación dice que falta espacio en disco. ¿Me pueden orientar?",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S141",
+          "texto": "La instalación dice que falta espacio en disco; ya reinicié y sigue igual, urge tantito.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S142",
+          "texto": "El complemento desapareció del menú después de actualizar.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S143",
+          "texto": "Buen día, el complemento desapareció del menú después de actualizar. ¿Me pueden orientar?",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "S144",
+          "texto": "El complemento desapareció del menú después de actualizar; ya reinicié y sigue igual, urge tantito.",
+          "real": "software",
+          "predicha": "software"
+        },
+        {
+          "id": "F031",
+          "texto": "¿Cuándo se paga el aguinaldo este año?",
+          "real": "fuera_de_alcance",
+          "predicha": "pagos"
+        },
+        {
+          "id": "F032",
+          "texto": "Buen día, ¿cuándo se paga el aguinaldo este año? ¿Me pueden orientar?",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F033",
+          "texto": "¿Cuándo se paga el aguinaldo este año? Ya reinicié y sigue igual, urge tantito.",
+          "real": "fuera_de_alcance",
+          "predicha": "pagos"
+        },
+        {
+          "id": "F034",
+          "texto": "La silla de mi escritorio está rota.",
+          "real": "fuera_de_alcance",
+          "predicha": "software"
+        },
+        {
+          "id": "F035",
+          "texto": "Buen día, la silla de mi escritorio está rota. ¿Me pueden orientar?",
+          "real": "fuera_de_alcance",
+          "predicha": "fuera_de_alcance"
+        },
+        {
+          "id": "F036",
+          "texto": "La silla de mi escritorio está rota; ya reinicié y sigue igual, urge tantito.",
+          "real": "fuera_de_alcance",
+          "predicha": "acceso"
+        }
+      ]
+    }
+  },
+  "criterio": "macro-F1 en validación; empate -> menor log-loss en validación",
+  "reproduccion_4_clases": {
+    "clasico": {
+      "validation": 0.43205128205128207,
+      "test": 0.6038461538461539
+    },
+    "contextual": {
+      "validation": 0.9142857142857143,
+      "test": 1.0
+    }
+  }
+}

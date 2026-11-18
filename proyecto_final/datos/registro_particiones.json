@@ -1,0 +1,13 @@
+{
+  "descripcion": "Roles de los conjuntos de consultas de recuperación. Una prueba se usa una sola vez; después pasa a desarrollo.",
+  "eventos": [
+    {"fecha": "2026-11-17", "evento": "Se crean consultas_dev.json (32) y consultas_test_v1.json (20) antes de calibrar."},
+    {"fecha": "2026-11-17", "evento": "Se congela la política v1 y se evalúa consultas_test_v1.json una vez. Resultados en resultados/prueba_v1_retirada/."},
+    {"fecha": "2026-11-17T19:17", "evento": "test_v1 queda RETIRADA como prueba y pasa a desarrollo. Se redacta consultas_test.json (prueba v2, 20 consultas: 15 respondibles y 5 sin evidencia) ANTES de diseñar la puerta v2.",
+     "sha256_consultas_test": "39a10f69062b378135db5a147a2c955d0533726b43badfd998d3cab78c70227a"}
+  ],
+  "roles_vigentes": {
+    "desarrollo": ["consultas_dev.json", "consultas_test_v1.json"],
+    "prueba": "consultas_test.json"
+  }
+}

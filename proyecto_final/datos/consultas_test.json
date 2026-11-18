@@ -1,0 +1,192 @@
+[
+ {
+  "id": "test2-01",
+  "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-02",
+  "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-02#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-03",
+  "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-02#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-04",
+  "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-03#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-05",
+  "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-01#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-06",
+  "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-03#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-07",
+  "query": "En la sala del sótano casi no agarra la señal",
+  "categoria": "conectividad",
+  "tipo": "parafrasis",
+  "relevant": [
+   "CON-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-08",
+  "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-02#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-09",
+  "query": "¿A qué hora conviene programar descargas grandes?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-04#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-10",
+  "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-01#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-11",
+  "query": "Mi factura salió con un IVA equivocado",
+  "categoria": "pagos",
+  "tipo": "parafrasis",
+  "relevant": [
+   "PAG-01#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-12",
+  "query": "¿Me pueden reembolsar en efectivo?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-02#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-13",
+  "query": "¿Por qué mi PDF exportado sale en blanco?",
+  "categoria": "software",
+  "tipo": "parafrasis",
+  "relevant": [
+   "SOF-02#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-14",
+  "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+  "categoria": "software",
+  "tipo": "directa",
+  "relevant": [
+   "SOF-03#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-15",
+  "query": "¿Cuántas veces puedo escalar un reporte?",
+  "categoria": "general",
+  "tipo": "directa",
+  "relevant": [
+   "GEN-01#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test2-16",
+  "query": "¿Cuántos caracteres puede tener como máximo mi contraseña?",
+  "categoria": "acceso",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test2-17",
+  "query": "¿Puedo conectar mi consola de videojuegos a la red Cumbre-Corp?",
+  "categoria": "conectividad",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test2-18",
+  "query": "¿Emiten facturas en dólares para clientes del extranjero?",
+  "categoria": "pagos",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test2-19",
+  "query": "¿MesaApp permite editar documentos entre varias personas al mismo tiempo?",
+  "categoria": "software",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test2-20",
+  "query": "¿Qué películas hay en el cine este fin de semana?",
+  "categoria": "fuera_de_alcance",
+  "tipo": "fuera_dominio",
+  "relevant": [],
+  "answerable": false
+ }
+]

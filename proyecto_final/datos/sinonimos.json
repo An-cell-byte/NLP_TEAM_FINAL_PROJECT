@@ -1,0 +1,19 @@
+{
+  "_descripcion": "Equivalencias declaradas (término del usuario -> término del corpus). Se construyeron SOLO con los fallos de desarrollo (consultas_dev.json y consultas_test_v1.json, ya retirada). No se consultó consultas_test.json. Claves sin acentos y en minúsculas.",
+  "equivalencias": {
+    "app": {"corpus": "aplicacion", "origen": "dev-05, test-02"},
+    "laptop": {"corpus": "computadora", "origen": "dev-10"},
+    "corrijo": {"corpus": "corregir", "origen": "dev-16"},
+    "mal": {"corpus": "equivocado", "origen": "dev-16"},
+    "abro": {"corpus": "abre", "origen": "dev-21"},
+    "entro": {"corpus": "entrar", "origen": "dev-05"},
+    "tamano": {"corpus": "pesar", "origen": "dev-22"},
+    "use": {"corpus": "usar", "origen": "test-01"},
+    "usarlo": {"corpus": "usar", "origen": "test-04"},
+    "quitar": {"corpus": "desactivar", "origen": "test-03"},
+    "saca": {"corpus": "cierra", "origen": "test-04"},
+    "rato": {"corpus": "minutos", "origen": "test-04, test-06"},
+    "iguales": {"corpus": "misma", "origen": "test-10"},
+    "veo": {"corpus": "muestra", "origen": "test-10"}
+  }
+}

@@ -1,0 +1,37 @@
+id,family,split,label,text,origin
+F001,fuera_00,train,fuera_de_alcance,Quiero reservar una sala para la junta del viernes.,sintético equipo
+F002,fuera_00,train,fuera_de_alcance,"Buen día, quiero reservar una sala para la junta del viernes. ¿Me pueden orientar?",sintético equipo
+F003,fuera_00,train,fuera_de_alcance,"Quiero reservar una sala para la junta del viernes; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F004,fuera_01,train,fuera_de_alcance,¿Cuál es el menú de la cafetería hoy?,sintético equipo
+F005,fuera_01,train,fuera_de_alcance,"Buen día, ¿cuál es el menú de la cafetería hoy? ¿Me pueden orientar?",sintético equipo
+F006,fuera_01,train,fuera_de_alcance,"¿Cuál es el menú de la cafetería hoy? Ya reinicié y sigue igual, urge tantito.",sintético equipo
+F007,fuera_02,train,fuera_de_alcance,Necesito solicitar mis días de vacaciones.,sintético equipo
+F008,fuera_02,train,fuera_de_alcance,"Buen día, necesito solicitar mis días de vacaciones. ¿Me pueden orientar?",sintético equipo
+F009,fuera_02,train,fuera_de_alcance,"Necesito solicitar mis días de vacaciones; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F010,fuera_03,train,fuera_de_alcance,Quiero cambiar mi lugar de estacionamiento.,sintético equipo
+F011,fuera_03,train,fuera_de_alcance,"Buen día, quiero cambiar mi lugar de estacionamiento. ¿Me pueden orientar?",sintético equipo
+F012,fuera_03,train,fuera_de_alcance,"Quiero cambiar mi lugar de estacionamiento; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F013,fuera_04,train,fuera_de_alcance,¿Quién ganó el partido de anoche?,sintético equipo
+F014,fuera_04,train,fuera_de_alcance,"Buen día, ¿quién ganó el partido de anoche? ¿Me pueden orientar?",sintético equipo
+F015,fuera_04,train,fuera_de_alcance,"¿Quién ganó el partido de anoche? Ya reinicié y sigue igual, urge tantito.",sintético equipo
+F016,fuera_05,train,fuera_de_alcance,Necesito una constancia laboral para el banco.,sintético equipo
+F017,fuera_05,train,fuera_de_alcance,"Buen día, necesito una constancia laboral para el banco. ¿Me pueden orientar?",sintético equipo
+F018,fuera_05,train,fuera_de_alcance,"Necesito una constancia laboral para el banco; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F019,fuera_06,train,fuera_de_alcance,El aire acondicionado de la oficina no enfría.,sintético equipo
+F020,fuera_06,train,fuera_de_alcance,"Buen día, el aire acondicionado de la oficina no enfría. ¿Me pueden orientar?",sintético equipo
+F021,fuera_06,train,fuera_de_alcance,"El aire acondicionado de la oficina no enfría; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F022,fuera_07,train,fuera_de_alcance,Quiero inscribirme al torneo de futbol de la empresa.,sintético equipo
+F023,fuera_07,train,fuera_de_alcance,"Buen día, quiero inscribirme al torneo de futbol de la empresa. ¿Me pueden orientar?",sintético equipo
+F024,fuera_07,train,fuera_de_alcance,"Quiero inscribirme al torneo de futbol de la empresa; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F025,fuera_08,validation,fuera_de_alcance,¿Dónde se recogen los paquetes de mensajería?,sintético equipo
+F026,fuera_08,validation,fuera_de_alcance,"Buen día, ¿dónde se recogen los paquetes de mensajería? ¿Me pueden orientar?",sintético equipo
+F027,fuera_08,validation,fuera_de_alcance,"¿Dónde se recogen los paquetes de mensajería? Ya reinicié y sigue igual, urge tantito.",sintético equipo
+F028,fuera_09,validation,fuera_de_alcance,Necesito cambiar la fecha de mi examen médico.,sintético equipo
+F029,fuera_09,validation,fuera_de_alcance,"Buen día, necesito cambiar la fecha de mi examen médico. ¿Me pueden orientar?",sintético equipo
+F030,fuera_09,validation,fuera_de_alcance,"Necesito cambiar la fecha de mi examen médico; ya reinicié y sigue igual, urge tantito.",sintético equipo
+F031,fuera_10,test,fuera_de_alcance,¿Cuándo se paga el aguinaldo este año?,sintético equipo
+F032,fuera_10,test,fuera_de_alcance,"Buen día, ¿cuándo se paga el aguinaldo este año? ¿Me pueden orientar?",sintético equipo
+F033,fuera_10,test,fuera_de_alcance,"¿Cuándo se paga el aguinaldo este año? Ya reinicié y sigue igual, urge tantito.",sintético equipo
+F034,fuera_11,test,fuera_de_alcance,La silla de mi escritorio está rota.,sintético equipo
+F035,fuera_11,test,fuera_de_alcance,"Buen día, la silla de mi escritorio está rota. ¿Me pueden orientar?",sintético equipo
+F036,fuera_11,test,fuera_de_alcance,"La silla de mi escritorio está rota; ya reinicié y sigue igual, urge tantito.",sintético equipo

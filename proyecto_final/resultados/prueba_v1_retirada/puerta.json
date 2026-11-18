@@ -1,0 +1,4013 @@
+{
+  "estricta": {
+    "rejilla_dev": [
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 5,
+        "tasa_respuesta_correcta": 0.20833333333333334,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7916666666666666
+      },
+      {
+        "puerta": "estricta",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 4,
+        "tasa_respuesta_correcta": 0.16666666666666666,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.8333333333333334
+      }
+    ],
+    "config": {
+      "retriever": "hibrido",
+      "alpha": 0.3,
+      "tau": 0.4,
+      "min_coverage": 1.0,
+      "oov_veto": false,
+      "synonyms": {},
+      "routing": true,
+      "gate": true,
+      "route_min_conf": 0.5,
+      "k": 3
+    },
+    "dev": {
+      "n": 32,
+      "respondibles": 24,
+      "sin_evidencia": 8,
+      "respuestas_correctas_con_cita": 7,
+      "tasa_respuesta_correcta": 0.2916666666666667,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.7083333333333334
+    },
+    "test_eval": {
+      "metricas": {
+        "n": 20,
+        "respondibles": 15,
+        "sin_evidencia": 5,
+        "respuestas_correctas_con_cita": 1,
+        "tasa_respuesta_correcta": 0.06666666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.9333333333333333
+      },
+      "detalle": [
+        {
+          "id": "test-01",
+          "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s1",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-02",
+          "query": "La app de autenticación me dice que el código es incorrecto",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s2",
+            "ACC-01#s4",
+            "ACC-02#s3"
+          ]
+        },
+        {
+          "id": "test-03",
+          "query": "¿Se puede quitar la verificación en dos pasos?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s4",
+            "ACC-02#s5",
+            "ACC-02#s1"
+          ]
+        },
+        {
+          "id": "test-04",
+          "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-05",
+          "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-04#s3",
+            "ACC-02#s1",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "test-06",
+          "query": "Cada rato se me cae el wifi en la oficina",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-01#s2",
+            "CON-01#s3",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-07",
+          "query": "¿Cuánto dura el acceso a la red de invitados?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-01#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-01#s4",
+            "CON-01#s1",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-08",
+          "query": "El navegador marca que el DNS no responde",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-03#s2",
+            "CON-03#s4",
+            "CON-02#s3"
+          ]
+        },
+        {
+          "id": "test-09",
+          "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-04#s5",
+            "CON-04#s1",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-10",
+          "query": "Veo dos cargos iguales en mi estado de cuenta",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-02#s1",
+            "PAG-02#s2",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-11",
+          "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-02#s4",
+            "PAG-02#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "test-12",
+          "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-03#s5",
+            "PAG-03#s4",
+            "PAG-03#s3"
+          ]
+        },
+        {
+          "id": "test-13",
+          "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "test-14",
+          "query": "¿En cuántas computadoras puedo activar mi licencia?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-01#s1",
+            "CON-04#s4"
+          ]
+        },
+        {
+          "id": "test-15",
+          "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s3",
+            "GEN-01#s4",
+            "GEN-01#s5"
+          ]
+        },
+        {
+          "id": "test-16",
+          "query": "¿Puedo iniciar sesión con mi cuenta de Google?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-03#s3",
+            "ACC-04#s1",
+            "ACC-03#s1"
+          ]
+        },
+        {
+          "id": "test-17",
+          "query": "¿Hay cobertura wifi en el estacionamiento?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s2",
+            "CON-01#s5"
+          ]
+        },
+        {
+          "id": "test-18",
+          "query": "¿Cuál es el atajo de teclado para insertar una tabla en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s7",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "test-19",
+          "query": "¿Cuánto cuesta una licencia de MesaApp para 50 usuarios?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s1",
+            "SOF-01#s3"
+          ]
+        },
+        {
+          "id": "test-20",
+          "query": "¿Cuál es la capital de Australia?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-02#s4",
+            "GEN-01#s6",
+            "SOF-01#s5"
+          ]
+        }
+      ]
+    },
+    "test": {
+      "n": 20,
+      "respondibles": 15,
+      "sin_evidencia": 5,
+      "respuestas_correctas_con_cita": 1,
+      "tasa_respuesta_correcta": 0.06666666666666667,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.9333333333333333
+    },
+    "dev_eval": {
+      "metricas": {
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      "detalle": [
+        {
+          "id": "dev-01",
+          "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-01#s1",
+            "ACC-01#s3",
+            "ACC-04#s1"
+          ]
+        },
+        {
+          "id": "dev-02",
+          "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-03",
+          "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-01#s3",
+            "ACC-01#s2",
+            "ACC-01#s1"
+          ]
+        },
+        {
+          "id": "dev-04",
+          "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s1",
+            "ACC-02#s4",
+            "ACC-02#s2"
+          ]
+        },
+        {
+          "id": "dev-05",
+          "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s3",
+            "ACC-02#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-06",
+          "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-03#s1",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-07",
+          "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "ACC-03#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "GEN-01#s1"
+          ]
+        },
+        {
+          "id": "dev-08",
+          "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-04#s1",
+            "ACC-01#s1",
+            "ACC-03#s2"
+          ]
+        },
+        {
+          "id": "dev-09",
+          "query": "¿Cuál red wifi deben usar los visitantes?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-01#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s1",
+            "CON-02#s1"
+          ]
+        },
+        {
+          "id": "dev-10",
+          "query": "Mi laptop no ve la red Cumbre-Corp",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-03#s1",
+            "CON-01#s1"
+          ]
+        },
+        {
+          "id": "dev-11",
+          "query": "¿Puedo usar la VPN con mi computadora personal?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s3",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-12",
+          "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-02#s5",
+            "CON-02#s4",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-13",
+          "query": "¿Qué significa la luz roja del router?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-03#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-03#s3",
+            "CON-03#s1",
+            "CON-01#s3"
+          ]
+        },
+        {
+          "id": "dev-14",
+          "query": "¿Qué velocidad necesito para una videollamada estable?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-04#s3",
+            "CON-04#s1",
+            "CON-04#s5"
+          ]
+        },
+        {
+          "id": "dev-15",
+          "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-01#s2",
+            "PAG-01#s5",
+            "PAG-02#s3"
+          ]
+        },
+        {
+          "id": "dev-16",
+          "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-01#s3",
+            "PAG-01#s2",
+            "PAG-01#s4"
+          ]
+        },
+        {
+          "id": "dev-17",
+          "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-02#s3",
+            "PAG-03#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "dev-18",
+          "query": "¿Aceptan American Express?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "PAG-03#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-03#s1",
+            "CON-01#s4",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "dev-19",
+          "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-03#s3",
+            "PAG-02#s3",
+            "PAG-03#s2"
+          ]
+        },
+        {
+          "id": "dev-20",
+          "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "SOF-01#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "SOF-01#s3",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-21",
+          "query": "MesaApp se congela cuando lo abro",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-22",
+          "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s2",
+            "SOF-03#s4",
+            "SOF-03#s3"
+          ]
+        },
+        {
+          "id": "dev-23",
+          "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "GEN-01#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "GEN-01#s1",
+            "GEN-01#s6",
+            "GEN-01#s3"
+          ]
+        },
+        {
+          "id": "dev-24",
+          "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s6",
+            "ACC-03#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-25",
+          "query": "¿Puedo usar mi huella digital para iniciar sesión?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "ACC-03#s3"
+          ]
+        },
+        {
+          "id": "dev-26",
+          "query": "¿La VPN funciona en Linux?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s2",
+            "CON-02#s4"
+          ]
+        },
+        {
+          "id": "dev-27",
+          "query": "¿Cuánto cuesta la suscripción anual de NubeTec?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s4",
+            "PAG-03#s4",
+            "ACC-04#s4"
+          ]
+        },
+        {
+          "id": "dev-28",
+          "query": "¿MesaApp tiene versión para tabletas Android?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "dev-29",
+          "query": "¿Dan descuento a estudiantes en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s5",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "dev-30",
+          "query": "¿Cuál es el pronóstico del clima para mañana en Monterrey?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s1",
+            "PAG-03#s5",
+            "PAG-01#s2"
+          ]
+        },
+        {
+          "id": "dev-31",
+          "query": "¿Quién es el mejor jugador de futbol del mundo?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-04#s2",
+            "GEN-01#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-32",
+          "query": "Recomiéndame una receta de pastel de chocolate",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s3",
+            "SOF-01#s6"
+          ]
+        }
+      ]
+    }
+  },
+  "cobertura_relajada": {
+    "rejilla_dev": [
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 22,
+        "tasa_respuesta_correcta": 0.9166666666666666,
+        "respuestas_sin_respaldo": 8,
+        "precision_de_cita": 0.7333333333333333,
+        "recall_abstencion": 0.25,
+        "tasa_abstencion_falsa": 0.0
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 22,
+        "tasa_respuesta_correcta": 0.9166666666666666,
+        "respuestas_sin_respaldo": 8,
+        "precision_de_cita": 0.7333333333333333,
+        "recall_abstencion": 0.25,
+        "tasa_abstencion_falsa": 0.0
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 22,
+        "tasa_respuesta_correcta": 0.9166666666666666,
+        "respuestas_sin_respaldo": 8,
+        "precision_de_cita": 0.7333333333333333,
+        "recall_abstencion": 0.25,
+        "tasa_abstencion_falsa": 0.0
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 22,
+        "tasa_respuesta_correcta": 0.9166666666666666,
+        "respuestas_sin_respaldo": 6,
+        "precision_de_cita": 0.7857142857142857,
+        "recall_abstencion": 0.5,
+        "tasa_abstencion_falsa": 0.0
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 21,
+        "tasa_respuesta_correcta": 0.875,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.875,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.041666666666666664
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 18,
+        "tasa_respuesta_correcta": 0.75,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.9,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.25,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 20,
+        "tasa_respuesta_correcta": 0.8333333333333334,
+        "respuestas_sin_respaldo": 5,
+        "precision_de_cita": 0.8,
+        "recall_abstencion": 0.625,
+        "tasa_abstencion_falsa": 0.08333333333333333
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 20,
+        "tasa_respuesta_correcta": 0.8333333333333334,
+        "respuestas_sin_respaldo": 5,
+        "precision_de_cita": 0.8,
+        "recall_abstencion": 0.625,
+        "tasa_abstencion_falsa": 0.08333333333333333
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 20,
+        "tasa_respuesta_correcta": 0.8333333333333334,
+        "respuestas_sin_respaldo": 5,
+        "precision_de_cita": 0.8,
+        "recall_abstencion": 0.625,
+        "tasa_abstencion_falsa": 0.08333333333333333
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 20,
+        "tasa_respuesta_correcta": 0.8333333333333334,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8695652173913043,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.08333333333333333
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 19,
+        "tasa_respuesta_correcta": 0.7916666666666666,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8636363636363636,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.125
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.5,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 19,
+        "tasa_respuesta_correcta": 0.7916666666666666,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8636363636363636,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.125
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 19,
+        "tasa_respuesta_correcta": 0.7916666666666666,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8636363636363636,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.125
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 19,
+        "tasa_respuesta_correcta": 0.7916666666666666,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8636363636363636,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.125
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 19,
+        "tasa_respuesta_correcta": 0.7916666666666666,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8636363636363636,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.125
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 18,
+        "tasa_respuesta_correcta": 0.75,
+        "respuestas_sin_respaldo": 3,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.16666666666666666
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 1,
+        "precision_de_cita": 0.9411764705882353,
+        "recall_abstencion": 0.875,
+        "tasa_abstencion_falsa": 0.3333333333333333
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.6,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 11,
+        "tasa_respuesta_correcta": 0.4583333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5416666666666666
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 13,
+        "tasa_respuesta_correcta": 0.5416666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8666666666666667,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.375
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 13,
+        "tasa_respuesta_correcta": 0.5416666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8666666666666667,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.375
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 13,
+        "tasa_respuesta_correcta": 0.5416666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8666666666666667,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.375
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 13,
+        "tasa_respuesta_correcta": 0.5416666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8666666666666667,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.375
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 13,
+        "tasa_respuesta_correcta": 0.5416666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8666666666666667,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.375
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 11,
+        "tasa_respuesta_correcta": 0.4583333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5416666666666666
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 0.75,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 8,
+        "tasa_respuesta_correcta": 0.3333333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.6666666666666666
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 5,
+        "tasa_respuesta_correcta": 0.20833333333333334,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7916666666666666
+      },
+      {
+        "puerta": "cobertura_relajada",
+        "min_coverage": 1.0,
+        "oov_veto": false,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 4,
+        "tasa_respuesta_correcta": 0.16666666666666666,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.8333333333333334
+      }
+    ],
+    "config": {
+      "retriever": "hibrido",
+      "alpha": 0.3,
+      "tau": 0.6,
+      "min_coverage": 0.5,
+      "oov_veto": false,
+      "synonyms": {},
+      "routing": true,
+      "gate": true,
+      "route_min_conf": 0.5,
+      "k": 3
+    },
+    "dev": {
+      "n": 32,
+      "respondibles": 24,
+      "sin_evidencia": 8,
+      "respuestas_correctas_con_cita": 12,
+      "tasa_respuesta_correcta": 0.5,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.5
+    },
+    "test_eval": {
+      "metricas": {
+        "n": 20,
+        "respondibles": 15,
+        "sin_evidencia": 5,
+        "respuestas_correctas_con_cita": 2,
+        "tasa_respuesta_correcta": 0.13333333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.8666666666666667
+      },
+      "detalle": [
+        {
+          "id": "test-01",
+          "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s1",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-02",
+          "query": "La app de autenticación me dice que el código es incorrecto",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s2",
+            "ACC-01#s4",
+            "ACC-02#s3"
+          ]
+        },
+        {
+          "id": "test-03",
+          "query": "¿Se puede quitar la verificación en dos pasos?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "ACC-02#s4",
+            "ACC-02#s5",
+            "ACC-02#s1"
+          ]
+        },
+        {
+          "id": "test-04",
+          "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-05",
+          "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-04#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-04#s3",
+            "ACC-02#s1",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "test-06",
+          "query": "Cada rato se me cae el wifi en la oficina",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s2",
+            "CON-01#s3",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-07",
+          "query": "¿Cuánto dura el acceso a la red de invitados?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s4",
+            "CON-01#s1",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-08",
+          "query": "El navegador marca que el DNS no responde",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-03#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-03#s2",
+            "CON-03#s4",
+            "CON-02#s3"
+          ]
+        },
+        {
+          "id": "test-09",
+          "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-04#s5",
+            "CON-04#s1",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-10",
+          "query": "Veo dos cargos iguales en mi estado de cuenta",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-02#s1",
+            "PAG-02#s2",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-11",
+          "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-02#s4",
+            "PAG-02#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "test-12",
+          "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-03#s5",
+            "PAG-03#s4",
+            "PAG-03#s3"
+          ]
+        },
+        {
+          "id": "test-13",
+          "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "test-14",
+          "query": "¿En cuántas computadoras puedo activar mi licencia?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-01#s1",
+            "CON-04#s4"
+          ]
+        },
+        {
+          "id": "test-15",
+          "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s3",
+            "GEN-01#s4",
+            "GEN-01#s5"
+          ]
+        },
+        {
+          "id": "test-16",
+          "query": "¿Puedo iniciar sesión con mi cuenta de Google?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "ACC-03#s3",
+            "ACC-04#s1",
+            "ACC-03#s1"
+          ]
+        },
+        {
+          "id": "test-17",
+          "query": "¿Hay cobertura wifi en el estacionamiento?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s2",
+            "CON-01#s5"
+          ]
+        },
+        {
+          "id": "test-18",
+          "query": "¿Cuál es el atajo de teclado para insertar una tabla en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s7",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "test-19",
+          "query": "¿Cuánto cuesta una licencia de MesaApp para 50 usuarios?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s1",
+            "SOF-01#s3"
+          ]
+        },
+        {
+          "id": "test-20",
+          "query": "¿Cuál es la capital de Australia?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-02#s4",
+            "GEN-01#s6",
+            "SOF-01#s5"
+          ]
+        }
+      ]
+    },
+    "test": {
+      "n": 20,
+      "respondibles": 15,
+      "sin_evidencia": 5,
+      "respuestas_correctas_con_cita": 2,
+      "tasa_respuesta_correcta": 0.13333333333333333,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.8666666666666667
+    },
+    "dev_eval": {
+      "metricas": {
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5
+      },
+      "detalle": [
+        {
+          "id": "dev-01",
+          "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s1",
+            "ACC-01#s3",
+            "ACC-04#s1"
+          ]
+        },
+        {
+          "id": "dev-02",
+          "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-03",
+          "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s3",
+            "ACC-01#s2",
+            "ACC-01#s1"
+          ]
+        },
+        {
+          "id": "dev-04",
+          "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-02#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-02#s1",
+            "ACC-02#s4",
+            "ACC-02#s2"
+          ]
+        },
+        {
+          "id": "dev-05",
+          "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-02#s3",
+            "ACC-02#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-06",
+          "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "ACC-03#s1",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-07",
+          "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "ACC-03#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "GEN-01#s1"
+          ]
+        },
+        {
+          "id": "dev-08",
+          "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-04#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-04#s1",
+            "ACC-01#s1",
+            "ACC-03#s2"
+          ]
+        },
+        {
+          "id": "dev-09",
+          "query": "¿Cuál red wifi deben usar los visitantes?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s1",
+            "CON-02#s1"
+          ]
+        },
+        {
+          "id": "dev-10",
+          "query": "Mi laptop no ve la red Cumbre-Corp",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-03#s1",
+            "CON-01#s1"
+          ]
+        },
+        {
+          "id": "dev-11",
+          "query": "¿Puedo usar la VPN con mi computadora personal?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s3",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-12",
+          "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-02#s5",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-02#s5",
+            "CON-02#s4",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-13",
+          "query": "¿Qué significa la luz roja del router?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-03#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-03#s3",
+            "CON-03#s1",
+            "CON-01#s3"
+          ]
+        },
+        {
+          "id": "dev-14",
+          "query": "¿Qué velocidad necesito para una videollamada estable?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-04#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-04#s3",
+            "CON-04#s1",
+            "CON-04#s5"
+          ]
+        },
+        {
+          "id": "dev-15",
+          "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-01#s2",
+            "PAG-01#s5",
+            "PAG-02#s3"
+          ]
+        },
+        {
+          "id": "dev-16",
+          "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "PAG-01#s3",
+            "PAG-01#s2",
+            "PAG-01#s4"
+          ]
+        },
+        {
+          "id": "dev-17",
+          "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "respondida",
+          "fuente": "PAG-02#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-02#s3",
+            "PAG-03#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "dev-18",
+          "query": "¿Aceptan American Express?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-03#s1",
+            "CON-01#s4",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "dev-19",
+          "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "respondida",
+          "fuente": "PAG-03#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-03#s3",
+            "PAG-02#s3",
+            "PAG-03#s2"
+          ]
+        },
+        {
+          "id": "dev-20",
+          "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "SOF-01#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "SOF-01#s3",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-21",
+          "query": "MesaApp se congela cuando lo abro",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-22",
+          "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "SOF-03#s2",
+            "SOF-03#s4",
+            "SOF-03#s3"
+          ]
+        },
+        {
+          "id": "dev-23",
+          "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "GEN-01#s1",
+            "GEN-01#s6",
+            "GEN-01#s3"
+          ]
+        },
+        {
+          "id": "dev-24",
+          "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "GEN-01#s6",
+            "ACC-03#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-25",
+          "query": "¿Puedo usar mi huella digital para iniciar sesión?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "ACC-03#s3"
+          ]
+        },
+        {
+          "id": "dev-26",
+          "query": "¿La VPN funciona en Linux?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s2",
+            "CON-02#s4"
+          ]
+        },
+        {
+          "id": "dev-27",
+          "query": "¿Cuánto cuesta la suscripción anual de NubeTec?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s4",
+            "PAG-03#s4",
+            "ACC-04#s4"
+          ]
+        },
+        {
+          "id": "dev-28",
+          "query": "¿MesaApp tiene versión para tabletas Android?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "dev-29",
+          "query": "¿Dan descuento a estudiantes en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s5",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "dev-30",
+          "query": "¿Cuál es el pronóstico del clima para mañana en Monterrey?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s1",
+            "PAG-03#s5",
+            "PAG-01#s2"
+          ]
+        },
+        {
+          "id": "dev-31",
+          "query": "¿Quién es el mejor jugador de futbol del mundo?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-04#s2",
+            "GEN-01#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-32",
+          "query": "Recomiéndame una receta de pastel de chocolate",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s3",
+            "SOF-01#s6"
+          ]
+        }
+      ]
+    }
+  },
+  "relajada_con_veto": {
+    "rejilla_dev": [
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 15,
+        "tasa_respuesta_correcta": 0.625,
+        "respuestas_sin_respaldo": 1,
+        "precision_de_cita": 0.9375,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.3333333333333333
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.25,
+        "oov_veto": true,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 17,
+        "tasa_respuesta_correcta": 0.7083333333333334,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8947368421052632,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.20833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 15,
+        "tasa_respuesta_correcta": 0.625,
+        "respuestas_sin_respaldo": 1,
+        "precision_de_cita": 0.9375,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.3333333333333333
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.5,
+        "oov_veto": true,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8888888888888888,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8888888888888888,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8888888888888888,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8888888888888888,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 16,
+        "tasa_respuesta_correcta": 0.6666666666666666,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8888888888888888,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.25
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 14,
+        "tasa_respuesta_correcta": 0.5833333333333334,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.6,
+        "oov_veto": true,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 11,
+        "tasa_respuesta_correcta": 0.4583333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5416666666666666
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 12,
+        "tasa_respuesta_correcta": 0.5,
+        "respuestas_sin_respaldo": 2,
+        "precision_de_cita": 0.8571428571428571,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 10,
+        "tasa_respuesta_correcta": 0.4166666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.5833333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 0.75,
+        "oov_veto": true,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 8,
+        "tasa_respuesta_correcta": 0.3333333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.6666666666666666
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.0,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.1,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.2,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.3,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.4,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 7,
+        "tasa_respuesta_correcta": 0.2916666666666667,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7083333333333334
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.5,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 5,
+        "tasa_respuesta_correcta": 0.20833333333333334,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.7916666666666666
+      },
+      {
+        "puerta": "relajada_con_veto",
+        "min_coverage": 1.0,
+        "oov_veto": true,
+        "tau": 0.6,
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 4,
+        "tasa_respuesta_correcta": 0.16666666666666666,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.8333333333333334
+      }
+    ],
+    "config": {
+      "retriever": "hibrido",
+      "alpha": 0.3,
+      "tau": 0.5,
+      "min_coverage": 0.6,
+      "oov_veto": true,
+      "synonyms": {},
+      "routing": true,
+      "gate": true,
+      "route_min_conf": 0.5,
+      "k": 3
+    },
+    "dev": {
+      "n": 32,
+      "respondibles": 24,
+      "sin_evidencia": 8,
+      "respuestas_correctas_con_cita": 14,
+      "tasa_respuesta_correcta": 0.5833333333333334,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.4166666666666667
+    },
+    "test_eval": {
+      "metricas": {
+        "n": 20,
+        "respondibles": 15,
+        "sin_evidencia": 5,
+        "respuestas_correctas_con_cita": 5,
+        "tasa_respuesta_correcta": 0.3333333333333333,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.6666666666666666
+      },
+      "detalle": [
+        {
+          "id": "test-01",
+          "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s1",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-02",
+          "query": "La app de autenticación me dice que el código es incorrecto",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-02#s2",
+            "ACC-01#s4",
+            "ACC-02#s3"
+          ]
+        },
+        {
+          "id": "test-03",
+          "query": "¿Se puede quitar la verificación en dos pasos?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-02#s4",
+            "ACC-02#s5",
+            "ACC-02#s1"
+          ]
+        },
+        {
+          "id": "test-04",
+          "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "test-05",
+          "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-04#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-04#s3",
+            "ACC-02#s1",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "test-06",
+          "query": "Cada rato se me cae el wifi en la oficina",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "CON-01#s2",
+            "CON-01#s3",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-07",
+          "query": "¿Cuánto dura el acceso a la red de invitados?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-01#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-01#s4",
+            "CON-01#s1",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-08",
+          "query": "El navegador marca que el DNS no responde",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-03#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-03#s2",
+            "CON-03#s4",
+            "CON-02#s3"
+          ]
+        },
+        {
+          "id": "test-09",
+          "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-04#s5",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-04#s5",
+            "CON-04#s1",
+            "CON-04#s2"
+          ]
+        },
+        {
+          "id": "test-10",
+          "query": "Veo dos cargos iguales en mi estado de cuenta",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "PAG-02#s1",
+            "PAG-02#s2",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "test-11",
+          "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "PAG-02#s4",
+            "PAG-02#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "test-12",
+          "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-03#s5",
+            "PAG-03#s4",
+            "PAG-03#s3"
+          ]
+        },
+        {
+          "id": "test-13",
+          "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "respondida",
+          "fuente": "SOF-01#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "test-14",
+          "query": "¿En cuántas computadoras puedo activar mi licencia?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-01#s1",
+            "CON-04#s4"
+          ]
+        },
+        {
+          "id": "test-15",
+          "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "GEN-01#s3",
+            "GEN-01#s4",
+            "GEN-01#s5"
+          ]
+        },
+        {
+          "id": "test-16",
+          "query": "¿Puedo iniciar sesión con mi cuenta de Google?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-03#s3",
+            "ACC-04#s1",
+            "ACC-03#s1"
+          ]
+        },
+        {
+          "id": "test-17",
+          "query": "¿Hay cobertura wifi en el estacionamiento?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s2",
+            "CON-01#s5"
+          ]
+        },
+        {
+          "id": "test-18",
+          "query": "¿Cuál es el atajo de teclado para insertar una tabla en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s7",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "test-19",
+          "query": "¿Cuánto cuesta una licencia de MesaApp para 50 usuarios?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s1",
+            "SOF-01#s3"
+          ]
+        },
+        {
+          "id": "test-20",
+          "query": "¿Cuál es la capital de Australia?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "PAG-02#s4",
+            "GEN-01#s6",
+            "SOF-01#s5"
+          ]
+        }
+      ]
+    },
+    "test": {
+      "n": 20,
+      "respondibles": 15,
+      "sin_evidencia": 5,
+      "respuestas_correctas_con_cita": 5,
+      "tasa_respuesta_correcta": 0.3333333333333333,
+      "respuestas_sin_respaldo": 0,
+      "precision_de_cita": 1.0,
+      "recall_abstencion": 1.0,
+      "tasa_abstencion_falsa": 0.6666666666666666
+    },
+    "dev_eval": {
+      "metricas": {
+        "n": 32,
+        "respondibles": 24,
+        "sin_evidencia": 8,
+        "respuestas_correctas_con_cita": 14,
+        "tasa_respuesta_correcta": 0.5833333333333334,
+        "respuestas_sin_respaldo": 0,
+        "precision_de_cita": 1.0,
+        "recall_abstencion": 1.0,
+        "tasa_abstencion_falsa": 0.4166666666666667
+      },
+      "detalle": [
+        {
+          "id": "dev-01",
+          "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s1",
+            "ACC-01#s3",
+            "ACC-04#s1"
+          ]
+        },
+        {
+          "id": "dev-02",
+          "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s2",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-03",
+          "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-01#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-01#s3",
+            "ACC-01#s2",
+            "ACC-01#s1"
+          ]
+        },
+        {
+          "id": "dev-04",
+          "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-02#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-02#s1",
+            "ACC-02#s4",
+            "ACC-02#s2"
+          ]
+        },
+        {
+          "id": "dev-05",
+          "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-02#s3",
+            "ACC-02#s2",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-06",
+          "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "ACC-03#s1",
+            "ACC-01#s3",
+            "ACC-01#s4"
+          ]
+        },
+        {
+          "id": "dev-07",
+          "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "ACC-03#s4",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "GEN-01#s1"
+          ]
+        },
+        {
+          "id": "dev-08",
+          "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+          "tipo": "directa",
+          "categoria_esperada": "acceso",
+          "answerable": true,
+          "etiqueta_predicha": "acceso",
+          "estado": "respondida",
+          "fuente": "ACC-04#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "ACC-04#s1",
+            "ACC-01#s1",
+            "ACC-03#s2"
+          ]
+        },
+        {
+          "id": "dev-09",
+          "query": "¿Cuál red wifi deben usar los visitantes?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-01#s1",
+            "CON-02#s1"
+          ]
+        },
+        {
+          "id": "dev-10",
+          "query": "Mi laptop no ve la red Cumbre-Corp",
+          "tipo": "parafrasis",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "CON-01#s3",
+            "CON-03#s1",
+            "CON-01#s1"
+          ]
+        },
+        {
+          "id": "dev-11",
+          "query": "¿Puedo usar la VPN con mi computadora personal?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-02#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s3",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-12",
+          "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "cobertura_insuficiente",
+          "top_ids": [
+            "CON-02#s5",
+            "CON-02#s4",
+            "CON-02#s2"
+          ]
+        },
+        {
+          "id": "dev-13",
+          "query": "¿Qué significa la luz roja del router?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-03#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-03#s3",
+            "CON-03#s1",
+            "CON-01#s3"
+          ]
+        },
+        {
+          "id": "dev-14",
+          "query": "¿Qué velocidad necesito para una videollamada estable?",
+          "tipo": "directa",
+          "categoria_esperada": "conectividad",
+          "answerable": true,
+          "etiqueta_predicha": "conectividad",
+          "estado": "respondida",
+          "fuente": "CON-04#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "CON-04#s3",
+            "CON-04#s1",
+            "CON-04#s5"
+          ]
+        },
+        {
+          "id": "dev-15",
+          "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "respondida",
+          "fuente": "PAG-01#s2",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-01#s2",
+            "PAG-01#s5",
+            "PAG-02#s3"
+          ]
+        },
+        {
+          "id": "dev-16",
+          "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "PAG-01#s3",
+            "PAG-01#s2",
+            "PAG-01#s4"
+          ]
+        },
+        {
+          "id": "dev-17",
+          "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "respondida",
+          "fuente": "PAG-02#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-02#s3",
+            "PAG-03#s3",
+            "PAG-02#s5"
+          ]
+        },
+        {
+          "id": "dev-18",
+          "query": "¿Aceptan American Express?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "PAG-03#s1",
+            "CON-01#s4",
+            "PAG-03#s4"
+          ]
+        },
+        {
+          "id": "dev-19",
+          "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+          "tipo": "directa",
+          "categoria_esperada": "pagos",
+          "answerable": true,
+          "etiqueta_predicha": "pagos",
+          "estado": "respondida",
+          "fuente": "PAG-03#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "PAG-03#s3",
+            "PAG-02#s3",
+            "PAG-03#s2"
+          ]
+        },
+        {
+          "id": "dev-20",
+          "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "SOF-01#s3",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "SOF-01#s3",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-21",
+          "query": "MesaApp se congela cuando lo abro",
+          "tipo": "parafrasis",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-02#s2",
+            "SOF-02#s1",
+            "SOF-02#s6"
+          ]
+        },
+        {
+          "id": "dev-22",
+          "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+          "tipo": "directa",
+          "categoria_esperada": "software",
+          "answerable": true,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-03#s2",
+            "SOF-03#s4",
+            "SOF-03#s3"
+          ]
+        },
+        {
+          "id": "dev-23",
+          "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+          "tipo": "directa",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "respondida",
+          "fuente": "GEN-01#s1",
+          "cita_valida": true,
+          "motivo": "evidencia_suficiente",
+          "top_ids": [
+            "GEN-01#s1",
+            "GEN-01#s6",
+            "GEN-01#s3"
+          ]
+        },
+        {
+          "id": "dev-24",
+          "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+          "tipo": "parafrasis",
+          "categoria_esperada": "general",
+          "answerable": true,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "similitud_insuficiente",
+          "top_ids": [
+            "GEN-01#s6",
+            "ACC-03#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-25",
+          "query": "¿Puedo usar mi huella digital para iniciar sesión?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "acceso",
+          "answerable": false,
+          "etiqueta_predicha": "acceso",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-03#s4",
+            "ACC-03#s2",
+            "ACC-03#s3"
+          ]
+        },
+        {
+          "id": "dev-26",
+          "query": "¿La VPN funciona en Linux?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "conectividad",
+          "answerable": false,
+          "etiqueta_predicha": "conectividad",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "CON-02#s1",
+            "CON-02#s2",
+            "CON-02#s4"
+          ]
+        },
+        {
+          "id": "dev-27",
+          "query": "¿Cuánto cuesta la suscripción anual de NubeTec?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "pagos",
+          "answerable": false,
+          "etiqueta_predicha": "pagos",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-03#s4",
+            "PAG-03#s4",
+            "ACC-04#s4"
+          ]
+        },
+        {
+          "id": "dev-28",
+          "query": "¿MesaApp tiene versión para tabletas Android?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "software",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-01#s4",
+            "SOF-02#s6",
+            "SOF-02#s4"
+          ]
+        },
+        {
+          "id": "dev-29",
+          "query": "¿Dan descuento a estudiantes en MesaApp?",
+          "tipo": "sin_evidencia_dominio",
+          "categoria_esperada": "software",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-01#s5",
+            "SOF-02#s5",
+            "SOF-02#s1"
+          ]
+        },
+        {
+          "id": "dev-30",
+          "query": "¿Cuál es el pronóstico del clima para mañana en Monterrey?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "GEN-01#s1",
+            "PAG-03#s5",
+            "PAG-01#s2"
+          ]
+        },
+        {
+          "id": "dev-31",
+          "query": "¿Quién es el mejor jugador de futbol del mundo?",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "ACC-04#s2",
+            "GEN-01#s5",
+            "ACC-01#s5"
+          ]
+        },
+        {
+          "id": "dev-32",
+          "query": "Recomiéndame una receta de pastel de chocolate",
+          "tipo": "fuera_dominio",
+          "categoria_esperada": "fuera_de_alcance",
+          "answerable": false,
+          "etiqueta_predicha": "fuera_de_alcance",
+          "estado": "abstencion",
+          "fuente": null,
+          "cita_valida": false,
+          "motivo": "termino_desconocido_en_corpus",
+          "top_ids": [
+            "SOF-03#s1",
+            "ACC-03#s3",
+            "SOF-01#s6"
+          ]
+        }
+      ]
+    }
+  }
+}
