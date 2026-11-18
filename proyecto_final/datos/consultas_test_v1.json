@@ -1,0 +1,192 @@
+[
+ {
+  "id": "test-01",
+  "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-01#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-02",
+  "query": "La app de autenticación me dice que el código es incorrecto",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-02#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-03",
+  "query": "¿Se puede quitar la verificación en dos pasos?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-02#s5"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-04",
+  "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-03#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-05",
+  "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-04#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-06",
+  "query": "Cada rato se me cae el wifi en la oficina",
+  "categoria": "conectividad",
+  "tipo": "parafrasis",
+  "relevant": [
+   "CON-01#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-07",
+  "query": "¿Cuánto dura el acceso a la red de invitados?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-01#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-08",
+  "query": "El navegador marca que el DNS no responde",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-03#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-09",
+  "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-04#s5"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-10",
+  "query": "Veo dos cargos iguales en mi estado de cuenta",
+  "categoria": "pagos",
+  "tipo": "parafrasis",
+  "relevant": [
+   "PAG-02#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-11",
+  "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-02#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-12",
+  "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-03#s5"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-13",
+  "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+  "categoria": "software",
+  "tipo": "directa",
+  "relevant": [
+   "SOF-01#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-14",
+  "query": "¿En cuántas computadoras puedo activar mi licencia?",
+  "categoria": "software",
+  "tipo": "parafrasis",
+  "relevant": [
+   "SOF-01#s5"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-15",
+  "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+  "categoria": "general",
+  "tipo": "directa",
+  "relevant": [
+   "GEN-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "test-16",
+  "query": "¿Puedo iniciar sesión con mi cuenta de Google?",
+  "categoria": "acceso",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test-17",
+  "query": "¿Hay cobertura wifi en el estacionamiento?",
+  "categoria": "conectividad",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test-18",
+  "query": "¿Cuál es el atajo de teclado para insertar una tabla en MesaApp?",
+  "categoria": "software",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test-19",
+  "query": "¿Cuánto cuesta una licencia de MesaApp para 50 usuarios?",
+  "categoria": "pagos",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "test-20",
+  "query": "¿Cuál es la capital de Australia?",
+  "categoria": "fuera_de_alcance",
+  "tipo": "fuera_dominio",
+  "relevant": [],
+  "answerable": false
+ }
+]

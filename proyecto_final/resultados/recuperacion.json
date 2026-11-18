@@ -1,0 +1,4678 @@
+{
+  "tabla": [
+    {
+      "recuperador": "tfidf",
+      "alpha": 0.0,
+      "dev": {
+        "recall_at_3": 0.8974358974358975,
+        "mrr_at_5": 0.8311965811965811,
+        "detalle": [
+          {
+            "id": "dev-01",
+            "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-01#s5",
+              "ACC-04#s1",
+              "ACC-01#s3",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-02",
+            "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-03#s4",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-03",
+            "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s5",
+              "ACC-01#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-04",
+            "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s1"
+            ],
+            "ranking": [
+              "ACC-02#s1",
+              "ACC-02#s2",
+              "ACC-02#s4",
+              "ACC-02#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-05",
+            "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-01#s5",
+              "ACC-02#s2",
+              "ACC-02#s3",
+              "ACC-02#s5",
+              "GEN-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.3333333333333333
+          },
+          {
+            "id": "dev-06",
+            "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-01#s4",
+              "ACC-03#s1",
+              "SOF-02#s2",
+              "ACC-03#s5",
+              "ACC-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-07",
+            "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s4"
+            ],
+            "ranking": [
+              "ACC-03#s4",
+              "SOF-01#s5",
+              "GEN-01#s4",
+              "CON-02#s5",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-08",
+            "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-04#s1"
+            ],
+            "ranking": [
+              "ACC-04#s1",
+              "ACC-01#s1",
+              "ACC-04#s2",
+              "CON-02#s3",
+              "CON-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-09",
+            "query": "¿Cuál red wifi deben usar los visitantes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s1"
+            ],
+            "ranking": [
+              "CON-01#s1",
+              "CON-01#s3",
+              "CON-01#s2",
+              "CON-01#s5",
+              "CON-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-10",
+            "query": "Mi laptop no ve la red Cumbre-Corp",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s1",
+              "CON-01#s2",
+              "CON-01#s3",
+              "CON-02#s1",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.3333333333333333
+          },
+          {
+            "id": "dev-11",
+            "query": "¿Puedo usar la VPN con mi computadora personal?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s3"
+            ],
+            "ranking": [
+              "CON-02#s3",
+              "CON-02#s1",
+              "CON-03#s4",
+              "ACC-04#s4",
+              "CON-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-12",
+            "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s5"
+            ],
+            "ranking": [
+              "CON-02#s5",
+              "CON-02#s4",
+              "GEN-01#s4",
+              "CON-02#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-13",
+            "query": "¿Qué significa la luz roja del router?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-03#s1",
+              "CON-03#s5",
+              "CON-03#s4",
+              "CON-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-14",
+            "query": "¿Qué velocidad necesito para una videollamada estable?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s3"
+            ],
+            "ranking": [
+              "CON-04#s3",
+              "CON-02#s4",
+              "CON-04#s1",
+              "CON-04#s5",
+              "ACC-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-15",
+            "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s2"
+            ],
+            "ranking": [
+              "PAG-01#s2",
+              "PAG-01#s3",
+              "PAG-01#s1",
+              "PAG-01#s4",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-16",
+            "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s3"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-01#s4",
+              "PAG-01#s1",
+              "PAG-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-17",
+            "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s3"
+            ],
+            "ranking": [
+              "PAG-02#s3",
+              "PAG-03#s3",
+              "PAG-03#s2",
+              "PAG-02#s2",
+              "PAG-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-18",
+            "query": "¿Aceptan American Express?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s1"
+            ],
+            "ranking": [
+              "PAG-03#s1",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-19",
+            "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s3"
+            ],
+            "ranking": [
+              "PAG-03#s3",
+              "PAG-03#s2",
+              "PAG-02#s1",
+              "PAG-02#s5",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-20",
+            "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s3"
+            ],
+            "ranking": [
+              "SOF-01#s3",
+              "SOF-03#s4",
+              "SOF-01#s1",
+              "SOF-02#s1",
+              "SOF-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-21",
+            "query": "MesaApp se congela cuando lo abro",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s2"
+            ],
+            "ranking": [
+              "SOF-02#s1",
+              "SOF-02#s7",
+              "SOF-02#s6",
+              "SOF-02#s4",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.0
+          },
+          {
+            "id": "dev-22",
+            "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s2",
+              "SOF-03#s5",
+              "SOF-03#s3",
+              "SOF-02#s1",
+              "SOF-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-23",
+            "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s1"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "GEN-01#s1",
+              "ACC-03#s5",
+              "ACC-01#s5",
+              "GEN-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-24",
+            "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "GEN-01#s6"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "ACC-01#s5",
+              "ACC-03#s5",
+              "GEN-01#s1",
+              "CON-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-01",
+            "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-02",
+            "query": "La app de autenticación me dice que el código es incorrecto",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s2"
+            ],
+            "ranking": [
+              "ACC-02#s2",
+              "ACC-02#s1",
+              "SOF-01#s3",
+              "PAG-01#s4",
+              "CON-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-03",
+            "query": "¿Se puede quitar la verificación en dos pasos?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s5"
+            ],
+            "ranking": [
+              "ACC-02#s5",
+              "ACC-02#s1",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "ACC-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-04",
+            "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s1",
+              "SOF-03#s2",
+              "SOF-03#s4",
+              "SOF-03#s6",
+              "SOF-03#s5"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.0
+          },
+          {
+            "id": "test-05",
+            "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-04#s3"
+            ],
+            "ranking": [
+              "ACC-04#s3",
+              "ACC-02#s1",
+              "ACC-01#s5",
+              "ACC-01#s1",
+              "PAG-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-06",
+            "query": "Cada rato se me cae el wifi en la oficina",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s2"
+            ],
+            "ranking": [
+              "CON-02#s4",
+              "CON-01#s3",
+              "CON-01#s5",
+              "CON-01#s2",
+              "CON-04#s5"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.25
+          },
+          {
+            "id": "test-07",
+            "query": "¿Cuánto dura el acceso a la red de invitados?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s4"
+            ],
+            "ranking": [
+              "CON-01#s4",
+              "CON-01#s1",
+              "CON-03#s1",
+              "ACC-03#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-08",
+            "query": "El navegador marca que el DNS no responde",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s2"
+            ],
+            "ranking": [
+              "CON-03#s2",
+              "SOF-02#s7",
+              "CON-03#s4",
+              "ACC-03#s3",
+              "CON-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-09",
+            "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s5"
+            ],
+            "ranking": [
+              "CON-04#s5",
+              "CON-04#s2",
+              "CON-04#s1",
+              "CON-04#s4",
+              "CON-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-10",
+            "query": "Veo dos cargos iguales en mi estado de cuenta",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s1"
+            ],
+            "ranking": [
+              "PAG-02#s1",
+              "PAG-02#s3",
+              "PAG-03#s4",
+              "ACC-02#s4",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-11",
+            "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s4"
+            ],
+            "ranking": [
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "SOF-01#s6",
+              "CON-01#s4",
+              "PAG-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-12",
+            "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s5"
+            ],
+            "ranking": [
+              "PAG-03#s5",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-01#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-13",
+            "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s4"
+            ],
+            "ranking": [
+              "SOF-03#s5",
+              "SOF-01#s4",
+              "SOF-02#s4",
+              "ACC-04#s3",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-14",
+            "query": "¿En cuántas computadoras puedo activar mi licencia?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-01#s5"
+            ],
+            "ranking": [
+              "SOF-01#s5",
+              "ACC-04#s1",
+              "ACC-02#s3",
+              "ACC-01#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-15",
+            "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "GEN-01#s4",
+              "CON-04#s5",
+              "ACC-04#s1",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.0
+          }
+        ]
+      },
+      "test": {
+        "recall_at_3": 0.9333333333333333,
+        "mrr_at_5": 0.9,
+        "detalle": [
+          {
+            "id": "test2-01",
+            "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-04#s4",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-02",
+            "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s4",
+              "ACC-02#s5",
+              "CON-02#s5",
+              "CON-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-03",
+            "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s4"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-01#s4",
+              "ACC-04#s5",
+              "ACC-03#s1",
+              "ACC-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-04",
+            "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-01#s4",
+              "ACC-04#s4",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-05",
+            "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-04#s4",
+              "ACC-04#s5",
+              "ACC-03#s1",
+              "ACC-04#s3",
+              "CON-01#s1"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.0
+          },
+          {
+            "id": "test2-06",
+            "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-02#s5",
+              "SOF-02#s2",
+              "SOF-01#s4",
+              "GEN-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-07",
+            "query": "En la sala del sótano casi no agarra la señal",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-04#s3",
+              "CON-02#s3",
+              "SOF-02#s7",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-08",
+            "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s4"
+            ],
+            "ranking": [
+              "CON-02#s4",
+              "CON-02#s3",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-09",
+            "query": "¿A qué hora conviene programar descargas grandes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s4"
+            ],
+            "ranking": [
+              "CON-04#s4",
+              "CON-02#s4",
+              "ACC-02#s2",
+              "ACC-02#s1",
+              "CON-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-10",
+            "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s1"
+            ],
+            "ranking": [
+              "PAG-01#s1",
+              "PAG-03#s3",
+              "CON-03#s3",
+              "ACC-02#s3",
+              "PAG-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-11",
+            "query": "Mi factura salió con un IVA equivocado",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s4"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s4",
+              "PAG-01#s2",
+              "PAG-02#s2",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test2-12",
+            "query": "¿Me pueden reembolsar en efectivo?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s2"
+            ],
+            "ranking": [
+              "PAG-02#s2",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-13",
+            "query": "¿Por qué mi PDF exportado sale en blanco?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s4"
+            ],
+            "ranking": [
+              "SOF-02#s4",
+              "SOF-02#s7",
+              "PAG-01#s1",
+              "SOF-02#s5",
+              "SOF-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-14",
+            "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s4"
+            ],
+            "ranking": [
+              "SOF-03#s4",
+              "SOF-03#s3",
+              "SOF-03#s5",
+              "SOF-02#s3",
+              "SOF-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-15",
+            "query": "¿Cuántas veces puedo escalar un reporte?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s4"
+            ],
+            "ranking": [
+              "GEN-01#s4",
+              "ACC-04#s1",
+              "PAG-02#s1",
+              "GEN-01#s2",
+              "GEN-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "recuperador": "semantico",
+      "alpha": 0.0,
+      "dev": {
+        "recall_at_3": 0.9743589743589743,
+        "mrr_at_5": 0.8311965811965811,
+        "detalle": [
+          {
+            "id": "dev-01",
+            "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-04#s1",
+              "ACC-03#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-02",
+            "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-03",
+            "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-04",
+            "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s1"
+            ],
+            "ranking": [
+              "ACC-02#s1",
+              "ACC-02#s4",
+              "PAG-02#s5",
+              "PAG-02#s3",
+              "ACC-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-05",
+            "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s2",
+              "ACC-01#s4",
+              "CON-03#s4",
+              "SOF-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-06",
+            "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-04#s5",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-07",
+            "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s4"
+            ],
+            "ranking": [
+              "ACC-03#s4",
+              "ACC-03#s2",
+              "GEN-01#s1",
+              "ACC-03#s5",
+              "CON-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-08",
+            "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-04#s1"
+            ],
+            "ranking": [
+              "ACC-04#s1",
+              "ACC-03#s2",
+              "ACC-03#s1",
+              "ACC-01#s1",
+              "CON-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-09",
+            "query": "¿Cuál red wifi deben usar los visitantes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s1"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-01#s1",
+              "CON-02#s1",
+              "CON-01#s2",
+              "CON-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-10",
+            "query": "Mi laptop no ve la red Cumbre-Corp",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-03#s1",
+              "CON-01#s3",
+              "CON-03#s4",
+              "SOF-02#s6",
+              "CON-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-11",
+            "query": "¿Puedo usar la VPN con mi computadora personal?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s3"
+            ],
+            "ranking": [
+              "CON-02#s1",
+              "CON-02#s2",
+              "CON-02#s3",
+              "CON-02#s5",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.3333333333333333
+          },
+          {
+            "id": "dev-12",
+            "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s5"
+            ],
+            "ranking": [
+              "CON-02#s5",
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-13",
+            "query": "¿Qué significa la luz roja del router?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-03#s1",
+              "CON-01#s3",
+              "PAG-03#s1",
+              "CON-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-14",
+            "query": "¿Qué velocidad necesito para una videollamada estable?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s3"
+            ],
+            "ranking": [
+              "CON-04#s3",
+              "CON-04#s1",
+              "CON-04#s5",
+              "CON-02#s4",
+              "CON-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-15",
+            "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s2"
+            ],
+            "ranking": [
+              "PAG-01#s2",
+              "PAG-02#s3",
+              "PAG-01#s5",
+              "PAG-01#s3",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-16",
+            "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s3"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-01#s4",
+              "PAG-02#s1",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-17",
+            "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s3"
+            ],
+            "ranking": [
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s3",
+              "PAG-02#s2",
+              "PAG-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-18",
+            "query": "¿Aceptan American Express?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s1"
+            ],
+            "ranking": [
+              "PAG-03#s1",
+              "CON-01#s4",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-19",
+            "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s3"
+            ],
+            "ranking": [
+              "PAG-03#s3",
+              "PAG-02#s3",
+              "PAG-03#s2",
+              "PAG-02#s5",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-20",
+            "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s3"
+            ],
+            "ranking": [
+              "SOF-01#s3",
+              "SOF-02#s1",
+              "SOF-01#s5",
+              "SOF-02#s6",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-21",
+            "query": "MesaApp se congela cuando lo abro",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s2"
+            ],
+            "ranking": [
+              "SOF-02#s2",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-01#s5",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-22",
+            "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s2",
+              "SOF-03#s4",
+              "SOF-03#s3",
+              "SOF-01#s3",
+              "SOF-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-23",
+            "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s1"
+            ],
+            "ranking": [
+              "GEN-01#s1",
+              "GEN-01#s3",
+              "GEN-01#s6",
+              "CON-04#s4",
+              "PAG-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-24",
+            "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "GEN-01#s6"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "GEN-01#s1",
+              "ACC-01#s5",
+              "CON-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-01",
+            "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-02",
+            "query": "La app de autenticación me dice que el código es incorrecto",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s2"
+            ],
+            "ranking": [
+              "ACC-01#s4",
+              "ACC-02#s2",
+              "ACC-02#s3",
+              "CON-02#s3",
+              "SOF-02#s6"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-03",
+            "query": "¿Se puede quitar la verificación en dos pasos?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s5"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-02#s5",
+              "ACC-02#s1",
+              "PAG-02#s2",
+              "ACC-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-04",
+            "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s1",
+              "ACC-03#s2",
+              "ACC-01#s4",
+              "SOF-03#s5",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-05",
+            "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-04#s3"
+            ],
+            "ranking": [
+              "ACC-04#s3",
+              "ACC-04#s5",
+              "ACC-01#s5",
+              "ACC-01#s1",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-06",
+            "query": "Cada rato se me cae el wifi en la oficina",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s2"
+            ],
+            "ranking": [
+              "CON-01#s2",
+              "CON-01#s3",
+              "CON-04#s2",
+              "CON-01#s5",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-07",
+            "query": "¿Cuánto dura el acceso a la red de invitados?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s4"
+            ],
+            "ranking": [
+              "CON-01#s4",
+              "PAG-03#s4",
+              "CON-02#s5",
+              "GEN-01#s1",
+              "CON-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-08",
+            "query": "El navegador marca que el DNS no responde",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s2"
+            ],
+            "ranking": [
+              "CON-03#s2",
+              "CON-02#s3",
+              "CON-03#s4",
+              "CON-03#s1",
+              "ACC-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-09",
+            "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s5"
+            ],
+            "ranking": [
+              "CON-04#s1",
+              "CON-04#s5",
+              "CON-04#s2",
+              "CON-04#s4",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-10",
+            "query": "Veo dos cargos iguales en mi estado de cuenta",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s1"
+            ],
+            "ranking": [
+              "PAG-02#s1",
+              "PAG-02#s2",
+              "PAG-03#s4",
+              "ACC-02#s4",
+              "PAG-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-11",
+            "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s4"
+            ],
+            "ranking": [
+              "PAG-02#s5",
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "ACC-04#s3",
+              "PAG-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-12",
+            "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s5"
+            ],
+            "ranking": [
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-01#s1",
+              "PAG-03#s5",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.25
+          },
+          {
+            "id": "test-13",
+            "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s4"
+            ],
+            "ranking": [
+              "SOF-02#s6",
+              "SOF-02#s4",
+              "SOF-01#s4",
+              "SOF-02#s5",
+              "SOF-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.3333333333333333
+          },
+          {
+            "id": "test-14",
+            "query": "¿En cuántas computadoras puedo activar mi licencia?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-01#s5"
+            ],
+            "ranking": [
+              "SOF-01#s5",
+              "SOF-01#s1",
+              "CON-04#s4",
+              "CON-02#s2",
+              "CON-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-15",
+            "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s3"
+            ],
+            "ranking": [
+              "GEN-01#s3",
+              "GEN-01#s4",
+              "GEN-01#s5",
+              "GEN-01#s1",
+              "PAG-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      },
+      "test": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9222222222222222,
+        "detalle": [
+          {
+            "id": "test2-01",
+            "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-03#s1",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-02",
+            "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s5",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-03",
+            "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s4"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s1",
+              "CON-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-04",
+            "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s4",
+              "ACC-04#s4",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-05",
+            "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-04#s3",
+              "ACC-01#s3",
+              "ACC-01#s5",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-06",
+            "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-01#s2",
+              "CON-02#s5",
+              "PAG-03#s3",
+              "PAG-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-07",
+            "query": "En la sala del sótano casi no agarra la señal",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-03#s1",
+              "CON-01#s5",
+              "CON-03#s3",
+              "CON-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-08",
+            "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s4"
+            ],
+            "ranking": [
+              "CON-02#s1",
+              "CON-02#s2",
+              "CON-02#s4",
+              "CON-02#s3",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.3333333333333333
+          },
+          {
+            "id": "test2-09",
+            "query": "¿A qué hora conviene programar descargas grandes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s4"
+            ],
+            "ranking": [
+              "CON-04#s4",
+              "GEN-01#s1",
+              "PAG-03#s4",
+              "SOF-03#s2",
+              "SOF-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-10",
+            "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s1"
+            ],
+            "ranking": [
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-11",
+            "query": "Mi factura salió con un IVA equivocado",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s4"
+            ],
+            "ranking": [
+              "PAG-01#s4",
+              "PAG-01#s3",
+              "PAG-02#s3",
+              "PAG-02#s1",
+              "PAG-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-12",
+            "query": "¿Me pueden reembolsar en efectivo?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s2"
+            ],
+            "ranking": [
+              "PAG-02#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s2",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-13",
+            "query": "¿Por qué mi PDF exportado sale en blanco?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s4"
+            ],
+            "ranking": [
+              "SOF-02#s4",
+              "SOF-02#s5",
+              "SOF-02#s3",
+              "SOF-03#s2",
+              "SOF-02#s7"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-14",
+            "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s4"
+            ],
+            "ranking": [
+              "SOF-03#s4",
+              "SOF-01#s3",
+              "SOF-03#s2",
+              "SOF-03#s5",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-15",
+            "query": "¿Cuántas veces puedo escalar un reporte?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s4"
+            ],
+            "ranking": [
+              "GEN-01#s3",
+              "GEN-01#s4",
+              "GEN-01#s2",
+              "GEN-01#s5",
+              "PAG-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "recuperador": "hibrido",
+      "alpha": 0.3,
+      "dev": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9487179487179487,
+        "detalle": [
+          {
+            "id": "dev-01",
+            "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-01#s3",
+              "ACC-04#s1",
+              "ACC-03#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-02",
+            "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-03",
+            "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-04",
+            "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s1"
+            ],
+            "ranking": [
+              "ACC-02#s1",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "PAG-02#s5",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-05",
+            "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s2",
+              "ACC-01#s4",
+              "CON-03#s4",
+              "ACC-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-06",
+            "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-07",
+            "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s4"
+            ],
+            "ranking": [
+              "ACC-03#s4",
+              "ACC-03#s2",
+              "GEN-01#s1",
+              "ACC-03#s5",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-08",
+            "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-04#s1"
+            ],
+            "ranking": [
+              "ACC-04#s1",
+              "ACC-01#s1",
+              "ACC-03#s2",
+              "ACC-03#s1",
+              "CON-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-09",
+            "query": "¿Cuál red wifi deben usar los visitantes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s1"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-01#s1",
+              "CON-02#s1",
+              "CON-01#s2",
+              "CON-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-10",
+            "query": "Mi laptop no ve la red Cumbre-Corp",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-03#s1",
+              "CON-01#s1",
+              "CON-03#s4",
+              "CON-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-11",
+            "query": "¿Puedo usar la VPN con mi computadora personal?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s3"
+            ],
+            "ranking": [
+              "CON-02#s1",
+              "CON-02#s3",
+              "CON-02#s2",
+              "CON-02#s5",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-12",
+            "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s5"
+            ],
+            "ranking": [
+              "CON-02#s5",
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-13",
+            "query": "¿Qué significa la luz roja del router?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-03#s1",
+              "CON-01#s3",
+              "CON-03#s5",
+              "PAG-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-14",
+            "query": "¿Qué velocidad necesito para una videollamada estable?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s3"
+            ],
+            "ranking": [
+              "CON-04#s3",
+              "CON-04#s1",
+              "CON-04#s5",
+              "CON-02#s4",
+              "CON-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-15",
+            "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s2"
+            ],
+            "ranking": [
+              "PAG-01#s2",
+              "PAG-01#s5",
+              "PAG-02#s3",
+              "PAG-01#s3",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-16",
+            "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s3"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-01#s4",
+              "PAG-02#s1",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-17",
+            "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s3"
+            ],
+            "ranking": [
+              "PAG-02#s3",
+              "PAG-03#s3",
+              "PAG-02#s5",
+              "PAG-02#s2",
+              "PAG-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-18",
+            "query": "¿Aceptan American Express?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s1"
+            ],
+            "ranking": [
+              "PAG-03#s1",
+              "CON-01#s4",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-19",
+            "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s3"
+            ],
+            "ranking": [
+              "PAG-03#s3",
+              "PAG-02#s3",
+              "PAG-03#s2",
+              "PAG-02#s5",
+              "PAG-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-20",
+            "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s3"
+            ],
+            "ranking": [
+              "SOF-01#s3",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-01#s5",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-21",
+            "query": "MesaApp se congela cuando lo abro",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s2"
+            ],
+            "ranking": [
+              "SOF-02#s2",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-02#s5",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-22",
+            "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s2",
+              "SOF-03#s4",
+              "SOF-03#s3",
+              "SOF-02#s1",
+              "SOF-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-23",
+            "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s1"
+            ],
+            "ranking": [
+              "GEN-01#s1",
+              "GEN-01#s6",
+              "GEN-01#s3",
+              "CON-04#s4",
+              "ACC-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-24",
+            "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "GEN-01#s6"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "ACC-01#s5",
+              "GEN-01#s1",
+              "GEN-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-01",
+            "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-02",
+            "query": "La app de autenticación me dice que el código es incorrecto",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s2"
+            ],
+            "ranking": [
+              "ACC-02#s2",
+              "ACC-01#s4",
+              "ACC-02#s3",
+              "CON-02#s3",
+              "SOF-02#s6"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-03",
+            "query": "¿Se puede quitar la verificación en dos pasos?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s5"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-02#s5",
+              "ACC-02#s1",
+              "ACC-02#s2",
+              "ACC-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-04",
+            "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s1",
+              "ACC-03#s2",
+              "ACC-01#s4",
+              "SOF-03#s5",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-05",
+            "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-04#s3"
+            ],
+            "ranking": [
+              "ACC-04#s3",
+              "ACC-02#s1",
+              "ACC-01#s5",
+              "ACC-04#s5",
+              "ACC-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-06",
+            "query": "Cada rato se me cae el wifi en la oficina",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s2"
+            ],
+            "ranking": [
+              "CON-01#s2",
+              "CON-01#s3",
+              "CON-04#s2",
+              "CON-01#s5",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-07",
+            "query": "¿Cuánto dura el acceso a la red de invitados?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s4"
+            ],
+            "ranking": [
+              "CON-01#s4",
+              "CON-01#s1",
+              "PAG-03#s4",
+              "CON-02#s5",
+              "CON-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-08",
+            "query": "El navegador marca que el DNS no responde",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s2"
+            ],
+            "ranking": [
+              "CON-03#s2",
+              "CON-03#s4",
+              "CON-02#s3",
+              "CON-03#s1",
+              "ACC-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-09",
+            "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s5"
+            ],
+            "ranking": [
+              "CON-04#s5",
+              "CON-04#s1",
+              "CON-04#s2",
+              "CON-04#s4",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-10",
+            "query": "Veo dos cargos iguales en mi estado de cuenta",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s1"
+            ],
+            "ranking": [
+              "PAG-02#s1",
+              "PAG-02#s2",
+              "PAG-03#s4",
+              "ACC-02#s4",
+              "PAG-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-11",
+            "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s4"
+            ],
+            "ranking": [
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-12",
+            "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s5"
+            ],
+            "ranking": [
+              "PAG-03#s5",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-01#s1",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-13",
+            "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s4"
+            ],
+            "ranking": [
+              "SOF-01#s4",
+              "SOF-02#s6",
+              "SOF-02#s4",
+              "SOF-02#s5",
+              "SOF-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-14",
+            "query": "¿En cuántas computadoras puedo activar mi licencia?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-01#s5"
+            ],
+            "ranking": [
+              "SOF-01#s5",
+              "SOF-01#s1",
+              "CON-04#s4",
+              "CON-02#s2",
+              "CON-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-15",
+            "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s3"
+            ],
+            "ranking": [
+              "GEN-01#s3",
+              "GEN-01#s4",
+              "GEN-01#s5",
+              "GEN-01#s1",
+              "GEN-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      },
+      "test": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "detalle": [
+          {
+            "id": "test2-01",
+            "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s4",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-02",
+            "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s5",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-03",
+            "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s4"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s1",
+              "CON-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-04",
+            "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s4",
+              "ACC-04#s4",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-05",
+            "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-04#s3",
+              "ACC-01#s5",
+              "ACC-03#s1",
+              "ACC-01#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-06",
+            "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-01#s2",
+              "CON-02#s5",
+              "PAG-03#s3",
+              "PAG-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-07",
+            "query": "En la sala del sótano casi no agarra la señal",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-03#s1",
+              "CON-04#s3",
+              "CON-01#s5",
+              "CON-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-08",
+            "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s4"
+            ],
+            "ranking": [
+              "CON-02#s4",
+              "CON-02#s1",
+              "CON-02#s2",
+              "CON-02#s3",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-09",
+            "query": "¿A qué hora conviene programar descargas grandes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s4"
+            ],
+            "ranking": [
+              "CON-04#s4",
+              "GEN-01#s1",
+              "SOF-03#s2",
+              "PAG-03#s4",
+              "SOF-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-10",
+            "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s1"
+            ],
+            "ranking": [
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-11",
+            "query": "Mi factura salió con un IVA equivocado",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s4"
+            ],
+            "ranking": [
+              "PAG-01#s4",
+              "PAG-01#s3",
+              "PAG-02#s1",
+              "PAG-02#s3",
+              "PAG-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-12",
+            "query": "¿Me pueden reembolsar en efectivo?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s2"
+            ],
+            "ranking": [
+              "PAG-02#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s2",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-13",
+            "query": "¿Por qué mi PDF exportado sale en blanco?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s4"
+            ],
+            "ranking": [
+              "SOF-02#s4",
+              "SOF-02#s5",
+              "SOF-03#s2",
+              "SOF-02#s3",
+              "SOF-02#s7"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-14",
+            "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s4"
+            ],
+            "ranking": [
+              "SOF-03#s4",
+              "SOF-01#s3",
+              "SOF-03#s2",
+              "SOF-03#s5",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-15",
+            "query": "¿Cuántas veces puedo escalar un reporte?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s4"
+            ],
+            "ranking": [
+              "GEN-01#s4",
+              "GEN-01#s3",
+              "GEN-01#s2",
+              "GEN-01#s5",
+              "PAG-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "recuperador": "hibrido",
+      "alpha": 0.5,
+      "dev": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9358974358974359,
+        "detalle": [
+          {
+            "id": "dev-01",
+            "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-01#s3",
+              "ACC-04#s1",
+              "ACC-03#s1",
+              "ACC-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-02",
+            "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-03",
+            "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-04",
+            "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s1"
+            ],
+            "ranking": [
+              "ACC-02#s1",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "PAG-02#s5",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-05",
+            "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s2",
+              "ACC-01#s4",
+              "CON-03#s4",
+              "ACC-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-06",
+            "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-07",
+            "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s4"
+            ],
+            "ranking": [
+              "ACC-03#s4",
+              "ACC-03#s2",
+              "SOF-01#s5",
+              "GEN-01#s1",
+              "ACC-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-08",
+            "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-04#s1"
+            ],
+            "ranking": [
+              "ACC-04#s1",
+              "ACC-01#s1",
+              "ACC-03#s2",
+              "CON-01#s4",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-09",
+            "query": "¿Cuál red wifi deben usar los visitantes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s1"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-01#s1",
+              "CON-01#s2",
+              "CON-02#s1",
+              "CON-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-10",
+            "query": "Mi laptop no ve la red Cumbre-Corp",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s1",
+              "CON-01#s3",
+              "CON-03#s1",
+              "CON-01#s2",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-11",
+            "query": "¿Puedo usar la VPN con mi computadora personal?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s3"
+            ],
+            "ranking": [
+              "CON-02#s1",
+              "CON-02#s3",
+              "CON-02#s2",
+              "CON-02#s5",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-12",
+            "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s5"
+            ],
+            "ranking": [
+              "CON-02#s5",
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-13",
+            "query": "¿Qué significa la luz roja del router?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-03#s1",
+              "CON-01#s3",
+              "CON-03#s5",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-14",
+            "query": "¿Qué velocidad necesito para una videollamada estable?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s3"
+            ],
+            "ranking": [
+              "CON-04#s3",
+              "CON-04#s1",
+              "CON-04#s5",
+              "CON-02#s4",
+              "CON-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-15",
+            "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s2"
+            ],
+            "ranking": [
+              "PAG-01#s2",
+              "PAG-01#s3",
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-16",
+            "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s3"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-01#s4",
+              "PAG-02#s1",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-17",
+            "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s3"
+            ],
+            "ranking": [
+              "PAG-02#s3",
+              "PAG-03#s3",
+              "PAG-02#s5",
+              "PAG-02#s2",
+              "PAG-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-18",
+            "query": "¿Aceptan American Express?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s1"
+            ],
+            "ranking": [
+              "PAG-03#s1",
+              "CON-01#s4",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-19",
+            "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s3"
+            ],
+            "ranking": [
+              "PAG-03#s3",
+              "PAG-03#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-20",
+            "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s3"
+            ],
+            "ranking": [
+              "SOF-01#s3",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-03#s4",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-21",
+            "query": "MesaApp se congela cuando lo abro",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s2"
+            ],
+            "ranking": [
+              "SOF-02#s2",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-02#s5",
+              "SOF-02#s7"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-22",
+            "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s2",
+              "SOF-03#s3",
+              "SOF-03#s4",
+              "SOF-02#s1",
+              "SOF-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-23",
+            "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s1"
+            ],
+            "ranking": [
+              "GEN-01#s1",
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "GEN-01#s3",
+              "CON-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-24",
+            "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "GEN-01#s6"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "ACC-01#s5",
+              "GEN-01#s1",
+              "GEN-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-01",
+            "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-02",
+            "query": "La app de autenticación me dice que el código es incorrecto",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s2"
+            ],
+            "ranking": [
+              "ACC-02#s2",
+              "ACC-01#s4",
+              "ACC-02#s3",
+              "CON-02#s3",
+              "SOF-02#s6"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-03",
+            "query": "¿Se puede quitar la verificación en dos pasos?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s5"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-02#s5",
+              "ACC-02#s1",
+              "ACC-02#s2",
+              "ACC-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-04",
+            "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s1",
+              "ACC-03#s2",
+              "ACC-01#s4",
+              "SOF-03#s5",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-05",
+            "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-04#s3"
+            ],
+            "ranking": [
+              "ACC-04#s3",
+              "ACC-02#s1",
+              "ACC-01#s5",
+              "ACC-01#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-06",
+            "query": "Cada rato se me cae el wifi en la oficina",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s2"
+            ],
+            "ranking": [
+              "CON-01#s2",
+              "CON-01#s3",
+              "CON-01#s5",
+              "CON-04#s2",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-07",
+            "query": "¿Cuánto dura el acceso a la red de invitados?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s4"
+            ],
+            "ranking": [
+              "CON-01#s4",
+              "CON-01#s1",
+              "PAG-03#s4",
+              "CON-04#s4",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-08",
+            "query": "El navegador marca que el DNS no responde",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s2"
+            ],
+            "ranking": [
+              "CON-03#s2",
+              "CON-03#s4",
+              "CON-02#s3",
+              "CON-03#s1",
+              "ACC-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-09",
+            "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s5"
+            ],
+            "ranking": [
+              "CON-04#s5",
+              "CON-04#s1",
+              "CON-04#s2",
+              "CON-04#s4",
+              "CON-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-10",
+            "query": "Veo dos cargos iguales en mi estado de cuenta",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s1"
+            ],
+            "ranking": [
+              "PAG-02#s1",
+              "PAG-03#s4",
+              "PAG-02#s2",
+              "ACC-02#s4",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-11",
+            "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s4"
+            ],
+            "ranking": [
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-12",
+            "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s5"
+            ],
+            "ranking": [
+              "PAG-03#s5",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-01#s1",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-13",
+            "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s4"
+            ],
+            "ranking": [
+              "SOF-01#s4",
+              "SOF-03#s5",
+              "SOF-02#s4",
+              "SOF-02#s6",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-14",
+            "query": "¿En cuántas computadoras puedo activar mi licencia?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-01#s5"
+            ],
+            "ranking": [
+              "SOF-01#s5",
+              "SOF-01#s1",
+              "CON-04#s4",
+              "ACC-02#s3",
+              "CON-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-15",
+            "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s3"
+            ],
+            "ranking": [
+              "GEN-01#s3",
+              "GEN-01#s4",
+              "GEN-01#s5",
+              "GEN-01#s1",
+              "GEN-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      },
+      "test": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "detalle": [
+          {
+            "id": "test2-01",
+            "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s4",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-02",
+            "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s5",
+              "ACC-02#s4",
+              "ACC-02#s2",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-03",
+            "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s4"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s1",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-04",
+            "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-02#s4",
+              "ACC-01#s4",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-05",
+            "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-04#s3",
+              "ACC-03#s1",
+              "ACC-04#s5",
+              "ACC-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-06",
+            "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-02#s5",
+              "CON-01#s2",
+              "PAG-03#s3",
+              "PAG-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-07",
+            "query": "En la sala del sótano casi no agarra la señal",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-04#s3",
+              "CON-03#s1",
+              "CON-01#s5",
+              "CON-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-08",
+            "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s4"
+            ],
+            "ranking": [
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-02#s3",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-09",
+            "query": "¿A qué hora conviene programar descargas grandes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s4"
+            ],
+            "ranking": [
+              "CON-04#s4",
+              "GEN-01#s1",
+              "SOF-03#s2",
+              "PAG-03#s4",
+              "SOF-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-10",
+            "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s1"
+            ],
+            "ranking": [
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "PAG-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-11",
+            "query": "Mi factura salió con un IVA equivocado",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s4"
+            ],
+            "ranking": [
+              "PAG-01#s4",
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-02#s1",
+              "PAG-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-12",
+            "query": "¿Me pueden reembolsar en efectivo?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s2"
+            ],
+            "ranking": [
+              "PAG-02#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s2",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-13",
+            "query": "¿Por qué mi PDF exportado sale en blanco?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s4"
+            ],
+            "ranking": [
+              "SOF-02#s4",
+              "SOF-02#s5",
+              "SOF-02#s7",
+              "SOF-03#s2",
+              "SOF-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-14",
+            "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s4"
+            ],
+            "ranking": [
+              "SOF-03#s4",
+              "SOF-01#s3",
+              "SOF-03#s5",
+              "SOF-03#s3",
+              "SOF-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-15",
+            "query": "¿Cuántas veces puedo escalar un reporte?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s4"
+            ],
+            "ranking": [
+              "GEN-01#s4",
+              "GEN-01#s3",
+              "GEN-01#s2",
+              "PAG-02#s1",
+              "GEN-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "recuperador": "hibrido",
+      "alpha": 0.7,
+      "dev": {
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9358974358974359,
+        "detalle": [
+          {
+            "id": "dev-01",
+            "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-01#s1",
+              "ACC-01#s3",
+              "ACC-04#s1",
+              "ACC-01#s5",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-02",
+            "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "SOF-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-03",
+            "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s4",
+              "ACC-01#s1",
+              "ACC-01#s2",
+              "ACC-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-04",
+            "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s1"
+            ],
+            "ranking": [
+              "ACC-02#s1",
+              "ACC-02#s2",
+              "ACC-02#s4",
+              "PAG-02#s5",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-05",
+            "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s2",
+              "ACC-01#s5",
+              "CON-03#s4",
+              "ACC-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-06",
+            "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-01#s4",
+              "ACC-03#s1",
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-07",
+            "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s4"
+            ],
+            "ranking": [
+              "ACC-03#s4",
+              "ACC-03#s2",
+              "SOF-01#s5",
+              "ACC-03#s5",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-08",
+            "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-04#s1"
+            ],
+            "ranking": [
+              "ACC-04#s1",
+              "ACC-01#s1",
+              "ACC-03#s2",
+              "ACC-04#s5",
+              "CON-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-09",
+            "query": "¿Cuál red wifi deben usar los visitantes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s1"
+            ],
+            "ranking": [
+              "CON-01#s1",
+              "CON-01#s3",
+              "CON-01#s2",
+              "CON-02#s1",
+              "CON-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-10",
+            "query": "Mi laptop no ve la red Cumbre-Corp",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s1",
+              "CON-01#s3",
+              "CON-01#s2",
+              "CON-03#s1",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-11",
+            "query": "¿Puedo usar la VPN con mi computadora personal?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s3"
+            ],
+            "ranking": [
+              "CON-02#s1",
+              "CON-02#s3",
+              "CON-02#s2",
+              "CON-02#s5",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "dev-12",
+            "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s5"
+            ],
+            "ranking": [
+              "CON-02#s5",
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s1",
+              "CON-01#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-13",
+            "query": "¿Qué significa la luz roja del router?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-03#s1",
+              "CON-03#s5",
+              "CON-03#s4",
+              "CON-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-14",
+            "query": "¿Qué velocidad necesito para una videollamada estable?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s3"
+            ],
+            "ranking": [
+              "CON-04#s3",
+              "CON-04#s1",
+              "CON-02#s4",
+              "CON-04#s5",
+              "CON-04#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-15",
+            "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s2"
+            ],
+            "ranking": [
+              "PAG-01#s2",
+              "PAG-01#s3",
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-16",
+            "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s3"
+            ],
+            "ranking": [
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-01#s4",
+              "PAG-02#s1",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-17",
+            "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s3"
+            ],
+            "ranking": [
+              "PAG-02#s3",
+              "PAG-03#s3",
+              "PAG-02#s5",
+              "PAG-02#s2",
+              "PAG-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-18",
+            "query": "¿Aceptan American Express?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s1"
+            ],
+            "ranking": [
+              "PAG-03#s1",
+              "CON-01#s4",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-19",
+            "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s3"
+            ],
+            "ranking": [
+              "PAG-03#s3",
+              "PAG-03#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-20",
+            "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s3"
+            ],
+            "ranking": [
+              "SOF-01#s3",
+              "SOF-02#s1",
+              "SOF-03#s4",
+              "SOF-02#s6",
+              "SOF-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-21",
+            "query": "MesaApp se congela cuando lo abro",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s2"
+            ],
+            "ranking": [
+              "SOF-02#s2",
+              "SOF-02#s1",
+              "SOF-02#s6",
+              "SOF-02#s7",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-22",
+            "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s2",
+              "SOF-03#s3",
+              "SOF-02#s1",
+              "SOF-03#s4",
+              "SOF-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-23",
+            "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s1"
+            ],
+            "ranking": [
+              "GEN-01#s1",
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "GEN-01#s3",
+              "CON-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "dev-24",
+            "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "GEN-01#s6"
+            ],
+            "ranking": [
+              "GEN-01#s6",
+              "ACC-03#s5",
+              "ACC-01#s5",
+              "GEN-01#s1",
+              "GEN-01#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-01",
+            "query": "¿Puedo reutilizar una contraseña que ya usé antes?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-01#s2"
+            ],
+            "ranking": [
+              "ACC-01#s2",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-01#s3",
+              "ACC-01#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-02",
+            "query": "La app de autenticación me dice que el código es incorrecto",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s2"
+            ],
+            "ranking": [
+              "ACC-02#s2",
+              "CON-02#s3",
+              "ACC-02#s3",
+              "ACC-01#s4",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-03",
+            "query": "¿Se puede quitar la verificación en dos pasos?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s5"
+            ],
+            "ranking": [
+              "ACC-02#s5",
+              "ACC-02#s4",
+              "ACC-02#s1",
+              "ACC-02#s2",
+              "ACC-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-04",
+            "query": "Me saca de AulaPro cuando dejo de usarlo un rato",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-03#s2"
+            ],
+            "ranking": [
+              "SOF-03#s1",
+              "ACC-03#s2",
+              "ACC-01#s4",
+              "SOF-03#s5",
+              "SOF-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          },
+          {
+            "id": "test-05",
+            "query": "Mi correo de recuperación es de mi trabajo anterior y ya no lo tengo",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-04#s3"
+            ],
+            "ranking": [
+              "ACC-04#s3",
+              "ACC-02#s1",
+              "ACC-01#s5",
+              "ACC-01#s1",
+              "ACC-04#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-06",
+            "query": "Cada rato se me cae el wifi en la oficina",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s2"
+            ],
+            "ranking": [
+              "CON-01#s2",
+              "CON-01#s3",
+              "CON-01#s5",
+              "CON-04#s2",
+              "CON-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-07",
+            "query": "¿Cuánto dura el acceso a la red de invitados?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-01#s4"
+            ],
+            "ranking": [
+              "CON-01#s4",
+              "CON-01#s1",
+              "CON-04#s4",
+              "ACC-03#s1",
+              "PAG-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-08",
+            "query": "El navegador marca que el DNS no responde",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s2"
+            ],
+            "ranking": [
+              "CON-03#s2",
+              "CON-03#s4",
+              "SOF-02#s7",
+              "CON-03#s1",
+              "ACC-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-09",
+            "query": "¿Qué datos debo incluir al reportar que el internet está lento?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s5"
+            ],
+            "ranking": [
+              "CON-04#s5",
+              "CON-04#s1",
+              "CON-04#s2",
+              "CON-04#s4",
+              "CON-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-10",
+            "query": "Veo dos cargos iguales en mi estado de cuenta",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-02#s1"
+            ],
+            "ranking": [
+              "PAG-02#s1",
+              "PAG-02#s3",
+              "PAG-03#s4",
+              "PAG-02#s2",
+              "ACC-02#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-11",
+            "query": "Hice una transferencia ayer y todavía no aparece en mi saldo",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s4"
+            ],
+            "ranking": [
+              "PAG-02#s4",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s3",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-12",
+            "query": "¿Cómo cancelo la renovación automática de mi suscripción?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-03#s5"
+            ],
+            "ranking": [
+              "PAG-03#s5",
+              "PAG-03#s4",
+              "PAG-03#s3",
+              "ACC-01#s1",
+              "ACC-04#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-13",
+            "query": "¿Puedo regresar a la versión anterior de MesaApp después de actualizar?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-01#s4"
+            ],
+            "ranking": [
+              "SOF-01#s4",
+              "SOF-03#s5",
+              "SOF-02#s4",
+              "SOF-02#s6",
+              "SOF-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-14",
+            "query": "¿En cuántas computadoras puedo activar mi licencia?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-01#s5"
+            ],
+            "ranking": [
+              "SOF-01#s5",
+              "ACC-02#s3",
+              "SOF-01#s1",
+              "CON-04#s4",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test-15",
+            "query": "¿En cuánto tiempo responden un reporte de prioridad alta?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s3"
+            ],
+            "ranking": [
+              "GEN-01#s4",
+              "GEN-01#s3",
+              "CON-03#s3",
+              "CON-04#s5",
+              "GEN-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 0.5
+          }
+        ]
+      },
+      "test": {
+        "recall_at_3": 0.9333333333333333,
+        "mrr_at_5": 0.95,
+        "detalle": [
+          {
+            "id": "test2-01",
+            "query": "Me llegó un aviso de que mi contraseña va a vencer, ¿con cuánta anticipación avisan?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s3"
+            ],
+            "ranking": [
+              "ACC-01#s3",
+              "ACC-01#s1",
+              "ACC-01#s4",
+              "ACC-01#s2",
+              "ACC-03#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-02",
+            "query": "¿Cuántos códigos de respaldo me dan al activar el segundo factor?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-02#s3"
+            ],
+            "ranking": [
+              "ACC-02#s3",
+              "ACC-02#s5",
+              "ACC-02#s4",
+              "SOF-01#s5",
+              "ACC-02#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-03",
+            "query": "Rechacé varias notificaciones de aprobación y ahora no me deja entrar",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-02#s4"
+            ],
+            "ranking": [
+              "ACC-02#s4",
+              "ACC-03#s1",
+              "ACC-01#s4",
+              "ACC-04#s5",
+              "ACC-03#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-04",
+            "query": "¿Cuántos intentos fallidos se permiten antes de que se bloquee la cuenta?",
+            "tipo": "directa",
+            "relevantes": [
+              "ACC-03#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-03#s5",
+              "ACC-01#s4",
+              "ACC-02#s4",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-05",
+            "query": "Se me olvidó la clave de mi cuenta, ¿qué hago?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "ACC-01#s1"
+            ],
+            "ranking": [
+              "ACC-03#s1",
+              "ACC-04#s3",
+              "ACC-04#s5",
+              "ACC-01#s1",
+              "ACC-04#s4"
+            ],
+            "recall_at_3": 0.0,
+            "mrr_at_5": 0.25
+          },
+          {
+            "id": "test2-06",
+            "query": "¿Cuánto tiempo tarda el router en volver a iniciar después de desconectarlo?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-03#s3"
+            ],
+            "ranking": [
+              "CON-03#s3",
+              "CON-02#s5",
+              "CON-01#s2",
+              "SOF-01#s4",
+              "CON-03#s4"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-07",
+            "query": "En la sala del sótano casi no agarra la señal",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "CON-01#s3"
+            ],
+            "ranking": [
+              "CON-01#s3",
+              "CON-04#s3",
+              "CON-03#s1",
+              "CON-01#s5",
+              "CON-03#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-08",
+            "query": "¿Qué servidor de VPN me conviene si trabajo desde el sur del país?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-02#s4"
+            ],
+            "ranking": [
+              "CON-02#s4",
+              "CON-02#s2",
+              "CON-02#s3",
+              "CON-02#s1",
+              "CON-02#s5"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-09",
+            "query": "¿A qué hora conviene programar descargas grandes?",
+            "tipo": "directa",
+            "relevantes": [
+              "CON-04#s4"
+            ],
+            "ranking": [
+              "CON-04#s4",
+              "GEN-01#s1",
+              "CON-02#s4",
+              "SOF-03#s2",
+              "ACC-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-10",
+            "query": "¿Cuánto tarda en aparecer el comprobante después de pagar?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-01#s1"
+            ],
+            "ranking": [
+              "PAG-01#s1",
+              "PAG-01#s5",
+              "PAG-02#s4",
+              "PAG-03#s4",
+              "PAG-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-11",
+            "query": "Mi factura salió con un IVA equivocado",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "PAG-01#s4"
+            ],
+            "ranking": [
+              "PAG-01#s4",
+              "PAG-01#s3",
+              "PAG-01#s2",
+              "PAG-02#s2",
+              "PAG-02#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-12",
+            "query": "¿Me pueden reembolsar en efectivo?",
+            "tipo": "directa",
+            "relevantes": [
+              "PAG-02#s2"
+            ],
+            "ranking": [
+              "PAG-02#s2",
+              "PAG-02#s3",
+              "PAG-02#s5",
+              "PAG-03#s2",
+              "PAG-01#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-13",
+            "query": "¿Por qué mi PDF exportado sale en blanco?",
+            "tipo": "parafrasis",
+            "relevantes": [
+              "SOF-02#s4"
+            ],
+            "ranking": [
+              "SOF-02#s4",
+              "SOF-02#s5",
+              "SOF-02#s7",
+              "SOF-03#s2",
+              "SOF-02#s3"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-14",
+            "query": "¿Cuánto almacenamiento tengo en NubeTec?",
+            "tipo": "directa",
+            "relevantes": [
+              "SOF-03#s4"
+            ],
+            "ranking": [
+              "SOF-03#s4",
+              "SOF-01#s3",
+              "SOF-03#s3",
+              "SOF-03#s5",
+              "SOF-03#s2"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          },
+          {
+            "id": "test2-15",
+            "query": "¿Cuántas veces puedo escalar un reporte?",
+            "tipo": "directa",
+            "relevantes": [
+              "GEN-01#s4"
+            ],
+            "ranking": [
+              "GEN-01#s4",
+              "GEN-01#s3",
+              "GEN-01#s2",
+              "PAG-02#s1",
+              "ACC-04#s1"
+            ],
+            "recall_at_3": 1.0,
+            "mrr_at_5": 1.0
+          }
+        ]
+      }
+    }
+  ],
+  "elegido": {
+    "recuperador": "hibrido",
+    "alpha": 0.3
+  }
+}

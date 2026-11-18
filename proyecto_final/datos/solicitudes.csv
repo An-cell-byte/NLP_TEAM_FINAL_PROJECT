@@ -1,0 +1,145 @@
+id,family,split,label,text,origin
+S001,acceso_00,train,acceso,Olvidé la contraseña y necesito restablecerla.,sintético original
+S002,acceso_00,train,acceso,"Buen día, olvidé la contraseña y necesito restablecerla. ¿Me pueden orientar?",sintético original
+S003,acceso_00,train,acceso,"Olvidé la contraseña y necesito restablecerla; ya reinicié y sigue igual, urge tantito.",sintético original
+S004,acceso_01,train,acceso,El código de verificación no llega a mi correo.,sintético original
+S005,acceso_01,train,acceso,"Buen día, el código de verificación no llega a mi correo. ¿Me pueden orientar?",sintético original
+S006,acceso_01,train,acceso,"El código de verificación no llega a mi correo; ya reinicié y sigue igual, urge tantito.",sintético original
+S007,acceso_02,train,acceso,Mi cuenta quedó bloqueada después de varios intentos.,sintético original
+S008,acceso_02,train,acceso,"Buen día, mi cuenta quedó bloqueada después de varios intentos. ¿Me pueden orientar?",sintético original
+S009,acceso_02,train,acceso,"Mi cuenta quedó bloqueada después de varios intentos; ya reinicié y sigue igual, urge tantito.",sintético original
+S010,acceso_03,train,acceso,La sesión caducó mientras trabajaba.,sintético original
+S011,acceso_03,train,acceso,"Buen día, la sesión caducó mientras trabajaba. ¿Me pueden orientar?",sintético original
+S012,acceso_03,train,acceso,"La sesión caducó mientras trabajaba; ya reinicié y sigue igual, urge tantito.",sintético original
+S013,acceso_04,train,acceso,No puedo entrar con el segundo factor.,sintético original
+S014,acceso_04,train,acceso,"Buen día, no puedo entrar con el segundo factor. ¿Me pueden orientar?",sintético original
+S015,acceso_04,train,acceso,"No puedo entrar con el segundo factor; ya reinicié y sigue igual, urge tantito.",sintético original
+S016,acceso_05,train,acceso,El enlace para activar mi usuario expiró.,sintético original
+S017,acceso_05,train,acceso,"Buen día, el enlace para activar mi usuario expiró. ¿Me pueden orientar?",sintético original
+S018,acceso_05,train,acceso,"El enlace para activar mi usuario expiró; ya reinicié y sigue igual, urge tantito.",sintético original
+S019,acceso_06,train,acceso,El portal rechaza mi nombre de usuario.,sintético original
+S020,acceso_06,train,acceso,"Buen día, el portal rechaza mi nombre de usuario. ¿Me pueden orientar?",sintético original
+S021,acceso_06,train,acceso,"El portal rechaza mi nombre de usuario; ya reinicié y sigue igual, urge tantito.",sintético original
+S022,acceso_07,train,acceso,Quiero recuperar acceso después de cambiar de celular.,sintético original
+S023,acceso_07,train,acceso,"Buen día, quiero recuperar acceso después de cambiar de celular. ¿Me pueden orientar?",sintético original
+S024,acceso_07,train,acceso,"Quiero recuperar acceso después de cambiar de celular; ya reinicié y sigue igual, urge tantito.",sintético original
+S025,acceso_08,validation,acceso,La página regresa al inicio de sesión sin avisar.,sintético original
+S026,acceso_08,validation,acceso,"Buen día, la página regresa al inicio de sesión sin avisar. ¿Me pueden orientar?",sintético original
+S027,acceso_08,validation,acceso,"La página regresa al inicio de sesión sin avisar; ya reinicié y sigue igual, urge tantito.",sintético original
+S028,acceso_09,validation,acceso,El autenticador muestra un código inválido.,sintético original
+S029,acceso_09,validation,acceso,"Buen día, el autenticador muestra un código inválido. ¿Me pueden orientar?",sintético original
+S030,acceso_09,validation,acceso,"El autenticador muestra un código inválido; ya reinicié y sigue igual, urge tantito.",sintético original
+S031,acceso_10,test,acceso,Mi contraseña nueva no se acepta.,sintético original
+S032,acceso_10,test,acceso,"Buen día, mi contraseña nueva no se acepta. ¿Me pueden orientar?",sintético original
+S033,acceso_10,test,acceso,"Mi contraseña nueva no se acepta; ya reinicié y sigue igual, urge tantito.",sintético original
+S034,acceso_11,test,acceso,El correo de recuperación pertenece a mi cuenta anterior.,sintético original
+S035,acceso_11,test,acceso,"Buen día, el correo de recuperación pertenece a mi cuenta anterior. ¿Me pueden orientar?",sintético original
+S036,acceso_11,test,acceso,"El correo de recuperación pertenece a mi cuenta anterior; ya reinicié y sigue igual, urge tantito.",sintético original
+S037,pagos_00,train,pagos,Me cobraron dos veces la misma factura.,sintético original
+S038,pagos_00,train,pagos,"Buen día, me cobraron dos veces la misma factura. ¿Me pueden orientar?",sintético original
+S039,pagos_00,train,pagos,"Me cobraron dos veces la misma factura; ya reinicié y sigue igual, urge tantito.",sintético original
+S040,pagos_01,train,pagos,Necesito el comprobante del pago del mes.,sintético original
+S041,pagos_01,train,pagos,"Buen día, necesito el comprobante del pago del mes. ¿Me pueden orientar?",sintético original
+S042,pagos_01,train,pagos,"Necesito el comprobante del pago del mes; ya reinicié y sigue igual, urge tantito.",sintético original
+S043,pagos_02,train,pagos,La tarjeta fue rechazada al renovar.,sintético original
+S044,pagos_02,train,pagos,"Buen día, la tarjeta fue rechazada al renovar. ¿Me pueden orientar?",sintético original
+S045,pagos_02,train,pagos,"La tarjeta fue rechazada al renovar; ya reinicié y sigue igual, urge tantito.",sintético original
+S046,pagos_03,train,pagos,Solicito un reembolso por un cargo equivocado.,sintético original
+S047,pagos_03,train,pagos,"Buen día, solicito un reembolso por un cargo equivocado. ¿Me pueden orientar?",sintético original
+S048,pagos_03,train,pagos,"Solicito un reembolso por un cargo equivocado; ya reinicié y sigue igual, urge tantito.",sintético original
+S049,pagos_04,train,pagos,El depósito no aparece en el saldo.,sintético original
+S050,pagos_04,train,pagos,"Buen día, el depósito no aparece en el saldo. ¿Me pueden orientar?",sintético original
+S051,pagos_04,train,pagos,"El depósito no aparece en el saldo; ya reinicié y sigue igual, urge tantito.",sintético original
+S052,pagos_05,train,pagos,Quiero corregir el RFC de mi factura.,sintético original
+S053,pagos_05,train,pagos,"Buen día, quiero corregir el RFC de mi factura. ¿Me pueden orientar?",sintético original
+S054,pagos_05,train,pagos,"Quiero corregir el RFC de mi factura; ya reinicié y sigue igual, urge tantito.",sintético original
+S055,pagos_06,train,pagos,El importe no coincide con la cotización.,sintético original
+S056,pagos_06,train,pagos,"Buen día, el importe no coincide con la cotización. ¿Me pueden orientar?",sintético original
+S057,pagos_06,train,pagos,"El importe no coincide con la cotización; ya reinicié y sigue igual, urge tantito.",sintético original
+S058,pagos_07,train,pagos,Necesito cambiar mi método de pago.,sintético original
+S059,pagos_07,train,pagos,"Buen día, necesito cambiar mi método de pago. ¿Me pueden orientar?",sintético original
+S060,pagos_07,train,pagos,"Necesito cambiar mi método de pago; ya reinicié y sigue igual, urge tantito.",sintético original
+S061,pagos_08,validation,pagos,La suscripción figura como vencida aunque pagué.,sintético original
+S062,pagos_08,validation,pagos,"Buen día, la suscripción figura como vencida aunque pagué. ¿Me pueden orientar?",sintético original
+S063,pagos_08,validation,pagos,"La suscripción figura como vencida aunque pagué; ya reinicié y sigue igual, urge tantito.",sintético original
+S064,pagos_09,validation,pagos,El banco confirmó el cargo pero no tengo recibo.,sintético original
+S065,pagos_09,validation,pagos,"Buen día, el banco confirmó el cargo pero no tengo recibo. ¿Me pueden orientar?",sintético original
+S066,pagos_09,validation,pagos,"El banco confirmó el cargo pero no tengo recibo; ya reinicié y sigue igual, urge tantito.",sintético original
+S067,pagos_10,test,pagos,La factura tiene un impuesto incorrecto.,sintético original
+S068,pagos_10,test,pagos,"Buen día, la factura tiene un impuesto incorrecto. ¿Me pueden orientar?",sintético original
+S069,pagos_10,test,pagos,"La factura tiene un impuesto incorrecto; ya reinicié y sigue igual, urge tantito.",sintético original
+S070,pagos_11,test,pagos,Quiero saber cuándo regresará el dinero a mi tarjeta.,sintético original
+S071,pagos_11,test,pagos,"Buen día, quiero saber cuándo regresará el dinero a mi tarjeta. ¿Me pueden orientar?",sintético original
+S072,pagos_11,test,pagos,"Quiero saber cuándo regresará el dinero a mi tarjeta; ya reinicié y sigue igual, urge tantito.",sintético original
+S073,conectividad_00,train,conectividad,La red inalámbrica se desconecta cada cinco minutos.,sintético original
+S074,conectividad_00,train,conectividad,"Buen día, la red inalámbrica se desconecta cada cinco minutos. ¿Me pueden orientar?",sintético original
+S075,conectividad_00,train,conectividad,"La red inalámbrica se desconecta cada cinco minutos; ya reinicié y sigue igual, urge tantito.",sintético original
+S076,conectividad_01,train,conectividad,Mi equipo no encuentra la señal de wifi.,sintético original
+S077,conectividad_01,train,conectividad,"Buen día, mi equipo no encuentra la señal de wifi. ¿Me pueden orientar?",sintético original
+S078,conectividad_01,train,conectividad,"Mi equipo no encuentra la señal de wifi; ya reinicié y sigue igual, urge tantito.",sintético original
+S079,conectividad_02,train,conectividad,La conexión a internet está demasiado lenta.,sintético original
+S080,conectividad_02,train,conectividad,"Buen día, la conexión a internet está demasiado lenta. ¿Me pueden orientar?",sintético original
+S081,conectividad_02,train,conectividad,"La conexión a internet está demasiado lenta; ya reinicié y sigue igual, urge tantito.",sintético original
+S082,conectividad_03,train,conectividad,No puedo conectarme a la VPN desde casa.,sintético original
+S083,conectividad_03,train,conectividad,"Buen día, no puedo conectarme a la VPN desde casa. ¿Me pueden orientar?",sintético original
+S084,conectividad_03,train,conectividad,"No puedo conectarme a la VPN desde casa; ya reinicié y sigue igual, urge tantito.",sintético original
+S085,conectividad_04,train,conectividad,El cable de red no da conexión.,sintético original
+S086,conectividad_04,train,conectividad,"Buen día, el cable de red no da conexión. ¿Me pueden orientar?",sintético original
+S087,conectividad_04,train,conectividad,"El cable de red no da conexión; ya reinicié y sigue igual, urge tantito.",sintético original
+S088,conectividad_05,train,conectividad,La videollamada se corta por falta de señal.,sintético original
+S089,conectividad_05,train,conectividad,"Buen día, la videollamada se corta por falta de señal. ¿Me pueden orientar?",sintético original
+S090,conectividad_05,train,conectividad,"La videollamada se corta por falta de señal; ya reinicié y sigue igual, urge tantito.",sintético original
+S091,conectividad_06,train,conectividad,El navegador dice que el servidor DNS no responde.,sintético original
+S092,conectividad_06,train,conectividad,"Buen día, el navegador dice que el servidor DNS no responde. ¿Me pueden orientar?",sintético original
+S093,conectividad_06,train,conectividad,"El navegador dice que el servidor DNS no responde; ya reinicié y sigue igual, urge tantito.",sintético original
+S094,conectividad_07,train,conectividad,Hay internet en el celular pero no en la computadora.,sintético original
+S095,conectividad_07,train,conectividad,"Buen día, hay internet en el celular pero no en la computadora. ¿Me pueden orientar?",sintético original
+S096,conectividad_07,train,conectividad,"Hay internet en el celular pero no en la computadora; ya reinicié y sigue igual, urge tantito.",sintético original
+S097,conectividad_08,validation,conectividad,La red de invitados no permite navegar.,sintético original
+S098,conectividad_08,validation,conectividad,"Buen día, la red de invitados no permite navegar. ¿Me pueden orientar?",sintético original
+S099,conectividad_08,validation,conectividad,"La red de invitados no permite navegar; ya reinicié y sigue igual, urge tantito.",sintético original
+S100,conectividad_09,validation,conectividad,La conexión falla después de suspender el equipo.,sintético original
+S101,conectividad_09,validation,conectividad,"Buen día, la conexión falla después de suspender el equipo. ¿Me pueden orientar?",sintético original
+S102,conectividad_09,validation,conectividad,"La conexión falla después de suspender el equipo; ya reinicié y sigue igual, urge tantito.",sintético original
+S103,conectividad_10,test,conectividad,El router muestra una luz roja y no hay servicio.,sintético original
+S104,conectividad_10,test,conectividad,"Buen día, el router muestra una luz roja y no hay servicio. ¿Me pueden orientar?",sintético original
+S105,conectividad_10,test,conectividad,"El router muestra una luz roja y no hay servicio; ya reinicié y sigue igual, urge tantito.",sintético original
+S106,conectividad_11,test,conectividad,La velocidad de descarga cae cuando activo la VPN.,sintético original
+S107,conectividad_11,test,conectividad,"Buen día, la velocidad de descarga cae cuando activo la VPN. ¿Me pueden orientar?",sintético original
+S108,conectividad_11,test,conectividad,"La velocidad de descarga cae cuando activo la VPN; ya reinicié y sigue igual, urge tantito.",sintético original
+S109,software_00,train,software,La aplicación se cierra al abrir un archivo.,sintético original
+S110,software_00,train,software,"Buen día, la aplicación se cierra al abrir un archivo. ¿Me pueden orientar?",sintético original
+S111,software_00,train,software,"La aplicación se cierra al abrir un archivo; ya reinicié y sigue igual, urge tantito.",sintético original
+S112,software_01,train,software,No puedo instalar la actualización del programa.,sintético original
+S113,software_01,train,software,"Buen día, no puedo instalar la actualización del programa. ¿Me pueden orientar?",sintético original
+S114,software_01,train,software,"No puedo instalar la actualización del programa; ya reinicié y sigue igual, urge tantito.",sintético original
+S115,software_02,train,software,El editor no guarda los cambios del documento.,sintético original
+S116,software_02,train,software,"Buen día, el editor no guarda los cambios del documento. ¿Me pueden orientar?",sintético original
+S117,software_02,train,software,"El editor no guarda los cambios del documento; ya reinicié y sigue igual, urge tantito.",sintético original
+S118,software_03,train,software,Necesito activar la licencia del software.,sintético original
+S119,software_03,train,software,"Buen día, necesito activar la licencia del software. ¿Me pueden orientar?",sintético original
+S120,software_03,train,software,"Necesito activar la licencia del software; ya reinicié y sigue igual, urge tantito.",sintético original
+S121,software_04,train,software,La pantalla se queda congelada al iniciar.,sintético original
+S122,software_04,train,software,"Buen día, la pantalla se queda congelada al iniciar. ¿Me pueden orientar?",sintético original
+S123,software_04,train,software,"La pantalla se queda congelada al iniciar; ya reinicié y sigue igual, urge tantito.",sintético original
+S124,software_05,train,software,El archivo exportado está vacío.,sintético original
+S125,software_05,train,software,"Buen día, el archivo exportado está vacío. ¿Me pueden orientar?",sintético original
+S126,software_05,train,software,"El archivo exportado está vacío; ya reinicié y sigue igual, urge tantito.",sintético original
+S127,software_06,train,software,El programa muestra un error de compatibilidad.,sintético original
+S128,software_06,train,software,"Buen día, el programa muestra un error de compatibilidad. ¿Me pueden orientar?",sintético original
+S129,software_06,train,software,"El programa muestra un error de compatibilidad; ya reinicié y sigue igual, urge tantito.",sintético original
+S130,software_07,train,software,La herramienta no reconoce el formato del documento.,sintético original
+S131,software_07,train,software,"Buen día, la herramienta no reconoce el formato del documento. ¿Me pueden orientar?",sintético original
+S132,software_07,train,software,"La herramienta no reconoce el formato del documento; ya reinicié y sigue igual, urge tantito.",sintético original
+S133,software_08,validation,software,Quiero volver a una versión anterior de la aplicación.,sintético original
+S134,software_08,validation,software,"Buen día, quiero volver a una versión anterior de la aplicación. ¿Me pueden orientar?",sintético original
+S135,software_08,validation,software,"Quiero volver a una versión anterior de la aplicación; ya reinicié y sigue igual, urge tantito.",sintético original
+S136,software_09,validation,software,El botón para imprimir no responde.,sintético original
+S137,software_09,validation,software,"Buen día, el botón para imprimir no responde. ¿Me pueden orientar?",sintético original
+S138,software_09,validation,software,"El botón para imprimir no responde; ya reinicié y sigue igual, urge tantito.",sintético original
+S139,software_10,test,software,La instalación dice que falta espacio en disco.,sintético original
+S140,software_10,test,software,"Buen día, la instalación dice que falta espacio en disco. ¿Me pueden orientar?",sintético original
+S141,software_10,test,software,"La instalación dice que falta espacio en disco; ya reinicié y sigue igual, urge tantito.",sintético original
+S142,software_11,test,software,El complemento desapareció del menú después de actualizar.,sintético original
+S143,software_11,test,software,"Buen día, el complemento desapareció del menú después de actualizar. ¿Me pueden orientar?",sintético original
+S144,software_11,test,software,"El complemento desapareció del menú después de actualizar; ya reinicié y sigue igual, urge tantito.",sintético original

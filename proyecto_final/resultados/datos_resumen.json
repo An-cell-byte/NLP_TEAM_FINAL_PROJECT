@@ -1,0 +1,64 @@
+{
+  "solicitudes_por_particion": {
+    "acceso": {
+      "test": 6,
+      "train": 24,
+      "validation": 6
+    },
+    "conectividad": {
+      "test": 6,
+      "train": 24,
+      "validation": 6
+    },
+    "fuera_de_alcance": {
+      "test": 6,
+      "train": 24,
+      "validation": 6
+    },
+    "pagos": {
+      "test": 6,
+      "train": 24,
+      "validation": 6
+    },
+    "software": {
+      "test": 6,
+      "train": 24,
+      "validation": 6
+    }
+  },
+  "familias": 60,
+  "ids": {
+    "originales": "S001-S144",
+    "fuera_de_alcance": "F001-F036"
+  },
+  "base_conocimiento": {
+    "documentos": 15,
+    "fragmentos": 80,
+    "palabras": 4412,
+    "por_categoria": {
+      "acceso": 20,
+      "conectividad": 20,
+      "general": 6,
+      "pagos": 15,
+      "software": 19
+    }
+  },
+  "consultas": {
+    "dev": {
+      "total": 52,
+      "respondibles": 39
+    },
+    "test": {
+      "total": 20,
+      "respondibles": 15
+    }
+  },
+  "sha256": {
+    "solicitudes.csv": "923d4fd289a7f12f8654d1ebcdc60c30bb550257b76d203a8b60920848eb099f",
+    "fuera_de_alcance.csv": "4dd2b716994a60e1f7e4cfbe5476372a132a98ccb796b5626ece66d297588532",
+    "consultas_dev.json": "3a0998b8c69704fb457d4cd63ec795db8c3e03c359d763927136021d6bedeafb",
+    "consultas_test_v1.json": "ca519efdbf2e9930841f9f44f24abe73288b6b3d9fbedeb9ff189f1a28ab60ea",
+    "consultas_test.json": "39a10f69062b378135db5a147a2c955d0533726b43badfd998d3cab78c70227a",
+    "sinonimos.json": "e4ba4db4dab7e094cca10c333100659d048d01e102e82715d4b5940a79d72034"
+  }
+}

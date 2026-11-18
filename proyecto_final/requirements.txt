@@ -1,0 +1,15 @@
+# Python 3.11 · CPU. Versiones fijadas para repetir los resultados.
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.6.1
+nltk==3.9.1
+torch==2.6.0
+transformers==4.49.0
+sentence-transformers==3.4.1
+huggingface-hub==0.36.2
+sentencepiece==0.2.0
+matplotlib==3.10.1
+pytest==8.3.5
+ipykernel==6.29.5
+nbconvert==7.16.6
+nbclient==0.10.2

@@ -1,0 +1,306 @@
+[
+ {
+  "id": "dev-01",
+  "query": "¿Cuánto tiempo dura el enlace para restablecer mi contraseña?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-01#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-02",
+  "query": "¿Cuántos caracteres debe tener mi nueva contraseña?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-01#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-03",
+  "query": "Cada cuánto tiempo tengo que cambiar la contraseña",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-04",
+  "query": "No me llega el código de verificación al correo, ¿cuánto debo esperar?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-02#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-05",
+  "query": "Compré un teléfono nuevo y perdí la app autenticadora, ¿cómo entro?",
+  "categoria": "acceso",
+  "tipo": "parafrasis",
+  "relevant": [
+   "ACC-02#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-06",
+  "query": "¿Cuánto tiempo queda bloqueada la cuenta después de fallar la contraseña varias veces?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-03#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-07",
+  "query": "¿Cuántas sesiones puedo tener abiertas al mismo tiempo?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-03#s4"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-08",
+  "query": "¿Cuántas horas tengo para usar el enlace de activación de mi usuario?",
+  "categoria": "acceso",
+  "tipo": "directa",
+  "relevant": [
+   "ACC-04#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-09",
+  "query": "¿Cuál red wifi deben usar los visitantes?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-01#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-10",
+  "query": "Mi laptop no ve la red Cumbre-Corp",
+  "categoria": "conectividad",
+  "tipo": "parafrasis",
+  "relevant": [
+   "CON-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-11",
+  "query": "¿Puedo usar la VPN con mi computadora personal?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-02#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-12",
+  "query": "¿Después de cuánto tiempo se desconecta sola la VPN?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-02#s5"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-13",
+  "query": "¿Qué significa la luz roja del router?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-03#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-14",
+  "query": "¿Qué velocidad necesito para una videollamada estable?",
+  "categoria": "conectividad",
+  "tipo": "directa",
+  "relevant": [
+   "CON-04#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-15",
+  "query": "¿Hasta cuándo puedo pedir la factura de un pago?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-01#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-16",
+  "query": "Puse mal el RFC en la factura, ¿cómo la corrijo?",
+  "categoria": "pagos",
+  "tipo": "parafrasis",
+  "relevant": [
+   "PAG-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-17",
+  "query": "¿En cuántos días me devuelven el dinero a la tarjeta?",
+  "categoria": "pagos",
+  "tipo": "parafrasis",
+  "relevant": [
+   "PAG-02#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-18",
+  "query": "¿Aceptan American Express?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-03#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-19",
+  "query": "¿Cuántas veces reintenta el cobro si mi tarjeta es rechazada?",
+  "categoria": "pagos",
+  "tipo": "directa",
+  "relevant": [
+   "PAG-03#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-20",
+  "query": "¿Cuánto espacio libre necesito para instalar MesaApp?",
+  "categoria": "software",
+  "tipo": "directa",
+  "relevant": [
+   "SOF-01#s3"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-21",
+  "query": "MesaApp se congela cuando lo abro",
+  "categoria": "software",
+  "tipo": "parafrasis",
+  "relevant": [
+   "SOF-02#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-22",
+  "query": "¿Cuál es el tamaño máximo de un archivo de tarea en AulaPro?",
+  "categoria": "software",
+  "tipo": "directa",
+  "relevant": [
+   "SOF-03#s2"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-23",
+  "query": "¿En qué horario atiende la mesa de ayuda los sábados?",
+  "categoria": "general",
+  "tipo": "directa",
+  "relevant": [
+   "GEN-01#s1"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-24",
+  "query": "¿La mesa de ayuda me puede ayudar a reservar una sala de juntas?",
+  "categoria": "general",
+  "tipo": "parafrasis",
+  "relevant": [
+   "GEN-01#s6"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "dev-25",
+  "query": "¿Puedo usar mi huella digital para iniciar sesión?",
+  "categoria": "acceso",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-26",
+  "query": "¿La VPN funciona en Linux?",
+  "categoria": "conectividad",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-27",
+  "query": "¿Cuánto cuesta la suscripción anual de NubeTec?",
+  "categoria": "pagos",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-28",
+  "query": "¿MesaApp tiene versión para tabletas Android?",
+  "categoria": "software",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-29",
+  "query": "¿Dan descuento a estudiantes en MesaApp?",
+  "categoria": "software",
+  "tipo": "sin_evidencia_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-30",
+  "query": "¿Cuál es el pronóstico del clima para mañana en Monterrey?",
+  "categoria": "fuera_de_alcance",
+  "tipo": "fuera_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-31",
+  "query": "¿Quién es el mejor jugador de futbol del mundo?",
+  "categoria": "fuera_de_alcance",
+  "tipo": "fuera_dominio",
+  "relevant": [],
+  "answerable": false
+ },
+ {
+  "id": "dev-32",
+  "query": "Recomiéndame una receta de pastel de chocolate",
+  "categoria": "fuera_de_alcance",
+  "tipo": "fuera_dominio",
+  "relevant": [],
+  "answerable": false
+ }
+]

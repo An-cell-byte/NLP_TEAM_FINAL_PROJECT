@@ -1,0 +1,348 @@
+== Verificación desde carpeta limpia: 2026-11-17T19:44:39-06:00
+== Carpeta: /c/Users/hecto/Downloads/NLP/verificacion_limpia
+== Contenido inicial (sin .venv/models):
+.gitignore
+README.md
+datos
+informe
+notebooks
+requirements.txt
+resultados
+scripts
+src
+tests
+
+== $ py -3.11 -m venv .venv
+== código de salida 0 (41 s)
+
+== $ ./.venv/Scripts/python.exe -m pip install --upgrade pip -q
+== código de salida 0 (40 s)
+
+== $ ./.venv/Scripts/python.exe -m pip install -r requirements.txt -q
+== código de salida 0 (536 s)
+
+== $ ./.venv/Scripts/python.exe scripts/descargar_modelo.py
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+Fetching 11 files:  73%|#######2  | 8/11 [00:02<00:01,  2.96it/s]Fetching 11 files: 100%|##########| 11/11 [00:13<00:00,  1.19s/it]
+Modelo listo en C:\Users\hecto\Downloads\NLP\verificacion_limpia\models\minilm (revisi�n e8f8c21122)
+== código de salida 0 (18 s)
+
+........................                                                 [100%]
+24 passed in 33.47s
+== código de salida 0 (36 s)
+
+== $ ./.venv/Scripts/python.exe scripts/evaluar.py
+Clasificador elegido: MiniLM multilingüe congelado + regresión logística, C=1.0
+Recuperador elegido: {'recuperador': 'hibrido', 'alpha': 0.3}
+Política congelada: {'retriever': 'hibrido', 'alpha': 0.3, 'tau': 0.5, 'min_coverage': 0.6, 'oov_veto': True, 'synonyms': {}, 'routing': True, 'gate': True, 'route_min_conf': 0.5, 'k': 3}
+{
+ "clasificador": {
+  "clasico": {
+   "val_macro_f1": 0.5941258741258741,
+   "test_macro_f1": 0.7035897435897436,
+   "test_ic95": [
+    0.534310101233476,
+    0.8295297619047619
+   ],
+   "test_accuracy": 0.7
+  },
+  "contextual": {
+   "val_macro_f1": 0.7938461538461539,
+   "test_macro_f1": 0.8406593406593407,
+   "test_ic95": [
+    0.6933333333333335,
+    0.9609022556390977
+   ],
+   "test_accuracy": 0.8666666666666667
+  },
+  "elegido": "contextual"
+ },
+ "recuperacion": {
+  "tfidf_0.0": {
+   "dev_mrr": 0.8311965811965811,
+   "test_mrr": 0.9,
+   "dev_r3": 0.8974358974358975,
+   "test_r3": 0.9333333333333333
+  },
+  "semantico_0.0": {
+   "dev_mrr": 0.8311965811965811,
+   "test_mrr": 0.9222222222222222,
+   "dev_r3": 0.9743589743589743,
+   "test_r3": 1.0
+  },
+  "hibrido_0.3": {
+   "dev_mrr": 0.9487179487179487,
+   "test_mrr": 1.0,
+   "dev_r3": 1.0,
+   "test_r3": 1.0
+  },
+  "hibrido_0.5": {
+   "dev_mrr": 0.9358974358974359,
+   "test_mrr": 1.0,
+   "dev_r3": 1.0,
+   "test_r3": 1.0
+  },
+  "hibrido_0.7": {
+   "dev_mrr": 0.9358974358974359,
+   "test_mrr": 0.95,
+   "dev_r3": 1.0,
+   "test_r3": 0.9333333333333333
+  }
+ },
+ "puertas": {
+  "estricta": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 8,
+    "tasa_respuesta_correcta": 0.20512820512820512,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.7948717948717948
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 2,
+    "tasa_respuesta_correcta": 0.13333333333333333,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.8666666666666667
+   },
+   "config": {
+    "retriever": "hibrido",
+    "alpha": 0.3,
+    "tau": 0.4,
+    "min_coverage": 1.0,
+    "oov_veto": false,
+    "synonyms": {},
+    "routing": true,
+    "gate": true,
+    "route_min_conf": 0.5,
+    "k": 3
+   }
+  },
+  "cobertura_relajada": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 14,
+    "tasa_respuesta_correcta": 0.358974358974359,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.6410256410256411
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 2,
+    "tasa_respuesta_correcta": 0.13333333333333333,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.8666666666666667
+   },
+   "config": {
+    "retriever": "hibrido",
+    "alpha": 0.3,
+    "tau": 0.6,
+    "min_coverage": 0.5,
+    "oov_veto": false,
+    "synonyms": {},
+    "routing": true,
+    "gate": true,
+    "route_min_conf": 0.5,
+    "k": 3
+   }
+  },
+  "relajada_con_veto": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 19,
+    "tasa_respuesta_correcta": 0.48717948717948717,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.5128205128205128
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 6,
+    "tasa_respuesta_correcta": 0.4,
+    "respuestas_sin_respaldo": 1,
+    "precision_de_cita": 0.8571428571428571,
+    "recall_abstencion": 0.8,
+    "tasa_abstencion_falsa": 0.6
+   },
+   "config": {
+    "retriever": "hibrido",
+    "alpha": 0.3,
+    "tau": 0.5,
+    "min_coverage": 0.6,
+    "oov_veto": true,
+    "synonyms": {},
+    "routing": true,
+    "gate": true,
+    "route_min_conf": 0.5,
+    "k": 3
+   }
+  },
+  "veto_con_sinonimos": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 14,
+    "tasa_respuesta_correcta": 0.358974358974359,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.6410256410256411
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 1,
+    "tasa_respuesta_correcta": 0.06666666666666667,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.9333333333333333
+   },
+   "config": {
+    "retriever": "hibrido",
+    "alpha": 0.3,
+    "tau": 0.6,
+    "min_coverage": 0.5,
+    "oov_veto": true,
+    "synonyms": {
+     "app": "aplicacion",
+     "laptop": "computadora",
+     "corrijo": "corregir",
+     "mal": "equivocado",
+     "abro": "abre",
+     "entro": "entrar",
+     "tamano": "pesar",
+     "use": "usar",
+     "usarlo": "usar",
+     "quitar": "desactivar",
+     "saca": "cierra",
+     "rato": "minutos",
+     "iguales": "misma",
+     "veo": "muestra"
+    },
+    "routing": true,
+    "gate": true,
+    "route_min_conf": 0.5,
+    "k": 3
+   }
+  }
+ },
+ "puerta_final": "relajada_con_veto",
+ "ablaciones": {
+  "sistema_completo": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 19,
+    "tasa_respuesta_correcta": 0.48717948717948717,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.5128205128205128
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 6,
+    "tasa_respuesta_correcta": 0.4,
+    "respuestas_sin_respaldo": 1,
+    "precision_de_cita": 0.8571428571428571,
+    "recall_abstencion": 0.8,
+    "tasa_abstencion_falsa": 0.6
+   }
+  },
+  "sin_puerta_de_evidencia": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 35,
+    "tasa_respuesta_correcta": 0.8974358974358975,
+    "respuestas_sin_respaldo": 17,
+    "precision_de_cita": 0.6730769230769231,
+    "recall_abstencion": 0.0,
+    "tasa_abstencion_falsa": 0.0
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 15,
+    "tasa_respuesta_correcta": 1.0,
+    "respuestas_sin_respaldo": 5,
+    "precision_de_cita": 0.75,
+    "recall_abstencion": 0.0,
+    "tasa_abstencion_falsa": 0.0
+   }
+  },
+  "sin_filtro_por_clasificacion": {
+   "dev": {
+    "n": 52,
+    "respondibles": 39,
+    "sin_evidencia": 13,
+    "respuestas_correctas_con_cita": 19,
+    "tasa_respuesta_correcta": 0.48717948717948717,
+    "respuestas_sin_respaldo": 0,
+    "precision_de_cita": 1.0,
+    "recall_abstencion": 1.0,
+    "tasa_abstencion_falsa": 0.5128205128205128
+   },
+   "test": {
+    "n": 20,
+    "respondibles": 15,
+    "sin_evidencia": 5,
+    "respuestas_correctas_con_cita": 6,
+    "tasa_respuesta_correcta": 0.4,
+    "respuestas_sin_respaldo": 1,
+    "precision_de_cita": 0.8571428571428571,
+    "recall_abstencion": 0.8,
+    "tasa_abstencion_falsa": 0.6
+   }
+  }
+ },
+ "segundos": 88.7
+}
+== código de salida 0 (93 s)
+
+== $ ./.venv/Scripts/python.exe scripts/responder.py ¿Cuántas sesiones puedo tener abiertas al mismo tiempo?
+Estado: respondida
+Clasificación: fuera_de_alcance (confianza 0.52) -> otra_area
+Búsqueda (hibrido, categorías: todas):
+  1. ✔ ACC-03#s4 «Sesiones abiertas en varios dispositivos» score=0.615 · evidencia_suficiente
+  2. ✘ ACC-03#s2 «La sesión caduca mientras trabajo» score=0.401 · cobertura_insuficiente
+  3. ✘ GEN-01#s1 «Horario de atención» score=0.324 · cobertura_insuficiente
+Respuesta: Puedes tener hasta tres sesiones abiertas al mismo tiempo. Al abrir una cuarta sesión, se cierra automáticamente la más antigua.
+Fuente: ACC-03 «Cuentas bloqueadas y sesiones que se cierran» › «Sesiones abiertas en varios dispositivos» (acc03_bloqueo_sesiones.md, ACC-03#s4)
+Tipo de respuesta: extractiva (oraciones copiadas literalmente del pasaje citado)
+== código de salida 0 (26 s)
+
+== Comparación de métricas con el proyecto original (sin tiempos ni fechas):
+IDÉNTICAS
